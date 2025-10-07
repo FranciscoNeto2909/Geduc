@@ -1,0 +1,26 @@
+:root{
+--dark-blue: #001A47;
+--medium-blue: #014478;
+--blue:#018ABE;
+--soft-blue:#93CBD8;
+--light-blue:#D6E7EE;
+
+--dark-green:#021A1A;
+--medium-green: #042222;
+--green:#03624C;
+--soft-green:#00DF82;
+--light-green:#2CC295;
+
+--dark-orange:#FD7B03;
+--medium-orange:#FE8E22;
+--orange:#FFA451;
+--soft-orange:#FFB76B;
+--light-orange:#FFCF91;
+
+--dark-yellow:#F8DE4B;
+--medium-yellow:#FCEE50;
+--yellow:#FEF78D;
+--soft-yellow:#FEF7AF;
+--light-yellow:#FEF7CD;
+}
+
