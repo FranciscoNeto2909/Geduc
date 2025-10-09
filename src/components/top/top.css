@@ -1,0 +1,41 @@
+.top {
+  background-color: #0f0;
+  height: 39px;
+  width: 100%;
+  display: flex;
+  font-weight: bold;
+  color: #fff;
+  background-color: #014478;
+  font-size: 13px;
+}
+
+.top-contacts {
+  height: 100%;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #93cbd8;
+  border-radius: 0 16px 16px 0;
+}
+
+.top-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.top-account {
+  width: 210px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: #fff;
+}
+
+.top-account a {
+  font-weight: 700;
+  color: #fff;
+}

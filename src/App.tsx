@@ -8,11 +8,13 @@ import Plataforma from './pages/plataforma/Plataforma'
 import BaixarApp from './pages/baixarApp/BaixarApp'
 import Contato from './pages/contato/Contato'
 import Conta from './pages/conta/Conta'
+import Navbar from './components/header/Header'
 
 export default function App() {
 
   return (
-    <>
+    <div className="container">
+      <Navbar/>
       <Routes>
         <Route path='/' element={< Inicio />}/>
         <Route path='/quem-somos' element={< QuemSomos />}/>
@@ -23,7 +25,7 @@ export default function App() {
         <Route path='/entre-em-contato' element={< Contato />}/>
         <Route path='/conta' element={< Conta />}/>
       </Routes>
-    </>
+    </div>
   )
 }
 
