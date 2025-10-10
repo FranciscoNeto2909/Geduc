@@ -1,11 +1,10 @@
 .top {
-  background-color: #0f0;
   height: 39px;
   width: 100%;
   display: flex;
   font-weight: bold;
   color: #fff;
-  background-color: #014478;
+  background-color: var(--medium-blue);
   font-size: 13px;
 }
 
@@ -16,14 +15,14 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  background-color: #93cbd8;
+  background-color: var(--soft-blue);
   border-radius: 0 16px 16px 0;
 }
 
 .top-item {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
 }
 
 .top-account {

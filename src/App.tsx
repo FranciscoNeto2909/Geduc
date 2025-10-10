@@ -22,7 +22,7 @@ export default function App() {
         <Route path='/seja-parceiro' element={< SejaParceiro />}/>
         <Route path='/plataforma' element={< Plataforma />}/>
         <Route path='/baixar-app' element={< BaixarApp />}/>
-        <Route path='/entre-em-contato' element={< Contato />}/>
+        <Route path='/contato' element={< Contato />}/>
         <Route path='/conta' element={< Conta />}/>
       </Routes>
     </div>
