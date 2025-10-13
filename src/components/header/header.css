@@ -5,10 +5,12 @@
 
 .header-container{
     margin: 0 auto;
-    padding: 12px;
+    padding: 12px 0;
     width: 100vw;
     max-width: 1440px;
-    display: flex;
+    display: grid;
+    grid-template-columns: 167px 1fr 158px;
+    gap: 12px;
     align-items: center;
     justify-content: space-between;
 }
@@ -40,12 +42,15 @@
 .header-nav-routes{
     display: flex;
     justify-content: space-between;
-    width: 702px;
+    justify-self: center;
+    width: 100%;
+    max-width: 702px;
 }
 
 .route-item{
     font-size: 15px;
     font-weight: 700;
+    border-bottom: 2px solid transparent;
 }
 
 .route-item--selected{
@@ -54,10 +59,6 @@
 
 .route-item a {
     color: #000;
-}
-
-.header-contact{
-    margin-right: 24px;
 }
 
 .header-contact-button{
