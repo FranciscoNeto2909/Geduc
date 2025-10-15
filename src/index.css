@@ -1,33 +1,40 @@
-:root{
---dark-blue: #001A47;
---medium-blue: #014478;
---blue:#018ABE;
---soft-blue:#93CBD8;
---light-blue:#D6E7EE;
+:root {
+  --primary-blue: #09acb1;
+  --dark-blue: #001a47;
+  --medium-blue: #014478;
+  --blue: #018abe;
+  --soft-blue: #93cbd8;
+  --light-blue: #d6e7ee;
+  --title-blue: #102f7d;
+  --card-blue: #E5F7FF;
 
---dark-green:#021A1A;
---medium-green: #042222;
---green:#03624C;
---soft-green:#00DF82;
---light-green:#2CC295;
+  --dark-green: #021a1a;
+  --medium-green: #042222;
+  --green: #03624c;
+  --soft-green: #00df82;
+  --light-green: #2cc295;
 
---dark-orange:#FD7B03;
---medium-orange:#FE8E22;
---orange:#FFA451;
---soft-orange:#FFB76B;
---light-orange:#FFCF91;
+  --dark-orange: #fd7b03;
+  --medium-orange: #fe8e22;
+  --orange: #ffa451;
+  --soft-orange: #ffb76b;
+  --light-orange: #ffcf91;
 
---dark-yellow:#F8DE4B;
---medium-yellow:#FCEE50;
---yellow:#FEF78D;
---soft-yellow:#FEF7AF;
---light-yellow:#FEF7CD;
+  --dark-yellow: #f8de4b;
+  --medium-yellow: #fcee50;
+  --yellow: #fef78d;
+  --soft-yellow: #fef7af;
+  --light-yellow: #fef7cd;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    list-style: none;
-    font-family: Arial, Helvetica, sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-optical-sizing: auto;
+  box-sizing: border-box;
 }
