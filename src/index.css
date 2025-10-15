@@ -6,7 +6,12 @@
   --soft-blue: #93cbd8;
   --light-blue: #d6e7ee;
   --title-blue: #102f7d;
-  --card-blue: #E5F7FF;
+  --card-blue: #e5f7ff;
+  --icon-blue: #013181;
+  --moredark-blue: #000a1b;
+  --form-blue: #42688b;
+  --news-blue:#82ECEF;
+
 
   --dark-green: #021a1a;
   --medium-green: #042222;
@@ -37,4 +42,10 @@
   font-style: normal;
   font-optical-sizing: auto;
   box-sizing: border-box;
+}
+
+input {
+  width: 100%;
+  border: none;
+  outline: none;
 }

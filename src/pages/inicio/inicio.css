@@ -116,7 +116,7 @@
 
 .inicio-pillars {
   margin: 0 auto;
-  height: 555px;
+  min-height: 555px;
   width: 100%;
   max-width: 1260px;
 }
@@ -158,6 +158,7 @@
 .inicio-pillars-cards {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .pillars-card {
@@ -175,16 +176,138 @@
 .pillars-card-title {
   font-weight: 700;
   font-size: 18px;
-  text-align: center
+  text-align: center;
 }
 
 .pillars-card-desc {
   font-size: 14px;
   width: 321px;
-  margin-top: 20px
+  margin-top: 20px;
 }
 
 .pillars-card-img {
   width: 321px;
   border-radius: 16px;
+}
+
+.inicio-solutions {
+  position: relative;
+  margin-bottom: 70px;
+}
+
+.inicio-solutions-banner {
+  height: 700px;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  min-width: 100vw;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.solutions-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 56px;
+}
+
+.solutions-header-title {
+  font-size: 41px;
+  color: var(--dark-blue);
+}
+
+.solutions-items {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1180px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 100px);
+  gap: 10px 50px;
+}
+
+.solutions-item {
+  display: flex;
+  height: 54px;
+  gap: 8px;
+  align-items: center;
+  color: var(--dark-blue);
+  padding-left: 38px;
+  border-radius: 8px;
+}
+
+.solutions-item:hover {
+  color: #fff;
+  background: linear-gradient(
+    90deg,
+    var(--icon-blue) 0%,
+    var(--dark-blue) 50%,
+    var(--moredark-blue) 100%
+  );
+}
+
+.solutions-item:hover * {
+  color: inherit;
+}
+
+.solutions-item-title {
+  max-width: 287px;
+}
+
+.solutions-item-icon {
+  color: var(--icon-blue);
+}
+
+.inicio-pillars-news {
+  margin: 0 auto;
+  margin-top: 30px;
+  height: 212px;
+  width: 100%;
+  max-width: 1102px;
+  background-color: var(--form-blue);
+  border-radius: 15px;
+  box-shadow: 0px 4px 0px 0px #0000001a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 42px;
+}
+
+.pillars-news-texts {
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.news-texts-title {
+  font-size: 36px;
+  max-width: 541px;
+}
+
+.news-texts-news {
+  color: var(--news-blue);
+}
+
+.pillars-news-form {
+  width: 425px;
+}
+
+.news-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.news-form-input {
+  border-radius: 30px;
+  height: 42px;
+  padding-left: 24px;
+  font-size: 16px;
+}
+
+.news-form button {
+  width: 100%;
 }

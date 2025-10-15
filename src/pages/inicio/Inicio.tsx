@@ -1,5 +1,6 @@
 import "./inicio.css";
 import quad from "../../assets/quadriculado.png";
+import quad2 from "../../assets/quadriculado2.png";
 import phone from "../../assets/celular.png";
 import eficiencia from "../../assets/eficiencia.png";
 import conectividade from "../../assets/conectividade.png";
@@ -7,6 +8,7 @@ import transformacao from "../../assets/transformacao.png";
 import aula from "../../assets/aula.png";
 import acompanhamento from "../../assets/acompanhamento.png";
 import conectividade2 from "../../assets/conectividade2.png";
+import { solutions } from "../../variables";
 
 export default function Inicio() {
   return (
@@ -101,13 +103,56 @@ export default function Inicio() {
           </div>
           <div className="pillars-card">
             <div className="pillars-card-texts">
-            <h4 className="pillars-card-title">Conectividade</h4>
+              <h4 className="pillars-card-title">Conectividade</h4>
               <p className="pillars-card-desc">
                 Manter os alunos engajados mesmo fora da escola para desenvolver
                 aprendizagem colaborativa.
               </p>
             </div>
             <img className="pillars-card-img" src={conectividade2} alt="" />
+          </div>
+        </div>
+      </div>
+      <div className="inicio-solutions">
+        <div
+          className="inicio-solutions-banner"
+          style={{ backgroundImage: `url(${quad2})` }}
+        ></div>
+        <div className="solutions-header">
+          <h3 className="solutions-header-title">Soluções Geduc</h3>
+        </div>
+        <div className="solutions-items">
+          {solutions.map((solution, i) => (
+            <div className="solutions-item" key={i}>
+              <solution.icon size={32} className="solutions-item-icon" />
+              <h4 className="solutions-item-title">{solution.title}</h4>
+            </div>
+          ))}
+        </div>
+        <div className="inicio-pillars-news">
+          <div className="pillars-news-texts">
+            <h3 className="news-texts-title">
+              Receba as <span className="news-texts-news">novidades</span> direto no  seu e-mail!
+            </h3>
+            <p className="news-texts-desc">
+              Cadastre-se e receba dicas, conteúdos exclusivos e novidades toda
+              semana.
+            </p>
+          </div>
+          <div className="pillars-news-form">
+            <form className="news-form" action="">
+              <div className="news-form-name">
+                <label htmlFor="name"></label>
+                <input className="news-form-input" type="text" id="name" placeholder="Nome Completo*" />
+              </div>
+              <div className="news-form-email">
+                <label htmlFor="email"></label>
+                <input className="news-form-input" id="email" type="text" placeholder="E-mail*" />
+              </div>
+              <div className="news-form-burtton">
+                <button className="button">Assinar</button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
