@@ -71,3 +71,21 @@ export const solutions = [
     title: "AVA Docentes",
   },
 ];
+
+export const mainSolutionsBanner = [
+  {
+    icon: FaUsers,
+    title: "Gestão de Aulas Não-Presenciais",
+    desc: "Adaptação de aulas para o formato remoto ou híbrido, seguindo as normas dos Conselhos de Educação",
+  },
+  {
+    icon: AiOutlineTeam,
+    title: "Ambiente do Professor e do Aluno",
+    desc: "Facilita a interação digital e o acompanhamento das atividades escolares.",
+  },
+  { 
+    icon: AiOutlineLineChart, 
+    title: "Gestão de Busca Ativa",
+    desc:"Monitoramento da infrequência escolar, evitando a evasão e abandono, com a possibilidade de integração com Conselhos Tutelares e Ministério Público."
+  },
+];

@@ -1,4 +1,3 @@
-import "./inicio.css";
 import quad from "../../assets/quadriculado.png";
 import quad2 from "../../assets/quadriculado2.png";
 import phone from "../../assets/celular.png";
@@ -8,8 +7,10 @@ import transformacao from "../../assets/transformacao.png";
 import aula from "../../assets/aula.png";
 import acompanhamento from "../../assets/acompanhamento.png";
 import conectividade2 from "../../assets/conectividade2.png";
-import { solutions } from "../../variables";
-
+import mainFeatures from "../../assets/mainFeatures.png";
+import { solutions, mainSolutionsBanner } from "../../variables";
+import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
+import "./inicio.css";
 export default function Inicio() {
   return (
     <div className="inicio">
@@ -132,7 +133,8 @@ export default function Inicio() {
         <div className="inicio-pillars-news">
           <div className="pillars-news-texts">
             <h3 className="news-texts-title">
-              Receba as <span className="news-texts-news">novidades</span> direto no  seu e-mail!
+              Receba as <span className="news-texts-news">novidades</span>{" "}
+              direto no seu e-mail!
             </h3>
             <p className="news-texts-desc">
               Cadastre-se e receba dicas, conteúdos exclusivos e novidades toda
@@ -143,17 +145,70 @@ export default function Inicio() {
             <form className="news-form" action="">
               <div className="news-form-name">
                 <label htmlFor="name"></label>
-                <input className="news-form-input" type="text" id="name" placeholder="Nome Completo*" />
+                <input
+                  className="news-form-input"
+                  type="text"
+                  id="name"
+                  placeholder="Nome Completo*"
+                />
               </div>
               <div className="news-form-email">
                 <label htmlFor="email"></label>
-                <input className="news-form-input" id="email" type="text" placeholder="E-mail*" />
+                <input
+                  className="news-form-input"
+                  id="email"
+                  type="text"
+                  placeholder="E-mail*"
+                />
               </div>
               <div className="news-form-burtton">
                 <button className="button">Assinar</button>
               </div>
             </form>
           </div>
+        </div>
+      </div>
+      <div className="inicio-features">
+        <div className="features-header">
+          <h3 className="features-header-title">Recursos Principais</h3>
+        </div>
+        <div className="features-carroussel">
+          <div className="features-carroussel-prev">
+            <button className="pagination-button">
+              <AiOutlineLeft size={32} />
+            </button>
+          </div>
+          <div className="features-carroussel-page">
+            <div className="features-carroussel-items">
+              {mainSolutionsBanner.map((item, i) => (
+                <div className="features-carroussel-item" key={i}>
+                  <div className="features-carroussel-icon">
+                    <item.icon size={32} />
+                  </div>
+                  <div className="features-carroussel-texts">
+                    <h4 className="features-carroussel-title">{item.title}</h4>
+                    <p className="features-carroussel-desc">{item.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="features-carroussel-img">
+              <img src={mainFeatures} alt="laptop e celular" />
+            </div>
+          </div>
+          <div className="features-carroussel-next">
+            <button className="pagination-button pagination-button--available">
+              <AiOutlineRight size={32} />
+            </button>
+          </div>
+        </div>
+        <div className="features-more">
+          <div className="features-more-pagination">
+            <div className="pagination-item pagination-item--selected"></div>
+            <div className="pagination-item"></div>
+            <div className="pagination-item"></div>
+          </div>
+          <button className="button features-more-button">Saiba mais</button>
         </div>
       </div>
     </div>

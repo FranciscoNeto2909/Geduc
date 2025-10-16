@@ -30,6 +30,9 @@
   --yellow: #fef78d;
   --soft-yellow: #fef7af;
   --light-yellow: #fef7cd;
+
+  --desc-color:#4E4E4E;
+  --not-selected:#ABABAB80;
 }
 
 * {
@@ -48,4 +51,8 @@ input {
   width: 100%;
   border: none;
   outline: none;
+}
+
+button{
+  cursor: pointer;
 }
