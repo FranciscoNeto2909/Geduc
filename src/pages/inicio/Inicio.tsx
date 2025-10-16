@@ -13,9 +13,12 @@ import {
   solutions,
   mainSolutionsBanner,
   clientsOpinion,
+  content,
 } from "../../variables";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import "./inicio.css";
+import { Link } from "react-router-dom";
+
 export default function Inicio() {
   return (
     <div className="inicio">
@@ -25,17 +28,21 @@ export default function Inicio() {
           style={{ backgroundImage: `url(${quad})` }}
         ></div>
         <div className="banner-texts">
-          <h3 className="banner-texts-title">
+          <h2 className="banner-texts-title">
             Transformando a <br /> Educação com Inovação e Conexão
-          </h3>
+          </h2>
           <p className="banner-texts-desc">
             O Geduc conecta mais de 350 mil alunos, 30 mil professores e 2 mil
             instituições, oferecendo uma gestão eficiente e uma educação mais
             acessível e transformadora.
           </p>
           <div className="banner-buttons">
-            <button className="button">Conheça a Plataforma</button>
-            <button className="button button--inverted">Seja Parceiro</button>
+            <button type="button" className="button">
+              Conheça a Plataforma
+            </button>
+            <button type="button" className="button button--inverted">
+              Seja Parceiro
+            </button>
           </div>
         </div>
         <div className="banners-phone">
@@ -81,7 +88,10 @@ export default function Inicio() {
             <p className="pillars-header-desc">O Que Nos Torna Únicos</p>
           </div>
           <div className="pillars-header-button">
-            <button className="button button--inverted button--small">
+            <button
+              type="button"
+              className="button button--inverted button--small"
+            >
               Saiba Mais
             </button>
           </div>
@@ -89,8 +99,14 @@ export default function Inicio() {
         <div className="inicio-pillars-cards">
           <div className="pillars-card">
             <div className="pillars-card-texts">
-              <h4 className="pillars-card-title"></h4>
-              <p className="pillars-card-desc"></p>
+              <h4 className="pillars-card-title">Gestão Eficiente</h4>
+              <p className="pillars-card-desc">
+                Envolver os{" "}
+                <span className="text--dark">aspectos gerenciais</span> e{" "}
+                <span className="text--dark">técnico-administrativos</span> para{" "}
+                <span className="text--dark">otimiza</span>r os{" "}
+                <span className="text--dark">processos diários</span>.
+              </p>
             </div>
             <img className="pillars-card-img" src={aula} alt="" />
           </div>
@@ -100,8 +116,11 @@ export default function Inicio() {
                 Acompanhamento e Diagnósticos
               </h4>
               <p className="pillars-card-desc">
-                Mapear pontos fortes e dificuldades com base nas habilidades dos
-                alunos permitindo que os professores avaliem o desempenho dos
+                Mapear <span className="text--dark">pontos fortes</span> e{" "}
+                <span className="text--dark">dificuldades</span> com base nas{" "}
+                <span className="text--dark">habilidades</span> dos alunos
+                permitindo que os professores{" "}
+                <span className="text--dark">avalie</span>m o desempenho dos
                 alunos.
               </p>
             </div>
@@ -111,8 +130,11 @@ export default function Inicio() {
             <div className="pillars-card-texts">
               <h4 className="pillars-card-title">Conectividade</h4>
               <p className="pillars-card-desc">
-                Manter os alunos engajados mesmo fora da escola para desenvolver
-                aprendizagem colaborativa.
+                Manter os alunos engajados mesmo fora da escola para{" "}
+                <span className="text--dark">
+                  desenvolver aprendizagem colaborativa
+                </span>
+                .
               </p>
             </div>
             <img className="pillars-card-img" src={conectividade2} alt="" />
@@ -125,7 +147,7 @@ export default function Inicio() {
           style={{ backgroundImage: `url(${quad2})` }}
         ></div>
         <div className="solutions-header">
-          <h3 className="solutions-header-title">Soluções Geduc</h3>
+          <h2 className="solutions-header-title">Soluções Geduc</h2>
         </div>
         <div className="solutions-items">
           {solutions.map((solution, i) => (
@@ -137,10 +159,10 @@ export default function Inicio() {
         </div>
         <div className="inicio-pillars-news">
           <div className="pillars-news-texts">
-            <h3 className="news-texts-title">
+            <h2 className="news-texts-title">
               Receba as <span className="news-texts-news">novidades</span>{" "}
               direto no seu e-mail!
-            </h3>
+            </h2>
             <p className="news-texts-desc">
               Cadastre-se e receba dicas, conteúdos exclusivos e novidades toda
               semana.
@@ -167,7 +189,9 @@ export default function Inicio() {
                 />
               </div>
               <div className="news-form-burtton">
-                <button className="button">Assinar</button>
+                <button type="button" className="button">
+                  Assinar
+                </button>
               </div>
             </form>
           </div>
@@ -175,11 +199,11 @@ export default function Inicio() {
       </div>
       <div className="inicio-features">
         <div className="features-header">
-          <h3 className="features-header-title">Recursos Principais</h3>
+          <h2 className="features-header-title">Recursos Principais</h2>
         </div>
         <div className="features-carroussel">
           <div className="features-carroussel-prev">
-            <button className="pagination-button">
+            <button type="button" className="pagination-button">
               <AiOutlineLeft size={32} />
             </button>
           </div>
@@ -202,7 +226,10 @@ export default function Inicio() {
             </div>
           </div>
           <div className="features-carroussel-next">
-            <button className="pagination-button pagination-button--available">
+            <button
+              type="button"
+              className="pagination-button pagination-button--available"
+            >
               <AiOutlineRight size={32} />
             </button>
           </div>
@@ -213,7 +240,9 @@ export default function Inicio() {
             <div className="pagination-item"></div>
             <div className="pagination-item"></div>
           </div>
-          <button className="button features-more-button">Saiba mais</button>
+          <button type="button" className="button features-more-button">
+            Saiba mais
+          </button>
         </div>
       </div>
       <div className="inicio-clients">
@@ -222,14 +251,14 @@ export default function Inicio() {
           style={{ backgroundImage: `url(${clientsOpinionImg})` }}
         ></div>
         <div className="clients-header">
-          <h3 className="clients-header-title">
+          <h2 className="clients-header-title">
             Veja o que Nossos Clientes Dizem
-          </h3>
+          </h2>
         </div>
 
         <div className="clients-carroussel">
           <div className="clients-carroussel-prev">
-            <button className="pagination-button">
+            <button type="button" className="pagination-button">
               <AiOutlineLeft size={32} />
             </button>
           </div>
@@ -252,7 +281,10 @@ export default function Inicio() {
             </div>
           </div>
           <div className="clients-carroussel-next">
-            <button className="pagination-button pagination-button--available">
+            <button
+              type="button"
+              className="pagination-button pagination-button--available"
+            >
               <AiOutlineRight size={32} />
             </button>
           </div>
@@ -260,6 +292,33 @@ export default function Inicio() {
         <div className="clients-pagination">
           <div className="pagination-item pagination-item--selected"></div>
           <div className="pagination-item"></div>
+        </div>
+      </div>
+      <div className="inicio-content">
+        <div className="content-header">
+          <h2 className="content-header-title">Veja Nossos Conteúdos</h2>
+          <div className="content-header-button">
+            <button type="button" className="button button--inverted button--small">
+              Saiba mais
+            </button>
+          </div>
+        </div>
+        <div className="content-cards">
+          <div className="content-cards-items">
+            {
+              content.map((item, i) => (
+                <div className="content-cards-item" key={i}>
+                  <div className="content-cards-item-texts">
+                    <h3 className="content-cards-item-title">{item.title}</h3>
+                    <p className="content-cards-item-desc">{item.desc}</p>
+                  </div>
+                  <div className="content-cards-item-button">
+                    <Link to="/" className="button button--underline">LER MAIS</Link>
+                  </div>
+                </div>
+              ))
+            }
+          </div>
         </div>
       </div>
     </div>

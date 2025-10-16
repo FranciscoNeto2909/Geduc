@@ -21,11 +21,20 @@
   background-color: #fff;
   border: 1px solid var(--primary-blue);
   color: var(--primary-blue);
+  font-weight: 600;
 }
 
 .button--small {
   width: 153px;
   font-size: 13px;
+}
+
+.button--underline{
+  background-color: transparent;
+  color: var(--primary-blue);
+  text-decoration: underline;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .pagination-button {
@@ -35,5 +44,9 @@
 }
 
 .pagination-button--available {
-  color:var(--desc-color);
+  color: var(--desc-color);
+}
+
+.text--dark {
+  font-weight: 600;
 }

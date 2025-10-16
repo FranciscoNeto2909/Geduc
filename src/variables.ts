@@ -83,22 +83,52 @@ export const mainSolutionsBanner = [
     title: "Ambiente do Professor e do Aluno",
     desc: "Facilita a interação digital e o acompanhamento das atividades escolares.",
   },
-  { 
-    icon: AiOutlineLineChart, 
+  {
+    icon: AiOutlineLineChart,
     title: "Gestão de Busca Ativa",
-    desc:"Monitoramento da infrequência escolar, evitando a evasão e abandono, com a possibilidade de integração com Conselhos Tutelares e Ministério Público."
+    desc: "Monitoramento da infrequência escolar, evitando a evasão e abandono, com a possibilidade de integração com Conselhos Tutelares e Ministério Público.",
   },
 ];
 
 export const clientsOpinion = [
   {
-    name:"Flávio Viana",
-    city:"Alto Alegre do Pindaré - MA",
-    opinion:"“No decorrer de sete anos sempre acompanhei meus dados estatísticos em geral de forma rápida e eficiente, nos momentos mais necessários na gestão de informações sempre tive o suporte eficaz.”"
+    name: "Flávio Viana",
+    city: "Alto Alegre do Pindaré - MA",
+    opinion:
+      "“No decorrer de sete anos sempre acompanhei meus dados estatísticos em geral de forma rápida e eficiente, nos momentos mais necessários na gestão de informações sempre tive o suporte eficaz.”",
   },
   {
-    name:"Gildasio Candeira",
-    city:"Palmeiras do Tocantis - TO",
-    opinion:"“Muito bom ter um sistema como o do Geduc dando facilidade em fazer acontecer o trabalho do professor em sala de aula.”"
+    name: "Gildasio Candeira",
+    city: "Palmeiras do Tocantis - TO",
+    opinion:
+      "“Muito bom ter um sistema como o do Geduc dando facilidade em fazer acontecer o trabalho do professor em sala de aula.”",
+  },
+];
+
+export const content = [
+  {
+    title:
+      "Integração de Dados na Gestão Escolar: Unindo Pedagógico e Administrativo",
+    desc: "A gestão escolar enfrenta o desafio contínuo de unificar diferentes vertentes, como o pedagógico, administrativo e financeiro, de maneira eficiente. A integração de dados se...",
+  },
+  {
+    title: "Tecnologia na Educação: 5 Abordagens para Potencializar Resultados",
+    desc: "A educação pública no Brasil enfrenta desafios contínuos para assegurar que todos os estudantes alcancem seu pleno potencial acadêmico. Uma ferramenta poderosa e cada vez...",
+  },
+  {
+    title: "Como Eliminar Filas e Erros nos Processos de Matrícula Escolar",
+    desc: "A matrícula escolar é um dos momentos mais críticos no calendário de qualquer instituição de ensino, gerando filas intermináveis, pais frustrados, documentos perdidos e erros administrativos...",
+  },
+  {
+    title: "Como Tornar a Gestão do Transporte Escolar mais Eficiente",
+    desc: "Administrar o transporte escolar é um grande desafio, mas é possível torná-lo mais eficiente com organização e tecnologia, reduzindo custos, otimizando processos e aumentando a confiança das famílias...",
+  },
+  {
+    title: "Automação na Gestão Escolar: Reduzindo Retrabalho",
+    desc: "A gestão escolar no Brasil enfrenta desafios diários, desde tarefas administrativas complexas até a necessidade de melhorar a experiência de aprendizagem dos alunos. Com recursos...",
+  },
+  {
+    title: "O Impacto dos Dados na Retenção Escolar",
+    desc: "A gestão eficaz de dados tem se tornado um alicerce cada vez mais essencial para a retenção de alunos na educação pública brasileira. No contexto...",
   }
-]
+];
