@@ -1,6 +1,6 @@
 .inicio {
   margin: 0 auto;
-  margin-bottom: 54px;
+  margin-bottom: 300px;
   width: 100vw;
   max-width: 1440px;
 }
@@ -421,5 +421,124 @@
 .features-more-button {
   font-weight: 900;
   font-size: 14px;
-  letter-spacing:.6px;
+  letter-spacing: 0.6px;
+}
+
+.inicio-clients {
+  width: 100%;
+  max-width: 1440px;
+  min-height: 600px;
+  margin-top: 150px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.clients-img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  min-width: 100vw;
+  background-position: -389px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.clients-header {
+  padding: 50px;
+}
+
+.clients-header-title {
+  font-size: 30px;
+  color: var(--primary-blue);
+}
+
+.clients-carroussel-page {
+ position: relative;
+  width: 100%;
+  justify-self: center;
+}
+
+.clients-carroussel-prev,.clients-carroussel-next{
+  position: absolute;
+  top: 50%;
+  left: 24px;
+  z-index: 1;
+}
+
+.clients-carroussel-next{
+  left: unset;
+  right: 24px;
+  color: var(--desc-color);
+}
+
+.clients-carroussel-items {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.clients-carroussel-item {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.clients-carroussel-opinion {
+  width: 100%;
+  height: 100%;
+  width: 492px;
+  height: 253px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.carroussel-opinion-tip {
+  width: 41px;
+  height: 36px;
+  display: inline-block;
+  background-color: #fff;
+  transform: rotate(45deg);
+  position: absolute;
+  bottom: -5px;
+  right: 30px;
+}
+
+.clients-carroussel-opinion-text {
+  font-size: 24px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--opinion-color);
+  width: 100%;
+  max-width: 394px;
+}
+
+.clients-carroussel-client {
+  text-align: end;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-right: 26px;
+}
+
+.carroussel-client-name {
+  font-weight: 700;
+  font-size: 17px;
+  color: var(--primary-blue);
+  margin-bottom: 6px;
+}
+
+.carroussel-client-city {
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.clients-pagination{
+  margin-top: 60px;
+  align-self: center;
+  display: flex;
+  gap: 4px;
 }

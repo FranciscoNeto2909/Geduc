@@ -89,3 +89,16 @@ export const mainSolutionsBanner = [
     desc:"Monitoramento da infrequência escolar, evitando a evasão e abandono, com a possibilidade de integração com Conselhos Tutelares e Ministério Público."
   },
 ];
+
+export const clientsOpinion = [
+  {
+    name:"Flávio Viana",
+    city:"Alto Alegre do Pindaré - MA",
+    opinion:"“No decorrer de sete anos sempre acompanhei meus dados estatísticos em geral de forma rápida e eficiente, nos momentos mais necessários na gestão de informações sempre tive o suporte eficaz.”"
+  },
+  {
+    name:"Gildasio Candeira",
+    city:"Palmeiras do Tocantis - TO",
+    opinion:"“Muito bom ter um sistema como o do Geduc dando facilidade em fazer acontecer o trabalho do professor em sala de aula.”"
+  }
+]
