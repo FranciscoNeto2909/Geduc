@@ -1,13 +1,12 @@
 .inicio {
-  margin: 0 auto;
-  margin-bottom: 300px;
   width: 100vw;
-  max-width: 1440px;
 }
 
 .inicio-banner {
   min-height: 700px;
   width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
   margin-bottom: 30px;
   position: relative;
   display: flex;
@@ -203,6 +202,7 @@
   height: 100%;
   width: 100%;
   min-width: 100vw;
+  background-position: center;
   background-repeat: no-repeat;
   z-index: -1;
 }
@@ -303,19 +303,14 @@
   gap: 12px;
 }
 
-.news-form-input {
-  border-radius: 30px;
-  height: 42px;
-  padding-left: 24px;
-  font-size: 16px;
-}
-
 .news-form button {
   width: 100%;
 }
 
 .inicio-features {
   position: relative;
+  max-width: 1411px;
+  margin: 0 auto;
 }
 
 .features-header {
@@ -434,6 +429,7 @@
   width: 100%;
   max-width: 1440px;
   min-height: 600px;
+  margin: 0 auto;
   margin-top: 150px;
   position: relative;
   display: flex;
@@ -553,6 +549,7 @@
 .inicio-content {
   margin: 100px auto;
   width: 100%;
+  max-width: 1440px;
 }
 .content-header {
   margin: 0 auto;
@@ -560,6 +557,7 @@
   padding: 24px 50px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .content-header-title {
   font-size: 30px;
@@ -567,6 +565,8 @@
 }
 .content-cards {
   padding: 24px 50px;
+  margin: 0 auto;
+  width: 100%;
 }
 .content-cards-items {
   display: flex;

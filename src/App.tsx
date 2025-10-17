@@ -9,7 +9,7 @@ import BaixarApp from './pages/baixarApp/BaixarApp'
 import Contato from './pages/contato/Contato'
 import Conta from './pages/conta/Conta'
 import Navbar from './components/header/Header'
-
+import Cadastro from './pages/cadastro/Cadastro'
 export default function App() {
 
   return (
@@ -17,13 +17,14 @@ export default function App() {
       <Navbar/>
       <Routes>
         <Route path='/' element={< Inicio />}/>
-        <Route path='/quem-somos' element={< QuemSomos />}/>
         <Route path='/blog' element={< Blog />}/>
-        <Route path='/seja-parceiro' element={< SejaParceiro />}/>
-        <Route path='/plataforma' element={< Plataforma />}/>
-        <Route path='/baixar-app' element={< BaixarApp />}/>
-        <Route path='/contato' element={< Contato />}/>
         <Route path='/conta' element={< Conta />}/>
+        <Route path='/contato' element={< Contato />}/>
+        <Route path='/cadastro' element={< Cadastro />}/>
+        <Route path='/quem-somos' element={< QuemSomos />}/>
+        <Route path='/baixar-app' element={< BaixarApp />}/>
+        <Route path='/plataforma' element={< Plataforma />}/>
+        <Route path='/seja-parceiro' element={< SejaParceiro />}/>
       </Routes>
     </div>
   )

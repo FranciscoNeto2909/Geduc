@@ -18,6 +18,7 @@ import {
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import "./inicio.css";
 import { Link } from "react-router-dom";
+import Footer from "../../components/footer/Footer";
 
 export default function Inicio() {
   return (
@@ -173,7 +174,7 @@ export default function Inicio() {
               <div className="news-form-name">
                 <label htmlFor="name"></label>
                 <input
-                  className="news-form-input"
+                  className="form-input"
                   type="text"
                   id="name"
                   placeholder="Nome Completo*"
@@ -182,7 +183,7 @@ export default function Inicio() {
               <div className="news-form-email">
                 <label htmlFor="email"></label>
                 <input
-                  className="news-form-input"
+                  className="form-input"
                   id="email"
                   type="text"
                   placeholder="E-mail*"
@@ -321,6 +322,7 @@ export default function Inicio() {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }

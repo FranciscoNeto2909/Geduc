@@ -24,8 +24,8 @@
 }
 
 .header-logo-img {
-  height: 100px;
-  width: 55px;
+  height: 55px;
+  width: auto;
   overflow: hidden;
 }
 

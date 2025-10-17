@@ -4,6 +4,9 @@ import {
   AiOutlineLineChart,
   AiOutlineTeam,
   AiOutlineEnvironment,
+  AiOutlineWhatsApp,
+  AiOutlineInstagram,
+  AiOutlineLinkedin,
 } from "react-icons/ai";
 import { PiBookBookmarkFill, PiClipboardTextBold } from "react-icons/pi";
 import { MdManageAccounts, MdOutlineHomeWork } from "react-icons/md";
@@ -130,5 +133,11 @@ export const content = [
   {
     title: "O Impacto dos Dados na Retenção Escolar",
     desc: "A gestão eficaz de dados tem se tornado um alicerce cada vez mais essencial para a retenção de alunos na educação pública brasileira. No contexto...",
-  }
+  },
+];
+
+export const social = [
+  {icon:AiOutlineInstagram},
+  {icon:AiOutlineWhatsApp},
+  {icon:AiOutlineLinkedin}
 ];
