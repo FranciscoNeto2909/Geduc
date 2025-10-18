@@ -408,17 +408,6 @@
   gap: 4px;
 }
 
-.pagination-item {
-  height: 7px;
-  width: 7px;
-  background-color: var(--not-selected);
-  border-radius: 50%;
-}
-
-.pagination-item--selected {
-  background-color: var(--primary-blue);
-}
-
 .features-more-button {
   font-weight: 900;
   font-size: 14px;

@@ -37,16 +37,6 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.pagination-button {
-  border: none;
-  background-color: transparent;
-  color: var(--not-selected);
-}
-
-.pagination-button--available {
-  color: var(--desc-color);
-}
-
 .text--dark {
   font-weight: 600;
 }
