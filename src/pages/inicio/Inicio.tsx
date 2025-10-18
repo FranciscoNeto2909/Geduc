@@ -9,6 +9,8 @@ import acompanhamento from "../../assets/acompanhamento.png";
 import conectividade2 from "../../assets/conectividade2.png";
 import mainFeatures from "../../assets/mainFeatures.png";
 import clientsOpinionImg from "../../assets/clientsOpinion.png";
+import books from "../../assets/livros.png";
+import student from "../../assets/aluno.png";
 import {
   solutions,
   mainSolutionsBanner,
@@ -19,38 +21,93 @@ import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import "./inicio.css";
 import { Link } from "react-router-dom";
 import Footer from "../../components/footer/Footer";
+import Carroussel from "../../components/carroussel/Carroussel";
 
 export default function Inicio() {
   return (
     <div className="inicio">
-      <div className="inicio-banner">
+      <div className="inicio-banners">
         <div
-          className="banner-img"
+          className="banners-img"
           style={{ backgroundImage: `url(${quad})` }}
         ></div>
-        <div className="banner-texts">
-          <h2 className="banner-texts-title">
-            Transformando a <br /> Educação com Inovação e Conexão
-          </h2>
-          <p className="banner-texts-desc">
-            O Geduc conecta mais de 350 mil alunos, 30 mil professores e 2 mil
-            instituições, oferecendo uma gestão eficiente e uma educação mais
-            acessível e transformadora.
-          </p>
-          <div className="banner-buttons">
-            <button type="button" className="button">
-              Conheça a Plataforma
-            </button>
-            <button type="button" className="button button--inverted">
-              Seja Parceiro
-            </button>
+        <Carroussel auto>
+          <div className="carroussel-item inicio-banner">
+            <div className="banner-texts">
+              <h2 className="banner-texts-title">
+                A Educação é a Base que Transforma o Mundo
+              </h2>
+              <p className="banner-texts-desc">
+                Com o Geduc, sua instituição ganha eficiência, transparência e
+                inovação em cada processo de gestão.
+              </p>
+              <div className="banner-buttons">
+                <button type="button" className="button banner-button">
+                  Conheça a Plataforma
+                </button>
+                <button type="button" className="button banner-button banner-button--inverted">
+                  Seja Parceiro
+                </button>
+              </div>
+            </div>
+            <div className="banners-phone">
+              <div className="phone-circle1"></div>
+              <img src={phone} alt="celular" className="banner-img-phone" />
+              <div className="phone-circle2"></div>
+            </div>
           </div>
-        </div>
-        <div className="banners-phone">
-          <div className="phone-circle1"></div>
-          <img src={phone} alt="celular" className="phone-img" />
-          <div className="phone-circle2"></div>
-        </div>
+          <div className="carroussel-item inicio-banner">
+            <div className="banner-texts">
+              <h2 className="banner-texts-title">
+                Mais de 350 Mil Alunos Conectados ao Futuro
+              </h2>
+              <p className="banner-texts-desc">
+                O Geduc conecta mais de 350 mil alunos, 30 mil professores e 2
+                mil instituições, oferecendo uma gestão eficiente e uma educação
+                mais acessível e transformadora.
+              </p>
+              <div className="banner-buttons">
+                <button type="button" className="button banner-button">
+                  Conheça a Plataforma
+                </button>
+                <button type="button" className="button banner-button banner-button--inverted">
+                  Seja Parceiro
+                </button>
+              </div>
+            </div>
+            <div className="banners-phone">
+              <div className="student-circle1"></div>
+              <img src={student} alt="celular" className="banner-img-student" />
+              <div className="student-circle2"></div>
+              <div className="student-circle3"></div>
+              <div className="student-rectangle"></div>
+            </div>
+          </div>
+          <div className="carroussel-item inicio-banner">
+            <div className="banner-texts">
+              <h2 className="banner-texts-title">
+                Gestão Simplificada, Educação Potencializada
+              </h2>
+              <p className="banner-texts-desc">
+                Centralize matrículas, finanças, comunicação e relatórios em um
+                só lugar.
+              </p>
+              <div className="banner-buttons">
+                <button type="button" className="button banner-button">
+                  Conheça a Plataforma
+                </button>
+                <button type="button" className="button banner-button banner-button--invertedd">
+                  Seja Parceiro
+                </button>
+              </div>
+            </div>
+            <div className="banner-books">
+              <div className="books-circle1"></div>
+              <img src={books} alt="celular" className="banner-img-books" />
+              <div className="books-circle2"></div>
+            </div>
+          </div>
+        </Carroussel>
       </div>
       <div className="inicio-descriptions">
         <div className="inicio-description">
@@ -299,30 +356,33 @@ export default function Inicio() {
         <div className="content-header">
           <h2 className="content-header-title">Veja Nossos Conteúdos</h2>
           <div className="content-header-button">
-            <button type="button" className="button button--inverted button--small">
+            <button
+              type="button"
+              className="button button--inverted button--small"
+            >
               Saiba mais
             </button>
           </div>
         </div>
         <div className="content-cards">
           <div className="content-cards-items">
-            {
-              content.map((item, i) => (
-                <div className="content-cards-item" key={i}>
-                  <div className="content-cards-item-texts">
-                    <h3 className="content-cards-item-title">{item.title}</h3>
-                    <p className="content-cards-item-desc">{item.desc}</p>
-                  </div>
-                  <div className="content-cards-item-button">
-                    <Link to="/" className="button button--underline">LER MAIS</Link>
-                  </div>
+            {content.map((item, i) => (
+              <div className="content-cards-item" key={i}>
+                <div className="content-cards-item-texts">
+                  <h3 className="content-cards-item-title">{item.title}</h3>
+                  <p className="content-cards-item-desc">{item.desc}</p>
                 </div>
-              ))
-            }
+                <div className="content-cards-item-button">
+                  <Link to="/" className="button button--underline">
+                    LER MAIS
+                  </Link>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

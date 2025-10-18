@@ -18,6 +18,8 @@
 .carroussel-item{
     height: 100%;
     min-width: 100%;
+    transition: 1.3s all ease-in-out;
+    margin-left: 1px;
 }
 
 .carroussel-pagination{
@@ -29,6 +31,7 @@
     gap: 4px;
     bottom: 20px;
     left: 50%;
+    transform: translateX(-50%);
 }
 
 .pagination-item {
@@ -46,6 +49,7 @@
     position: absolute;
     z-index: 2;
     top: 50%;
+    transform: translateY(-50%);
     left: 24px;
 }
 

@@ -29,12 +29,26 @@
   font-size: 13px;
 }
 
-.button--underline{
+.button--underline {
   background-color: transparent;
   color: var(--primary-blue);
   text-decoration: underline;
   font-weight: 700;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.banner-button {
+  background-color: var(--banner-blue);
+  font-family: Arial;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 13px;
+}
+
+.banner-button--inverted{
+  background-color: #fff;
+  color: var(--banner-blue);
+  border: 1px solid var(--banner-blue);
 }
 
 .text--dark {
@@ -49,6 +63,6 @@
   background-color: #fff;
 }
 
-.form-input-small{
+.form-input-small {
   height: 32px;
 }

@@ -16,6 +16,7 @@ export default function Carroussel({ auto, children }: ComponentsProps) {
   function handleNextPage() {
     if (pagesCount < pages?.length - 1) {
       setPagesCount(pagesCount + 1);
+      pages[0].style.transition = "1.3s ease-in-out;";
       pages[0].style.marginLeft = `-${100 * (pagesCount + 1)}%`;
     }
   }
@@ -38,9 +39,8 @@ export default function Carroussel({ auto, children }: ComponentsProps) {
   useEffect(() => {
     if (auto) {
       if (!pages || pages.length === 0) return;
-
       let subindo = true;
-      let interval = window.setInterval(() => {
+      let interval = setInterval(() => {
         setPagesCount(prev => {
           if (subindo) {
             if (prev >= pages.length - 1) {
@@ -58,7 +58,7 @@ export default function Carroussel({ auto, children }: ComponentsProps) {
             return prev - 1;
           }
         });
-      }, 15000 / (pages.length + 4));
+      }, 4000);
 
       return () => clearInterval(interval);
     }

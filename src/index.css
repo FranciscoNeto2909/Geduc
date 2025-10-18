@@ -3,7 +3,7 @@
   --dark-blue: #001a47;
   --medium-blue: #014478;
   --blue: #018abe;
-  --soft-blue: #93cbd8;
+  --soft-blue: #66D1EA;
   --light-blue: #d6e7ee;
   --title-blue: #102f7d;
   --card-blue: #e5f7ff;
@@ -12,6 +12,7 @@
   --form-blue: #42688b;
   --news-blue:#82ECEF;
   --local-blue:#E3F0FF45;
+  --banner-blue:#0976b1;
 
   --dark-green: #021a1a;
   --medium-green: #042222;
@@ -34,7 +35,6 @@
   --desc-color:#4E4E4E;
   --not-selected:#ABABAB80;
   --opinion-color: #717171;
-
 }
 
 * {

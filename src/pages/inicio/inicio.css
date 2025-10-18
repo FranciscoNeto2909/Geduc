@@ -2,17 +2,20 @@
   width: 100vw;
 }
 
+.inicio-banners {
+  margin-bottom: 70px;
+}
+
 .inicio-banner {
-  min-height: 700px;
+  min-height: 600px;
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  margin-bottom: 30px;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
 }
 
 .banner-texts {
@@ -25,22 +28,29 @@
 }
 
 .banner-texts-title {
-  font-size: 32px;
+  font-size: 42px;
+  width: 100%;
+  max-width: 480px;
   font-weight: 700;
-  color: var(--primary-blue);
+  color: var(--banner-blue);
 }
 
 .banner-texts-desc {
   max-width: 550px;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 1.1px;
   font-weight: 400;
   font-size: 16px;
+  font-family: Arial;
+  line-height: 122%;
 }
 
-.banner-img {
+.banners-img {
   position: absolute;
   height: 100%;
+  max-height: 700px;
   width: 100%;
-  min-width: 100vw;
+  max-width: 100vw;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -52,10 +62,15 @@
   position: relative;
 }
 
-.phone-img {
+.banner-img-phone {
+  display: flex;
+  justify-content: center;
   position: relative;
-  height: 448px;
+  max-height: 448px;
+  width: 100%;
+  max-width: 448px;
   z-index: 2;
+  flex-shrink: 2;
 }
 
 .phone-circle1,
@@ -66,7 +81,12 @@
   width: 100%;
   max-width: 203px;
   border-radius: 50%;
-  background-color: var(--primary-blue);
+  background: linear-gradient(
+    135.51deg,
+    var(--soft-blue) 11.09%,
+    var(--blue) 59.06%,
+    var(--icon-blue) 107.03%
+  );
   z-index: 1;
 }
 
@@ -76,6 +96,97 @@
 }
 
 .phone-circle2 {
+  bottom: -15px;
+  right: 0;
+}
+
+.banner-img-student {
+  position: relative;
+  max-height: 380px;
+  width: 100%;
+  max-width: 497px;
+  z-index: 2;
+}
+
+.student-circle1,
+.student-circle2,
+.student-circle3,
+.student-rectangle {
+  position: absolute;
+  height: 100%;
+  max-height: 59px;
+  width: 100%;
+  max-width: 59px;
+  border-radius: 50%;
+  background: linear-gradient(
+    135.51deg,
+    var(--soft-blue) 11.09%,
+    var(--blue) 59.06%,
+    var(--icon-blue) 107.03%
+  );
+  z-index: 3;
+}
+
+.student-circle1 {
+  bottom: 170px;
+  left: -25px;
+}
+
+.student-circle2 {
+  bottom: -25px;
+  right: -35px;
+}
+
+.student-circle3 {
+  top: 0;
+  right: 5px;
+}
+
+.student-rectangle {
+  bottom: 4px;
+  max-height: 130px;
+  max-width: 385px;
+  left: 28px;
+  border-radius: 16px;
+  z-index: inherit;
+}
+
+.banner-books {
+  position: relative;
+}
+
+.banner-img-books {
+  position: relative;
+  max-height: 293px;
+  width: 100%;
+  max-width: 440px;
+  z-index: 2;
+  flex-shrink: 2;
+}
+
+.books-circle1,
+.books-circle2 {
+  position: absolute;
+  height: 100%;
+  max-height: 190px;
+  width: 100%;
+  max-width: 233px;
+  border-radius: 32px;
+  background: linear-gradient(
+    135.51deg,
+    var(--soft-blue) 11.09%,
+    var(--blue) 59.06%,
+    var(--icon-blue) 107.03%
+  );
+  z-index: 1;
+}
+
+.books-circle1 {
+  top: -50px;
+  left: -5px;
+}
+
+.books-circle2 {
   bottom: -15px;
   right: 0;
 }
