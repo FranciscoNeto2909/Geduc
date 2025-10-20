@@ -22,8 +22,18 @@ import "./inicio.css";
 import { Link } from "react-router-dom";
 import Footer from "../../components/footer/Footer";
 import Carroussel from "../../components/carroussel/Carroussel";
+import { useState } from "react";
 
 export default function Inicio() {
+const [solutioinId, setsolutionId] = useState<number | null>()
+
+  function handleSelectItem(id:number) {
+    setsolutionId(id)
+    setTimeout(() => {
+      setsolutionId(null)
+    }, 5000);
+  }
+
   return (
     <div className="inicio">
       <div className="inicio-banners">
@@ -43,7 +53,7 @@ export default function Inicio() {
               </p>
               <div className="banner-buttons">
                 <button type="button" className="button banner-button">
-                  Conheça a Plataforma
+              Quero uma demonstração
                 </button>
                 <button type="button" className="button banner-button banner-button--inverted">
                   Seja Parceiro
@@ -68,7 +78,7 @@ export default function Inicio() {
               </p>
               <div className="banner-buttons">
                 <button type="button" className="button banner-button">
-                  Conheça a Plataforma
+              Quero uma demonstração
                 </button>
                 <button type="button" className="button banner-button banner-button--inverted">
                   Seja Parceiro
@@ -94,7 +104,7 @@ export default function Inicio() {
               </p>
               <div className="banner-buttons">
                 <button type="button" className="button banner-button">
-                  Conheça a Plataforma
+              Quero uma demonstração
                 </button>
                 <button type="button" className="button banner-button banner-button--invertedd">
                   Seja Parceiro
@@ -209,9 +219,12 @@ export default function Inicio() {
         </div>
         <div className="solutions-items">
           {solutions.map((solution, i) => (
-            <div className="solutions-item" key={i}>
-              <solution.icon size={32} className="solutions-item-icon" />
-              <h4 className="solutions-item-title">{solution.title}</h4>
+            <div className={`${solutioinId == i && "solutions-item--selected"} solutions-item`} key={i} onClick={() => handleSelectItem(i)}>
+              <div className="solution-item-top">
+                <solution.icon size={32} className="solutions-item-icon" />
+                <h4 className="solutions-item-title">{solution.title}</h4>
+              </div>
+             <div className="solution-item-desc">{solution.desc}</div>
             </div>
           ))}
         </div>

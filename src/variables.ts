@@ -27,51 +27,63 @@ export const solutions = [
   {
     icon: PiClipboardTextBold,
     title: "Gestão de Matricula e Rematrícula",
+    desc: "Otimização dos processos de pré-matrícula, matrícula e rematrícula, facilitando a formação de turmas por série/ano, turno e modalidade.",
   },
   {
     icon: PiBookBookmarkFill,
     title: "Secretaria e Diário Eletrônico",
+    desc: "Armazenamento de registros acadêmicos gerados pela interação entre professor e aluno são automaticamente armazenados, e emissão de documentos de secretaria via plataforma.",
   },
   {
     icon: MdManageAccounts,
     title: "Gestão do Censo Escolar",
+    desc: "Monitoramento da infrequência escolar, evitando a evasão e abandono, com a possibilidade de integração com Conselhos Tutelares e Ministério Público.",
   },
   {
     icon: AiOutlineEnvironment,
     title: "Geolocalização",
+    desc: "Sistema integrado de rastreamento do transporte escolar, com cobertura 4G e GPRS, permitindo o acompanhamento em tempo real para pais e alunos.",
   },
   {
     icon: FaUsers,
     title: "Gestão de Aulas Não-Presenciais",
+    desc: "Adaptação de aulas para o formato remoto ou híbrido, seguindo as normas dos Conselhos de Educação.",
   },
   {
     icon: BiCategoryAlt,
     title: "Processos Seletivos",
+    desc: "Digitalização de processos seletivos, com portal de editais on-line, gestão de inscrições e recebimento de documentos garantindo eficiência e agilidade.",
   },
   {
     icon: AiOutlineTeam,
     title: "Ambiente do Professor e do Aluno",
+    desc: "Facilita a interação digital e o acompanhamento das atividades escolares.",
   },
   {
     icon: MdOutlineHomeWork,
     title: "Ambiente Administrativo",
+    desc: "Integração de ferramentas de gestão administrativa e pedagógica, acessíveis a gestores, coordenadores, professores e alunos.",
   },
   {
     icon: FaSchoolCircleCheck,
     title:
       "Gestão de Patrimônio, Alimentação Escolar, Transporte e Almoxarifado",
+    desc: "Uma ferramenta para otimizar recursos financeiros e auxiliar na gestão eficiente de patrimônio, almoxarifado e alimentação escolar.",
   },
   {
     icon: AiOutlineBarChart,
     title: "Avaliação Institucional",
+    desc: "Permite a avaliação interativa e personalizada, com suporte para o acompanhamento de indicadores educacionais e o desenvolvimento do planejamento estratégico.",
   },
   {
     icon: AiOutlineLineChart,
     title: "Gestão de Busca Ativa",
+    desc: "Monitoramento da infrequência escolar, evitando a evasão e abandono, com a possibilidade de integração com Conselhos Tutelares e Ministério Público.",
   },
   {
     icon: AiOutlineIdcard,
     title: "AVA Docentes",
+    desc:"Sistema para a capacitação contínua dos docentes, com formação digital, presencial ou online, incluindo acompanhamento do progresso e emissão de certificados."
   },
 ];
 
@@ -137,7 +149,7 @@ export const content = [
 ];
 
 export const social = [
-  {icon:AiOutlineInstagram},
-  {icon:AiOutlineWhatsApp},
-  {icon:AiOutlineLinkedin}
+  { icon: AiOutlineInstagram },
+  { icon: AiOutlineWhatsApp },
+  { icon: AiOutlineLinkedin },
 ];

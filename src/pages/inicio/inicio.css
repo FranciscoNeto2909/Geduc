@@ -342,12 +342,23 @@
 
 .solutions-item {
   display: flex;
+  flex-direction: column;
   height: 54px;
-  gap: 8px;
-  align-items: center;
+  gap: 12px;
+  justify-content: flex-start;
   color: var(--dark-blue);
-  padding-left: 38px;
+  padding-left: 12px;
   border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.solution-item-top {
+  padding-top: 14px;
+  gap: 8px;
+  display: flex;
+  align-items: center;
+  height: 54px;
 }
 
 .solutions-item:hover {
@@ -360,6 +371,23 @@
   );
 }
 
+.solutions-item--selected {
+  width: 100%;
+  max-width: 331px;
+  z-index: 2;
+  height: 180px;
+  color: #fff;
+  background: linear-gradient(
+    90deg,
+    var(--icon-blue) 0%,
+    var(--dark-blue) 50%,
+    var(--moredark-blue) 100%
+  );
+  /* animation 
+  transition: all 500ms ease-in-out;
+  transform-origin: top; */
+}
+
 .solutions-item:hover * {
   color: #fff;
 }
@@ -369,7 +397,7 @@
 }
 
 .solutions-item-icon {
-  color: var(--icon-blue);
+  color: inherit;
 }
 
 .inicio-pillars-news {
