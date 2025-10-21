@@ -373,7 +373,7 @@
 
 .solutions-item--selected {
   width: 100%;
-  max-width: 331px;
+  max-width: auto;
   z-index: 2;
   height: 180px;
   color: #fff;
@@ -398,6 +398,10 @@
 
 .solutions-item-icon {
   color: inherit;
+}
+
+.solution-item-desc{
+  padding-right: 8px;
 }
 
 .inicio-pillars-news {
