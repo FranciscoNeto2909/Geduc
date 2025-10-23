@@ -66,3 +66,7 @@
 .form-input-small {
   height: 32px;
 }
+
+.desc-bold{
+  font-weight: bold;
+}
