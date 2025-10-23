@@ -353,3 +353,155 @@
   max-width: 319px;
   border-radius: 8px;
 }
+
+.quemsomos-values {
+  width: 100vw;
+  height: 100%;
+  position: relative;
+  padding: 50px 24px 160px 24px;
+  background: linear-gradient(
+    90deg,
+    var(--primary-blue) 0%,
+    var(--gradient-blue) 100%
+  );
+  margin: 180px 0;
+}
+
+.values-circle1,
+.values-circle2 {
+  position: absolute;
+  height: 360px;
+  width: 360px;
+  background-color: #d6e7ee40;
+  backdrop-filter: blur(25px);
+  border-radius: 50%;
+  overflow: hidden;
+  bottom: calc(-360px / 2);
+  left: -242px;
+}
+
+.values-circle2 {
+  height: 252px;
+  width: 242px;
+  left: unset;
+  bottom: unset;
+  top: calc(-252px / 2);
+  right: calc(-242px / 2);
+}
+
+.values {
+  margin: 0 auto;
+  max-width: 1202px;
+}
+
+.values-texts {
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+  line-height: 100%;
+  font-weight: 700;
+}
+
+.values-texts-top {
+  font-family: Arial;
+  font-size: 10px;
+}
+
+.values-texts-title {
+  font-size: 40px;
+  line-height: 100%;
+  margin: 24px 0;
+}
+
+.values-texts-title span {
+  color: var(--medium-green);
+}
+
+.values-texts-desc {
+  font-family: Arial;
+  font-size: 15px;
+}
+
+.values-cards {
+  margin-top: 72px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.values-card-container {
+  width: 262.5px;
+  height: 200px;
+  position: relative;
+}
+
+.values-card {
+  width: 262.5px;
+  height: 200px;
+  background-color: #fff;
+  clip-path: path(
+    "M10.6159 13.0487C6.36321 7.82145 10.0829 0 16.8216 0H254.5C258.918 0 262.5 3.58172 262.5 8V101.5V192C262.5 196.418 258.918 200 254.5 200H32C27.5817 200 24 196.418 24 192V97.5V32.3432C24 30.5041 23.3663 28.7211 22.2057 27.2945L10.6159 13.0487Z"
+  );
+  overflow: visible;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 24px;
+}
+.values-card-texts {
+  height: 94px;
+  max-width: 198px;
+  margin-left: 18px;
+}
+
+.values-card-emphasis {
+  width: 167px;
+  height: 31px;
+  position: absolute;
+  left: 0;
+  padding: 8px 24px;
+  border-radius: 8px;
+  left: 10px;
+  top: 30px;
+  z-index: 2;
+  font-family: Arial;
+  font-size: 12px;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+
+.emphasis-orange {
+  background-color: var(--medium-orange);
+}
+
+.emphasis-blue {
+  background-color: var(--primary-blue);
+}
+
+.emphasis-green {
+  background-color: var(--soft-green);
+}
+
+.emphasis-dark-blue {
+  background-color: var(--icon-blue);
+}
+
+.values-card-title {
+  font-family: Arial;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--desc-gray);
+  margin-bottom: 12px;
+}
+
+.values-card-desc {
+  font-family: Arial;
+  font-weight: 700;
+  font-size: 10px;
+  color: var(--desc-color);
+}
+
+

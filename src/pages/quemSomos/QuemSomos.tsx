@@ -10,6 +10,7 @@ import quad from "../../assets/quadriculado.png";
 import Footer from "../../components/footer/Footer";
 import "./quemSomos.css";
 import { FaChartLine } from "react-icons/fa";
+import { ourValues } from "../../variables";
 
 export default function QuemSomos() {
   return (
@@ -138,8 +139,8 @@ export default function QuemSomos() {
               </p>
               <p className="proporsal-item-desc">
                 Além disso, a plataforma otimiza recursos <br /> logísticos e
-                simplifica processos seletivos, <br /> garantindo agilidade, segurança
-                e padronização.
+                simplifica processos seletivos, <br /> garantindo agilidade,
+                segurança e padronização.
               </p>
               <p className="proporsal-item-desc">
                 Ao unir tecnologia de ponta com a compreensão dos desafios
@@ -162,6 +163,36 @@ export default function QuemSomos() {
             <div className="proporsal-item-green"></div>
           </div>
         </div>
+      </div>
+      <div className="quemsomos-values">
+        <div className="values-circle1"></div>
+        <div className="values">
+          <div className="values-texts">
+            <span className="values-texts-top">Os Nossos Valores</span>
+            <h2 className="values-texts-title">
+              Os <span>Pilares</span> que Guiam Cada Decisão
+            </h2>
+            <p className="values-texts-desc">
+              São os princípios que guiam todas as nossas ações e decisões.
+            </p>
+          </div>
+          <div className="values-cards">
+            {ourValues.map((value, i) => (
+              <div className="values-card-container">
+                  <div className={`values-card-emphasis ${value.color}`}>
+                    <h4 className="values-card-emphasis-title">{value.emphasis}</h4>
+                  </div>
+                <div className="values-card" key={i}>
+                  <div className="values-card-texts">
+                    <h3 className="values-card-title">{value.title}</h3>
+                    <p className="values-card-desc">{value.desc}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="values-circle2"></div>
       </div>
       <Footer />
     </div>

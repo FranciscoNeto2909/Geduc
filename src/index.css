@@ -1,27 +1,28 @@
 :root {
   --primary-blue: #09acb1;
+  --moredark-blue: #000a1b;
   --dark-blue: #001a47;
   --medium-blue: #014478;
   --blue: #018abe;
-  --soft-blue: #66D1EA;
+  --soft-blue: #66d1ea;
   --light-blue: #d6e7ee;
   --title-blue: #102f7d;
   --card-blue: #e5f7ff;
   --icon-blue: #013181;
-  --moredark-blue: #000a1b;
   --form-blue: #42688b;
-  --news-blue:#82ECEF;
-  --local-blue:#E3F0FF45;
-  --banner-blue:#0976b1;
+  --news-blue: #82ecef;
+  --local-blue: #e3f0ff45;
+  --banner-blue: #0976b1;
+  --gradient-blue: #93cbd8;
 
   --dark-green: #021a1a;
-  --medium-green: #042222;
-  --green:#93C02C;
-  --soft-green: #00df82;
+  --medium-green:#195849;
+  --green: #93c02c;
+  --soft-green: #2EA98C;
   --light-green: #2cc295;
 
   --dark-orange: #fd7b03;
-  --medium-orange: #fe8e22;
+  --medium-orange: #ED8C36;
   --orange: #ffa451;
   --soft-orange: #ffb76b;
   --light-orange: #ffcf91;
@@ -32,10 +33,10 @@
   --soft-yellow: #fef7af;
   --light-yellow: #fef7cd;
 
-  --desc-color:#4E4E4E;
-  --not-selected:#ABABAB80;
+  --desc-color: #4e4e4e;
+  --not-selected: #ababab80;
   --opinion-color: #717171;
-  --desc-gray: #2A2A2A;
+  --desc-gray: #2a2a2a;
 }
 
 * {
@@ -48,6 +49,7 @@
   font-style: normal;
   font-optical-sizing: auto;
   box-sizing: border-box;
+  cursor: default;
 }
 
 input {
@@ -56,10 +58,11 @@ input {
   outline: none;
 }
 
-button{
+button {
   cursor: pointer;
 }
 
-a{
+a {
   color: #fff;
+  cursor: pointer;
 }

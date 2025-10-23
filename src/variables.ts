@@ -83,7 +83,7 @@ export const solutions = [
   {
     icon: AiOutlineIdcard,
     title: "AVA Docentes",
-    desc:"Sistema para a capacitação contínua dos docentes, com formação digital, presencial ou online, incluindo acompanhamento do progresso e emissão de certificados."
+    desc: "Sistema para a capacitação contínua dos docentes, com formação digital, presencial ou online, incluindo acompanhamento do progresso e emissão de certificados.",
   },
 ];
 
@@ -152,4 +152,31 @@ export const social = [
   { icon: AiOutlineInstagram },
   { icon: AiOutlineWhatsApp },
   { icon: AiOutlineLinkedin },
+];
+
+export const ourValues = [
+  {
+    emphasis: "Inovar",
+    title: "Inovação com Propósito",
+    desc: "Não buscamos a tecnologia mais complexa, mas a mais inteligente e útil. Cada funcionalidade que desenvolvemos é pensada para resolver um problema real, simplificar e eliminar a dor dos gestores, professores e famílias.",
+    color: "emphasis-orange",
+  },
+  {
+    emphasis:"Cumprir",
+    title:"Parceria e Confiança",
+    desc:"Nossa relação com as escolas vai além do fornecedor-cliente. Nosso sucesso é medido pelo sucesso dos nossos parceiros.",
+    color:"emphasis-blue"
+  },
+   {
+    emphasis:"Educar",
+    title:"Paixão por Educação",
+    desc:"Acreditamos, genuinamente, no poder transformador da educação. Nosso combustível é ver as instituições de ensino prosperando e os alunos alcançando seu potencial máximo.",
+    color:"emphasis-green"
+  },
+   {
+    emphasis:"Transmitir",
+    title:"Simplicidade e Eficiência",
+    desc:"A complexidade é inimiga da produtividade. Lutamos contra ela todos os dias. Buscamos transformar processos complexos e burocráticos em fluxos simples, intuitivos e eficientes.",
+    color:"emphasis-dark-blue"
+  },
 ];
