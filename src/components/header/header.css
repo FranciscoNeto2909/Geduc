@@ -1,18 +1,16 @@
-.header{
-    width: 100vw;
-    box-shadow: 0px 4px 4px 0px #0000000A;
+.header {
+  width: 100vw;
+  box-shadow: 0px 4px 4px 0px #0000000A;
 }
 
-.header-container{
-    margin: 0 auto;
-    padding: 12px 0;
-    width: 100vw;
-    max-width: 1440px;
-    display: grid;
-    grid-template-columns: 167px 1fr 158px;
-    gap: 12px;
-    align-items: center;
-    justify-content: space-between;
+.header-container {
+  margin: 0 auto;
+  padding: 12px 24px 12px 24px;
+  width: 100vw;
+  max-width: 1180px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .header-logo {
@@ -39,36 +37,44 @@
   font-size: 32px;
 }
 
-.header-nav-routes{
-    display: flex;
-    justify-content: space-between;
-    justify-self: center;
-    width: 100%;
-    max-width: 702px;
+.header-nav {
+  width: 100%;
+  max-width: 671px;
 }
 
-.route-item{
-    font-size: 15px;
-    font-weight: 700;
-    border-bottom: 2px solid transparent;
+.header-nav-routes {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
-.route-item--selected{
-    border-bottom: 2px solid#000;
+.route-item {
+  font-size: 15px;
+  font-weight: 700;
+  border-bottom: 2px solid transparent;
+  color: var(--blue);
+}
+
+.route-item--selected {
+  color: var(--dark-blue);
+  border-bottom: 2px solid var(--dark-blue);
+}
+
+.route-item:hover {
+  color: var(--blue);
+  border-bottom: 2px solid var(--blue);
 }
 
 .route-item a {
-    color: #000;
+  font-family: Arial;
+  font-size: 14px;
+  color: inherit;
 }
 
-.header-contact-button{
-    width: 134px;
-    height: 31px;
-    background-color: var(--blue);
-    border: none;
-    border-radius: 8px;
-}
-
-.header-contact-button a{
-    color: #fff;
+.header-contact-button {
+  width: 134px;
+  height: 31px;
+  background-color: var(--blue);
+  border: none;
+  border-radius: 8px;
 }

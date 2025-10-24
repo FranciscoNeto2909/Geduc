@@ -31,7 +31,7 @@ export default function Header() {
             {routes.map((route, i) => (
               <div
                 className={`route-item ${
-                 route.to === currRoute && "route-item--selected"
+                  route.to === currRoute && "route-item--selected"
                 }`}
                 key={i}
               >
@@ -39,11 +39,6 @@ export default function Header() {
               </div>
             ))}
           </nav>
-        </div>
-        <div className="header-contact">
-          <button className="header-contact-button">
-            <Link to="/contato">Entre em contato</Link>
-          </button>
         </div>
       </div>
     </div>
