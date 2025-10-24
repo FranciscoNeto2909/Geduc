@@ -4,6 +4,50 @@
 
 .inicio-banners {
   margin-bottom: 70px;
+  position: relative;
+}
+
+.inicio-banners-carroussel {
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.inicio-banners-circle {
+  position: absolute;
+  height: 525px;
+  width: 525px;
+  border-radius: 50%;
+  top: -50%;
+  opacity: 50%;
+  z-index: -1;
+}
+
+.circle-orange {
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(237, 140, 54, 0.45) 0%,
+    rgba(254, 208, 167, 0.2) 50%,
+    rgba(214, 231, 238, 0) 100%
+  );
+}
+.circle-blue {
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(9, 172, 177, 0.45) 0%,
+    rgba(112, 202, 208, 0.2) 50%,
+    rgba(214, 231, 238, 0) 100%
+  );
+  left: calc(100% / 3);
+}
+.circle-green {
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(147, 192, 44, 0.45) 0%,
+    rgba(177, 203, 116, 0.2) 50%,
+    rgba(214, 231, 238, 0) 100%
+  );
+  right: 0;
 }
 
 .inicio-banner {
@@ -238,7 +282,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 24px;
+  margin-bottom: 52px;
 }
 
 .pillars-header-line {
@@ -262,14 +306,15 @@
 }
 
 .pillars-header-desc {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial;
   font-weight: 700;
   color: var(--dark-blue);
 }
 
 .inicio-pillars-cards {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 56px;
   flex-wrap: wrap;
 }
 
@@ -285,16 +330,25 @@
   justify-content: space-between;
 }
 
+.pillars-card-texts{
+  width: 100%;
+  padding: 0 12px;
+}
+
 .pillars-card-title {
+  padding-top: 6px;
   font-weight: 700;
-  font-size: 18px;
-  text-align: center;
+  font-size: 16px;
+  color: var(--dark-blue);
 }
 
 .pillars-card-desc {
-  font-size: 14px;
-  width: 321px;
+  width: 260px;
   margin-top: 20px;
+  color: var(--dark-blue);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 121%;
 }
 
 .pillars-card-img {
@@ -400,7 +454,7 @@
   color: inherit;
 }
 
-.solution-item-desc{
+.solution-item-desc {
   padding-right: 8px;
 }
 

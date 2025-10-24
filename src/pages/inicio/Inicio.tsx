@@ -25,12 +25,12 @@ import Carroussel from "../../components/carroussel/Carroussel";
 import { useState } from "react";
 
 export default function Inicio() {
-const [solutioinId, setsolutionId] = useState<number | null>()
+  const [solutioinId, setsolutionId] = useState<number | null>();
 
-  function handleSelectItem(id:number) {
-    setsolutionId(id)
+  function handleSelectItem(id: number) {
+    setsolutionId(id);
     setTimeout(() => {
-      setsolutionId(null)
+      setsolutionId(null);
     }, 5000);
   }
 
@@ -41,83 +41,101 @@ const [solutioinId, setsolutionId] = useState<number | null>()
           className="banners-img"
           style={{ backgroundImage: `url(${quad})` }}
         ></div>
-        <Carroussel auto>
-          <div className="carroussel-item inicio-banner">
-            <div className="banner-texts">
-              <h2 className="banner-texts-title">
-                A Educação é a Base que Transforma o Mundo
-              </h2>
-              <p className="banner-texts-desc">
-                Com o Geduc, sua instituição ganha eficiência, transparência e
-                inovação em cada processo de gestão.
-              </p>
-              <div className="banner-buttons">
-                <button type="button" className="button banner-button">
-              Quero uma demonstração
-                </button>
-                <button type="button" className="button banner-button banner-button--inverted">
-                  Seja Parceiro
-                </button>
+        <div className="inicio-banners-carroussel">
+          <div className="inicio-banners-circle circle-orange"></div>
+          <div className="inicio-banners-circle circle-blue"></div>
+          <div className="inicio-banners-circle circle-green"></div>
+          <Carroussel auto>
+            <div className="carroussel-item inicio-banner">
+              <div className="banner-texts">
+                <h2 className="banner-texts-title">
+                  A Educação é a Base que Transforma o Mundo
+                </h2>
+                <p className="banner-texts-desc">
+                  Com o Geduc, sua instituição ganha eficiência, transparência e
+                  inovação em cada processo de gestão.
+                </p>
+                <div className="banner-buttons">
+                  <button type="button" className="button banner-button">
+                    Quero uma demonstração
+                  </button>
+                  <button
+                    type="button"
+                    className="button banner-button banner-button--inverted"
+                  >
+                    Seja Parceiro
+                  </button>
+                </div>
+              </div>
+              <div className="banners-phone">
+                <div className="phone-circle1"></div>
+                <img src={phone} alt="celular" className="banner-img-phone" />
+                <div className="phone-circle2"></div>
               </div>
             </div>
-            <div className="banners-phone">
-              <div className="phone-circle1"></div>
-              <img src={phone} alt="celular" className="banner-img-phone" />
-              <div className="phone-circle2"></div>
-            </div>
-          </div>
-          <div className="carroussel-item inicio-banner">
-            <div className="banner-texts">
-              <h2 className="banner-texts-title">
-                Mais de 350 Mil Alunos Conectados ao Futuro
-              </h2>
-              <p className="banner-texts-desc">
-                O Geduc conecta mais de 350 mil alunos, 30 mil professores e 2
-                mil instituições, oferecendo uma gestão eficiente e uma educação
-                mais acessível e transformadora.
-              </p>
-              <div className="banner-buttons">
-                <button type="button" className="button banner-button">
-              Quero uma demonstração
-                </button>
-                <button type="button" className="button banner-button banner-button--inverted">
-                  Seja Parceiro
-                </button>
+            <div className="carroussel-item inicio-banner">
+              <div className="banner-texts">
+                <h2 className="banner-texts-title">
+                  Mais de 350 Mil Alunos Conectados ao Futuro
+                </h2>
+                <p className="banner-texts-desc">
+                  O Geduc conecta mais de 350 mil alunos, 30 mil professores e 2
+                  mil instituições, oferecendo uma gestão eficiente e uma
+                  educação mais acessível e transformadora.
+                </p>
+                <div className="banner-buttons">
+                  <button type="button" className="button banner-button">
+                    Quero uma demonstração
+                  </button>
+                  <button
+                    type="button"
+                    className="button banner-button banner-button--inverted"
+                  >
+                    Seja Parceiro
+                  </button>
+                </div>
+              </div>
+              <div className="banners-phone">
+                <div className="student-circle1"></div>
+                <img
+                  src={student}
+                  alt="celular"
+                  className="banner-img-student"
+                />
+                <div className="student-circle2"></div>
+                <div className="student-circle3"></div>
+                <div className="student-rectangle"></div>
               </div>
             </div>
-            <div className="banners-phone">
-              <div className="student-circle1"></div>
-              <img src={student} alt="celular" className="banner-img-student" />
-              <div className="student-circle2"></div>
-              <div className="student-circle3"></div>
-              <div className="student-rectangle"></div>
-            </div>
-          </div>
-          <div className="carroussel-item inicio-banner">
-            <div className="banner-texts">
-              <h2 className="banner-texts-title">
-                Gestão Simplificada, Educação Potencializada
-              </h2>
-              <p className="banner-texts-desc">
-                Centralize matrículas, finanças, comunicação e relatórios em um
-                só lugar.
-              </p>
-              <div className="banner-buttons">
-                <button type="button" className="button banner-button">
-              Quero uma demonstração
-                </button>
-                <button type="button" className="button banner-button banner-button--invertedd">
-                  Seja Parceiro
-                </button>
+            <div className="carroussel-item inicio-banner">
+              <div className="banner-texts">
+                <h2 className="banner-texts-title">
+                  Gestão Simplificada, Educação Potencializada
+                </h2>
+                <p className="banner-texts-desc">
+                  Centralize matrículas, finanças, comunicação e relatórios em
+                  um só lugar.
+                </p>
+                <div className="banner-buttons">
+                  <button type="button" className="button banner-button">
+                    Quero uma demonstração
+                  </button>
+                  <button
+                    type="button"
+                    className="button banner-button banner-button--invertedd"
+                  >
+                    Seja Parceiro
+                  </button>
+                </div>
+              </div>
+              <div className="banner-books">
+                <div className="books-circle1"></div>
+                <img src={books} alt="celular" className="banner-img-books" />
+                <div className="books-circle2"></div>
               </div>
             </div>
-            <div className="banner-books">
-              <div className="books-circle1"></div>
-              <img src={books} alt="celular" className="banner-img-books" />
-              <div className="books-circle2"></div>
-            </div>
-          </div>
-        </Carroussel>
+          </Carroussel>
+        </div>
       </div>
       <div className="inicio-descriptions">
         <div className="inicio-description">
@@ -219,12 +237,18 @@ const [solutioinId, setsolutionId] = useState<number | null>()
         </div>
         <div className="solutions-items">
           {solutions.map((solution, i) => (
-            <div className={`${solutioinId == i && "solutions-item--selected"} solutions-item`} key={i} onClick={() => handleSelectItem(i)}>
+            <div
+              className={`${
+                solutioinId == i && "solutions-item--selected"
+              } solutions-item`}
+              key={i}
+              onClick={() => handleSelectItem(i)}
+            >
               <div className="solution-item-top">
                 <solution.icon size={32} className="solutions-item-icon" />
                 <h4 className="solutions-item-title">{solution.title}</h4>
               </div>
-             <div className="solution-item-desc">{solution.desc}</div>
+              <div className="solution-item-desc">{solution.desc}</div>
             </div>
           ))}
         </div>
