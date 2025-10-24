@@ -473,22 +473,6 @@
   letter-spacing: 0.5px;
 }
 
-.emphasis-orange {
-  background-color: var(--medium-orange);
-}
-
-.emphasis-blue {
-  background-color: var(--primary-blue);
-}
-
-.emphasis-green {
-  background-color: var(--soft-green);
-}
-
-.emphasis-dark-blue {
-  background-color: var(--icon-blue);
-}
-
 .values-card-title {
   font-family: Arial;
   font-weight: 700;
@@ -504,4 +488,136 @@
   color: var(--desc-color);
 }
 
+.quemsomos-firstStep {
+  width: 100vw;
+  padding: 0 24px 160px 24px;
+}
 
+.firststep {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1202px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 52px;
+}
+
+.firststep-item {
+  width: 100%;
+  max-width: 582px;
+}
+
+.firststep-item:first-child {
+  background-color: var(--light-blue);
+  padding: 36px 24px;
+  border-radius: 24px;
+}
+
+.firstStep-form-header {
+  margin-bottom: 32px;
+}
+
+.firstStep-form-header-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 100%;
+  text-align: center;
+  color: var(--medium-green);
+}
+
+.firstStep-form-body {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.firstStep-form-item-text {
+  height: 334px;
+  width: 100%;
+  border-radius: 32px;
+  padding: 24px;
+}
+
+.firstStep-form-button {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.firststep-item:last-child {
+  max-width: 551px;
+}
+
+.firstStep-item-header {
+  max-width: 462px;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+
+.firstStep-item-header-title {
+  font-weight: 700;
+  font-size: 32px;
+  text-align: right;
+  color: var(--dark-blue);
+}
+.firstStep-item-header-undertitle {
+  font-family: Arial;
+  font-weight: 700;
+  font-size: 10px;
+  text-align: right;
+  color: var(--opinion-color);
+  align-self: flex-end;
+}
+.firstStep-item-header-desc {
+  max-width: 446px;
+  font-family: Arial;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  color: var(--opinion-color);
+  margin: 42px 0;
+}
+
+.firstStep-item-steps {
+  max-width: 485px;
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+  padding-bottom: 72px;
+  margin-bottom: 32px;
+  border-bottom: 1px solid var(--not-selected);
+}
+
+.firstStep-item-step {
+  display: flex;
+  gap: 14px;
+}
+
+.step-number {
+  font-family: "Archivo Black", Impact, "Arial Black", Arial, sans-serif;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 38px;
+  line-height: 100%;
+  letter-spacing: 2px;
+}
+
+.step-text {
+  max-width: 400px;
+  font-family: Arial;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 100%;
+  color: var(--dark-blue);
+}
+
+.item-invite-text {
+  max-width: 482px;
+  font-family: Arial;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  color: var(--opinion-color);
+}

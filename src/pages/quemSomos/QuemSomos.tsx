@@ -10,7 +10,7 @@ import quad from "../../assets/quadriculado.png";
 import Footer from "../../components/footer/Footer";
 import "./quemSomos.css";
 import { FaChartLine } from "react-icons/fa";
-import { ourValues } from "../../variables";
+import { ourValues, steps } from "../../variables";
 
 export default function QuemSomos() {
   return (
@@ -179,9 +179,11 @@ export default function QuemSomos() {
           <div className="values-cards">
             {ourValues.map((value, i) => (
               <div className="values-card-container">
-                  <div className={`values-card-emphasis ${value.color}`}>
-                    <h4 className="values-card-emphasis-title">{value.emphasis}</h4>
-                  </div>
+                <div className={`values-card-emphasis ${value.color}`}>
+                  <h4 className="values-card-emphasis-title">
+                    {value.emphasis}
+                  </h4>
+                </div>
                 <div className="values-card" key={i}>
                   <div className="values-card-texts">
                     <h3 className="values-card-title">{value.title}</h3>
@@ -193,6 +195,102 @@ export default function QuemSomos() {
           </div>
         </div>
         <div className="values-circle2"></div>
+      </div>
+      <div className="quemsomos-firstStep">
+        <div className="firststep">
+          <div className="firststep-item">
+            <div className="firstStep-item-form">
+              <form action="">
+                <div className="firstStep-form-header">
+                  <h3 className="firstStep-form-header-title">
+                    Converse com um de nossos Especialistas!
+                  </h3>
+                </div>
+                <div className="firstStep-form-body">
+                  <div className="firststep-form-item">
+                    <label htmlFor="name"></label>
+                    <input
+                      id="name"
+                      placeholder="Nome*"
+                      type="text"
+                      className="form-input"
+                    />
+                  </div>
+                  <div className="firststep-form-item">
+                    <label htmlFor="surname"></label>
+                    <input
+                      id="surname"
+                      placeholder="Sobrenome*"
+                      type="text"
+                      className="form-input"
+                    />
+                  </div>
+                  <div className="firststep-form-item">
+                    <label htmlFor="email"></label>
+                    <input
+                      id="email"
+                      type="email"
+                      placeholder="E-mail*"
+                      className="form-input"
+                    />
+                  </div>
+                  <div className="firststep-form-item">
+                    <label htmlFor="phone"></label>
+                    <input
+                      id="phone"
+                      placeholder="Telefone*"
+                      type="text"
+                      className="form-input"
+                    />
+                  </div>
+                  <div className="">
+                    <textarea
+                      className="firstStep-form-item-text"
+                      id="text"
+                      placeholder="Escreva para Nós!"
+                    ></textarea>
+                  </div>
+                </div>
+                <div className="firstStep-form-button">
+                  <button className="button">Enviar</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div className="firststep-item">
+            <div className="firstStep-item-header">
+              <h2 className="firstStep-item-header-title">
+                O Primeiro Passo para a Transformação
+              </h2>
+              <span className="firstStep-item-header-undertitle">
+                Não hesite em nos contatar
+              </span>
+              <p className="firstStep-item-header-desc">
+                Não se trata apenas de uma demonstração de software, mas de uma
+                análise estratégica gratuita. Nossos especialistas irão:
+              </p>
+            </div>
+            <div className="firstStep-item-steps">
+              {steps.map((step, i) => (
+                <div className="firstStep-item-step" key={i}>
+                  <div className="item-step-number">
+                    <h3 className="step-number" style={{ color: `var(${step.color})` }}>{`0${i+1}.`}</h3>
+                  </div>
+                  <div className="item-step-text">
+                    <h3 className="step-text">{step.text}</h3>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="firstStep-item-invite">
+              <p className="item-invite-text">
+                Agora que você já conhece nossa história, nossos valores e o que
+                nos move, convidamos você a experimentar na prática como a Geduc
+                pode revolucionar <br /> a gestão da sua instituição.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
       <Footer />
     </div>

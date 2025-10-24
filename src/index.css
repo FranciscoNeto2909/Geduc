@@ -16,13 +16,13 @@
   --gradient-blue: #93cbd8;
 
   --dark-green: #021a1a;
-  --medium-green:#195849;
+  --medium-green: #195849;
   --green: #93c02c;
-  --soft-green: #2EA98C;
+  --soft-green: #2ea98c;
   --light-green: #2cc295;
 
   --dark-orange: #fd7b03;
-  --medium-orange: #ED8C36;
+  --medium-orange: #ed8c36;
   --orange: #ffa451;
   --soft-orange: #ffb76b;
   --light-orange: #ffcf91;
@@ -37,6 +37,7 @@
   --not-selected: #ababab80;
   --opinion-color: #717171;
   --desc-gray: #2a2a2a;
+  --placeholder-gray: #ababab;
 }
 
 * {
@@ -50,12 +51,23 @@
   font-optical-sizing: auto;
   box-sizing: border-box;
   cursor: default;
+  outline: none;
 }
 
-input {
+input,
+textarea {
   width: 100%;
   border: none;
-  outline: none;
+  cursor: text;
+  resize: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--placeholder-gray);
+  font-family: Arial;
+  font-weight: 700;
+  font-size: 12px;
 }
 
 button {

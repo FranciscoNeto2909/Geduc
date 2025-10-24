@@ -162,21 +162,40 @@ export const ourValues = [
     color: "emphasis-orange",
   },
   {
-    emphasis:"Cumprir",
-    title:"Parceria e Confiança",
-    desc:"Nossa relação com as escolas vai além do fornecedor-cliente. Nosso sucesso é medido pelo sucesso dos nossos parceiros.",
-    color:"emphasis-blue"
+    emphasis: "Cumprir",
+    title: "Parceria e Confiança",
+    desc: "Nossa relação com as escolas vai além do fornecedor-cliente. Nosso sucesso é medido pelo sucesso dos nossos parceiros.",
+    color: "emphasis-primary-blue",
   },
-   {
-    emphasis:"Educar",
-    title:"Paixão por Educação",
-    desc:"Acreditamos, genuinamente, no poder transformador da educação. Nosso combustível é ver as instituições de ensino prosperando e os alunos alcançando seu potencial máximo.",
-    color:"emphasis-green"
+  {
+    emphasis: "Educar",
+    title: "Paixão por Educação",
+    desc: "Acreditamos, genuinamente, no poder transformador da educação. Nosso combustível é ver as instituições de ensino prosperando e os alunos alcançando seu potencial máximo.",
+    color: "emphasis-green",
   },
-   {
-    emphasis:"Transmitir",
-    title:"Simplicidade e Eficiência",
-    desc:"A complexidade é inimiga da produtividade. Lutamos contra ela todos os dias. Buscamos transformar processos complexos e burocráticos em fluxos simples, intuitivos e eficientes.",
-    color:"emphasis-dark-blue"
+  {
+    emphasis: "Transmitir",
+    title: "Simplicidade e Eficiência",
+    desc: "A complexidade é inimiga da produtividade. Lutamos contra ela todos os dias. Buscamos transformar processos complexos e burocráticos em fluxos simples, intuitivos e eficientes.",
+    color: "emphasis-dark-blue",
+  },
+];
+
+export const steps = [
+  {
+    text: "Compreender os desafios específicos da sua escola.",
+    color:"--blue"
+  },
+  {
+    text: "Mapear os processos que podem ser automatizados e otimizados.",
+    color:"--green"
+  },
+  {
+    text: "Apresentar um walkthrough personalizado da plataforma.",
+    color:"--primary-blue"
+  },
+  {
+    text: "Esclarecer todas as dúvidas e traçar um potencial roteiro de implementação.",
+    color:"--orange"
   },
 ];

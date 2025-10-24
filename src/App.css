@@ -70,3 +70,27 @@
 .desc-bold{
   font-weight: bold;
 }
+
+.emphasis-orange {
+  background-color: var(--medium-orange);
+}
+
+.emphasis-primary-blue {
+  background-color: var(--primary-blue);
+}
+
+.emphasis-blue {
+  background-color: var(--blue);
+}
+
+.emphasis-medium-blue {
+  background-color: var(--primary-blue);
+}
+
+.emphasis-green {
+  background-color: var(--soft-green);
+}
+
+.emphasis-dark-blue {
+  background-color: var(--icon-blue);
+}
