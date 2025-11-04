@@ -94,3 +94,8 @@
 .emphasis-dark-blue {
   background-color: var(--icon-blue);
 }
+
+.title-emphasis{
+  color: var(--banner-blue);
+  font-weight: 700;
+}

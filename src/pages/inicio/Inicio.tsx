@@ -25,13 +25,15 @@ import Carroussel from "../../components/carroussel/Carroussel";
 import { useState } from "react";
 
 export default function Inicio() {
-  const [solutioinId, setsolutionId] = useState<number | null>();
+  const [solutioinId, setSolutionId] = useState<number | null>();
 
   function handleSelectItem(id: number) {
-    setsolutionId(id);
-    setTimeout(() => {
-      setsolutionId(null);
+    setSolutionId(id);
+    const timeout = setTimeout(() => {
+      setSolutionId(null);
     }, 5000);
+
+    return () => clearTimeout(timeout);
   }
 
   return (

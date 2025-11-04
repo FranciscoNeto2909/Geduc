@@ -1,6 +1,6 @@
 .header {
   width: 100vw;
-  box-shadow: 0px 4px 4px 0px #0000000A;
+  box-shadow: 0px 4px 4px 0px #0000000a;
   background-color: #fff;
 }
 
@@ -53,7 +53,7 @@
   font-size: 15px;
   font-weight: 700;
   border-bottom: 2px solid transparent;
-  color: var(--blue);
+  color: var(--not-selected);
 }
 
 .route-item--selected {
@@ -61,9 +61,8 @@
   border-bottom: 2px solid var(--dark-blue);
 }
 
-.route-item:hover {
+.route-item:hover:not(.route-item--selected) {
   color: var(--blue);
-  border-bottom: 2px solid var(--blue);
 }
 
 .route-item a {

@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import { FaRegUser } from "react-icons/fa";
+import { FaRegUser, FaLinkedin } from "react-icons/fa";
 import "./top.css";
-import { AiOutlineInstagram, AiOutlineLinkedin, AiOutlineWhatsApp } from "react-icons/ai";
+import { AiOutlineInstagram, AiOutlineWhatsApp } from "react-icons/ai";
 
 export default function Top() {
   return (
@@ -17,18 +17,30 @@ export default function Top() {
           </div>
           <span>|</span>
           <div className="top-item">
-            <MdEmail size={16}/>
+            <MdEmail size={16} />
             <p>contato@genesistech.com.br</p>
           </div>
         </div>
         <div className="top-social">
           <div className="top-social-icons">
-            <AiOutlineInstagram size={18}/>
-            <AiOutlineWhatsApp size={18}/>
-            <AiOutlineLinkedin size={18}/>
+            <Link target="_blank" to="https://www.instagram.com/geduc.educacao">
+              <AiOutlineInstagram size={18} className="top-social-icon" />
+            </Link>
+            <Link
+              target="_blank"
+              to="https://api.whatsapp.com/send/?phone=5585994323201"
+            >
+              <AiOutlineWhatsApp size={18} className="top-social-icon" />
+            </Link>
+            <Link
+              target="_blank"
+              to="https://www.linkedin.com/company/geduc-soluções/"
+            >
+              <FaLinkedin size={16} className="top-social-icon" />
+            </Link>
           </div>
           <div className="top-account">
-            <FaRegUser size={16}/>
+            <FaRegUser size={16} />
             <Link to="conta">Minha conta</Link>
           </div>
         </div>

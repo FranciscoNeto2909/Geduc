@@ -702,7 +702,7 @@
 .clients-carroussel-opinion-text {
   font-size: 24px;
   font-family: Arial, Helvetica, sans-serif;
-  color: var(--opinion-color);
+  color: var(--opinion-gray);
   width: 100%;
   max-width: 394px;
 }
@@ -778,12 +778,12 @@
   margin-bottom: 14px;
   font-size: 20px;
   font-weight: 700;
-  color: var(--opinion-color);
+  color: var(--opinion-gray);
 }
 .content-cards-item-desc {
   font-size: 14px;
   font-weight: 400;
-  color: var(--opinion-color);
+  color: var(--opinion-gray);
 }
 .content-cards-item-button {
   text-align: start;

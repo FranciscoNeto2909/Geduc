@@ -1,3 +1,19 @@
+type CommentType = {
+  img: string;
+  name: string;
+  comment: string;
+};
+
+export interface PostInterface {
+  img: string;
+  title: string;
+  subTitle: string;
+  texts: string[];
+  cardText:string;
+  comments: CommentType[];
+}
+
+
 import {
   AiOutlineBarChart,
   AiOutlineIdcard,
@@ -13,6 +29,41 @@ import { MdManageAccounts, MdOutlineHomeWork } from "react-icons/md";
 import { FaUsers } from "react-icons/fa";
 import { FaSchoolCircleCheck } from "react-icons/fa6";
 import { BiCategoryAlt } from "react-icons/bi";
+
+import post1 from "./blog/post1.png";
+import post1comment1 from "./blog/post1comment1.png";
+import post1comment2 from "./blog/post1comment2.png";
+import post1comment3 from "./blog/post1comment3.png";
+import post1comment4 from "./blog/post1comment4.png";
+import post1comment5 from "./blog/post1comment5.png";
+import post1comment6 from "./blog/post1comment6.png";
+import post2 from "./blog/post2.png";
+import post2comment1 from "./blog/post2comment1.png";
+import post2comment2 from "./blog/post2comment2.png";
+import post2comment3 from "./blog/post2comment3.png";
+import post2comment4 from "./blog/post2comment4.png";
+import post2comment5 from "./blog/post2comment5.png";
+import post3 from "./blog/post3.png";
+import post3comment1 from "./blog/post3comment1.png";
+import post3comment2 from "./blog/post3comment2.png";
+import post3comment3 from "./blog/post3comment3.png";
+import post3comment4 from "./blog/post3comment4.png";
+import post4 from "./blog/post4.png";
+import post4comment1 from "./blog/post4comment1.png";
+import post4comment2 from "./blog/post4comment2.png";
+import post4comment3 from "./blog/post4comment3.png";
+import post4comment4 from "./blog/post4comment4.png";
+import post5 from "./blog/post5.png";
+import post5comment1 from "./blog/post5comment1.png";
+import post5comment2 from "./blog/post5comment2.png";
+import post5comment3 from "./blog/post5comment3.png";
+import post6 from "./blog/post6.png";
+import post6comment1 from "./blog/post6comment1.png";
+import post6comment2 from "./blog/post6comment2.png";
+import post6comment3 from "./blog/post6comment3.png";
+import post6comment4 from "./blog/post6comment4.png";
+import post6comment5 from "./blog/post6comment5.png";
+import post6comment6 from "./blog/post6comment6.png";
 
 export const routes = [
   { name: "Início", to: "/" },
@@ -184,18 +235,282 @@ export const ourValues = [
 export const steps = [
   {
     text: "Compreender os desafios específicos da sua escola.",
-    color:"--blue"
+    color: "--blue",
   },
   {
     text: "Mapear os processos que podem ser automatizados e otimizados.",
-    color:"--green"
+    color: "--green",
   },
   {
     text: "Apresentar um walkthrough personalizado da plataforma.",
-    color:"--primary-blue"
+    color: "--primary-blue",
   },
   {
     text: "Esclarecer todas as dúvidas e traçar um potencial roteiro de implementação.",
-    color:"--orange"
+    color: "--orange",
+  },
+];
+
+export const posts:PostInterface[] = [
+  {
+    img: post1,
+    title:
+      "Integração de Dados na Gestão Escolar: Unindo Pedagógico e Administrativo",
+    subTitle: "para uma Tomada de Decisão Mais Eficaz e Personalizada",
+    texts: [
+      "A gestão escolar enfrenta o desafio de unificar as vertentes pedagógica, administrativa e financeira de maneira eficiente. A integração de dados se apresenta como uma solução poderosa permitindo uma visão holística da escola e capacitando os gestores a tomarem decisões estratégicas mais embasadas.",
+      "Integrar dados de diferentes setores em uma única plataforma oferece aos gestores uma visão panorâmica. Este sistema unificado permite, por exemplo, correlacionar dados de desempenho acadêmico com informações financeiras, identificando as causas de problemas como a evasão escolar. Com essas informações, a gestão pode desenvolver planos de ação específicos para corrigir falhas antes invisíveis.",
+      "Outro benefício crucial é a capacidade de resposta rápida às demandas internas e de órgãos reguladores. Possuir uma plataforma centralizada permite que relatórios de prestação de contas sejam gerados automaticamente com dados em tempo real, economizando tempo e recursos humanos. Assim, o foco pode ser realocado para o desenvolvimento de estratégias educacionais.",
+      "Em conclusão, a integração de dados na gestão escolar é necessária para enfrentar os desafios da educação pública. Ao promover a interconexão dos diferentes aspectos, as instituições se tornam mais resilientes, eficientes e ágeis. A tecnologia e a inovação são motores essenciais para essa transformação.",
+    ],
+    cardText:"A gestão escolar enfrenta o desafio contínuo de unificar diferentes vertentes, como o pedagógico, administrativo e financeiro, de maneira eficiente. A integração de dados se...",
+    comments: [
+      {
+        img: post1comment1,
+        name: "Ana Claudia",
+        comment:
+          "Finalmente um texto que aborda o cerne da questão! Na prática, a falta de integração nos faz perder horas cruzando planilhas manualmente. Unir o pedagógico ao financeiro é a chave para entender, de fato, por que alguns alunos abandonam os estudos.",
+      },
+      {
+        img: post1comment2,
+        name: "Carlos Eduardo",
+        comment:
+          "A ideia é excelente, mas preocupa a execução. Já vi muitos sistemas 'unificados' que são complexos e tomam o tempo que deveria ser em sala.",
+      },
+      {
+        img: post1comment3,
+        name: "João Pedro",
+        comment:
+          "Como pai, fico pensando como isso pode melhorar a comunicação com a escola. Se a gestão tem uma visão completa, significa que poderiam me alertar se meu filho começar a ter queda nas notas ou faltas.",
+      },
+      {
+        img: post1comment4,
+        name: "Roberto Silva",
+        comment:
+          "Vejo um potencial enorme para a personalização do ensino. Ao integrar dados de desempenho com informações de frequência e até socioeconômicas",
+      },
+      {
+        img: post1comment5,
+        name: "Marina Costa",
+        comment:
+          "O artigo acerta ao destacar a visão holística, mas é importante lembrar que a integração de dados exige um cuidado enorme com a LGPD. Unir tudo em uma plataforma é poderoso, mas também concentra riscos.",
+      },
+      {
+        img: post1comment6,
+        name: "Patrícia Mendes",
+        comment:
+          "Este é o futuro da gestão pública. A capacidade de gerar relatórios automáticos para prestação de contas é um avanço imenso em eficiência.",
+      },
+    ],
+  },
+  {
+    img: post2,
+    title: "Como Eliminar Filas e Erros nos Processos de Matrícula Escolar",
+    subTitle: "Estratégias Comprovadas para uma Gestão Eficiente",
+    texts: [
+      "A matrícula escolar é um dos momentos mais críticos no calendário de qualquer instituição de ensino, gerando filas intermináveis, pais frustrados, documentos perdidos e erros administrativos. Esses problemas comprometem a eficiência da gestão escolar, resultando em frustração para as famílias, ineficiência administrativa, erros humanos e impacto financeiro.",
+      "A solução para transformar esse processo em algo rápido, organizado e livre de erros está na adoção de tecnologias e estratégias modernas. As principais soluções práticas incluem:",
+      "<ul><li>Adotar sistemas de matrícula online, que oferecem formulários digitais padronizados, acessibilidade e centralização de dados.</li><li>Automatizar a validação de documentos com integração com bases de dados oficiais e alertas automáticos.</li><li>Capacitar a equipe administrativa com treinamentos regulares e suporte técnico.</li><li>Oferecer múltiplos canais de comunicação, como e-mails, SMS, chatbots e portais de autoatendimento.</li><li>Planejar a logística com antecedência, incluindo escalonamento de matrículas e simulações prévias.</li></ul>",
+      "Os benefícios de um processo eficiente são maior satisfação da comunidade, redução de custos, dados mais confiáveis e a capacidade de focar no que importa: a qualidade da educação.",
+      "O primeiro passo para implementar essa mudança é avaliar as ferramentas disponíveis, considerando soluções gratuitas ou parcerias, e iniciar com um projeto-piloto em pequena escala para testar e ajustar a solução",
+      "Conclui-se que eliminar filas e erros na matrícula é uma necessidade para modernizar a gestão educacional, transformando um momento desafiador em uma oportunidade de engajar a comunidade e otimizar recursos.",
+    ],
+    cardText:"A educação pública no Brasil enfrenta desafios contínuos para assegurar que todos os estudantes alcancem seu pleno potencial acadêmico. Uma ferramenta poderosa e cada vez...",
+    comments: [
+      {
+        img: post2comment1,
+        name: "Claudio Viana",
+        comment:
+          "A resistência à tecnologia era nosso maior inimigo. Depois que treinamos a equade e adotamos o sistema online, ganhamos tempo para focar em coisas mais importantes, como o pedagógico",
+      },
+      {
+        img: post2comment2,
+        name: "Eduarda Costa",
+        comment:
+          "É um exemplo perfeito de como a tecnologia não deve substituir pessoas, mas sim eliminar tarefas burocráticas para que os profissionais possam ser mais estratégicos e humanos",
+      },
+      {
+        img: post2comment3,
+        name: "Olivia S.",
+        comment:
+          "Como representante dos professores, vejo que menos erros na matrícula significam turmas melhor formadas no primeiro dia de aula. Isso impacta diretamente no planejamento das nossas aulas.",
+      },
+      {
+        img: post2comment4,
+        name: "Prof. Otávio",
+        comment:
+          "Achei complicado no começo, tive que pedir ajuda para preencher o formulário online. As escolas precisam oferecer suporte para quem não é tão familiarizado com a tecnologia.",
+      },
+      {
+        img: post2comment5,
+        name: "Coord. Diana",
+        comment:
+          "Como representante dos professores, vejo que menos erros na matrícula significam turmas melhor formadas no primeiro dia de aula. Isso impacta diretamente no planejamento das nossas aulas.",
+      },
+    ],
+  },
+  {
+    img: post3,
+    title: "Automação na Gestão Escolar: Reduzindo Retrabalho",
+    subTitle: "para uma Tomada de Decisão Mais Eficaz e Personalizada",
+    texts: [
+      "A gestão escolar no Brasil enfrenta desafios diários com recursos limitados e equipes sobrecarregadas. A automatização de processos repetitivos surge como uma necessidade para otimizar o trabalho geracional, permitindo que as equipes se concentrem no que realmente importa: a educação.",
+      "Um dos maiores benefícios é a automatização de tarefas administrativas, como a gestão de matrículas e a emissão de boletins escolares. A digitalização e automatização do processo de matrícula elimina a necessidade de papéis e diminui significativamente o tempo gasto com conferência de documentos. A emissão automática de boletins reduz erros humanos e proporciona relatórios mais precisos.",
+      "Outro ponto crucial é facilitar a comunicação com famílias e comunidade. Plataformas automatizadas enviam comunicados e notificações em tempo real via aplicativos ou e-mails, criando uma comunicação mais direta e eficiente e promovendo um ambiente mais colaborativo.",
+      "Por fim, a integração de dados e análise de desempenho é transformada. Dashboards integrados consolidam dados de frequência e desempenho, reduzindo o trabalho manual de coleta e permitindo o acesso a insights valiosos para decisões pedagógicas e administrativas baseadas em evidências.",
+      "Em conclusão, a automação de processos na gestão escolar é uma poderosa ferramenta para aliviar o retrabalho das equipes, capacitando educadores a tomarem decisões mais informadas e estratégicas e transformando as instituições em exemplos de eficiência e inovação.",
+    ],
+    cardText:"A matrícula escolar é um dos momentos mais críticos no calendário de qualquer instituição de ensino, gerando filas intermináveis, pais frustrados, documentos perdidos e erros administrativos...",
+    comments: [
+      {
+        img: post3comment1,
+        name: "Kaio Diretor",
+        comment:
+          "Desde que automatizamos as matrículas e a emissão de boletins, nossa equipe ganhou horas preciosas. Agora podemos focar em projetos pedagógicos em vez de ficar presos em papelada. A mudança foi radical.",
+      },
+      {
+        img: post3comment2,
+        name: "Jorge Coord.",
+        comment:
+          "No começo tive medo da tecnologia, mas agora não vivo sem. Deixar de preenchar tudo manualmente e ter os dados integrados acabou com os erros e a duplicação de trabalho. Melhorou muito meu dia a dia",
+      },
+      {
+        img: post3comment3,
+        name: "Prof. Gabriel",
+        comment:
+          "Receber as notificações pelo celular mudou tudo. Fico sabendo na hora sobre faltas, eventos e boletins. A comunicação com a escola ficou muito mais fácil e transparente. Me sinto muito mais presente.",
+      },
+      {
+        img: post3comment4,
+        name: "Prof. Danilo",
+        comment:
+          "Ter acesso a dashboards com os dados dos alunos é incrível para planejar minhas aulas.",
+      },
+    ],
+  },
+  {
+    img: post4,
+    title: "O Futuro da Educação: Transformação Tecnológica na Gestão Escolar",
+    subTitle:
+      "Desafios Atuais da Gestão Escolar e Como a Tecnologia Pode Superá-los",
+    texts: [
+      "A educação pública no Brasil enfrenta desafios contínuos para assegurar que todos os estudantes alcancem seu pleno potencial, e a tecnologia surge como uma ferramenta poderosa e essencial para enfrentá-los.",
+      "As principais estratégias apresentadas são:",
+      "<ul><li>Implementar plataformas de gerenciamento de aprendizado para coletar e analisar dados sobre o desempenho, frequência e envolvimento dos alunos. Isso permite identificar rapidamente estudantes que necessitam de atenção especial e alocar recursos de forma adequada.</li><li>Utilizar a personalização do ensino por meio de ferramentas de aprendizado adaptativo com inteligência artificial. Essas ferramentas ajustam o conteúdo e a dificuldade conforme as necessidades individuais, criando um currículo sob medida que aumenta a motivação e melhora os resultados.</li><li>Incluir atividades interativas, como módulos de gamificação e realidade aumentada, para tornar a experiência educacional mais envolvente e contribuir para a retenção do conhecimento.</li></ul>",
+      "Em suma, a tecnologia aplicada à educação possui um potencial transformador inquestionável. Ela fornece os insights críticos necessários para uma tomada de decisão ágil e fundamentada, permite uma abordagem pedagógica altamente personalizada que respeita as individualidades e, por fim, cria ambientes de aprendizagem ricos, interativos e inclusivos. A transformação digital na educação pública brasileira é, portanto, muito mais do que uma opção: é um imperativo estratégico e uma necessidade urgente para construir um sistema educacional mais equânime, eficiente e preparado para capacitar os cidadãos e profissionais que irão liderar os desafios e oportunidades do século XXI. Cabe aos gestores educacionais em todas as esferas abraçar esta agenda, fomentando a integração consciente e crítica dessas tecnologias no cotidiano das escolas.",
+    ],
+    cardText:"Administrar o transporte escolar é um grande desafio, mas é possível torná-lo mais eficiente com organização e tecnologia, reduzindo custos, otimizando processos e aumentando a confiança das famílias...",
+    comments: [
+      {
+        img: post4comment1,
+        name: "Professora Maria",
+        comment:
+          "Vejo com certa cautela essa onda de tecnologia. Não duvido que possa ajudar, mas já vi modismos passarem e deixarem mais problemas que soluções. Precisamos de investimento em estrutura básica antes de tablets e plataformas sofisticadas.",
+      },
+      {
+        img: post4comment2,
+        name: "Dr. Ricardo",
+        comment:
+          "A tecnologia tem potencial transformador, mas seu uso deve ser criticamente orientado por políticas públicas consistentes.",
+      },
+      {
+        img: post4comment3,
+        name: "João Ricardo",
+        comment:
+          "A transformação tecnológica não é mais uma opção é uma necessidade. Com ferramentas como a GEDUC, conseguimos identificar problemas de evasão e rendimento em tempo real, algo impensável há alguns anos. Isso permite agir antes que seja tarde.",
+      },
+      {
+        img: post4comment4,
+        name: "Coord. Paula",
+        comment:
+          "Acho que a tecnologia nas escolas pode ser incrível, mas tem que ser bem usada. Já tive professor que só passava slide velho e chamava isso de 'aula digital'. Precisamos de coisas que realmente engajem, como jogos, simulações, aulas com realidade virtual.",
+      },
+    ],
+  },
+  {
+    img: post5,
+    title: "Como Tornar a Gestão do Transporte Escolar mais Eficiente",
+    subTitle:
+      "Estratégias Práticas para Otimizar a Gestão do Transporte Escolar",
+    texts: [
+      "Administrar o transporte escolar é um grande desafio, mas é possível torná-lo mais eficiente com organização e tecnologia, reduzindo custos, otimizando processos e aumentando a confiança das famílias.",
+      "A base da eficiência começa com o planejamento de rotas inteligentes, que deve utilizar softwares de roteirização automática para mapear endereços, organizar pontos de coleta e evitar deslocamentos desnecessários, economizando combustível e reduzindo o tempo dos trajetos.",
+      "Outro pilar fundamental é a comunicação transparente com as famílias. Ferramentas como apps com notificações push sobre embarque e desembarque, e canais de atendimento direto, são essenciais para dar tranquilidade aos pais e evitar confusões.",
+      "O controle financeiro e operacional eficiente é alcançado através da automação, que traz transparência com a geração automática de boletos e relatórios financeiros para acompanhar receitas e custos com manutenção e combustíveis.",
+      "Por fim, a segurança é ampliada pelo monitoramento em tempo real com sistemas de rastreamento (GPS), alertas de desvios e controle de velocidade, oferecendo histórico de percursos para auditorias e maior confiança para a comunidade.",
+      "A eficiência na gestão do transporte escolar depende da integração de processos, tecnologia e comunicação.",
+    ],
+    cardText:"A gestão escolar no Brasil enfrenta desafios diários, desde tarefas administrativas complexas até a necessidade de melhorar a experiência de aprendizagem dos alunos. Com recursos...",
+    comments: [
+      {
+        img: post5comment1,
+        name: "Paula",
+        comment:
+          "A notificação no celial quando o ônibus está chegando é fantástica! Acabou a minha ansiedade de ficar esperando no ponto com meu filho no sol ou na chuva. Segurança e praticidade que fazem toda a diferença.",
+      },
+      {
+        img: post5comment2,
+        name: "Marcos",
+        comment:
+          "Implementar um software de roteirização foi um divisor de águas. Reduzimos drasticamente nossos custos com combustível e conseguimos otimizar o tempo dos motoristas. O retorno financeiro e operacional foi imediato.",
+      },
+      {
+        img: post5comment3,
+        name: "Sônia",
+        comment:
+          "O GPS e o controle de rota facilitam muito meu dia a dia, mas a pressão por pontualidade absoluta e ser monitorada o tempo todo pode ser estressante.",
+      },
+    ],
+  },
+  {
+    img: post6,
+    title: "O Impacto dos Dados na Retenção Escolar",
+    subTitle: "Como a Gestão de Dados Pode Combater a Evasão Escolar",
+    texts: [
+      "A gestão eficaz de dados tem se tornado um alicerce essencial para a retenção de alunos na educação pública brasileira. Num contexto onde a evasão escolar continua sendo um desafio significativo, o uso de dados precisos e bem geridos oferece insights valiosos para os gestores, permitindo a identificação precoce de sinais de risco de evasão e a criação de estratégias direcionadas.",
+      "O principal benefício é a capacidade de monitorar e analisar o desempenho e a frequência dos alunos em tempo real. Ao identificar padrões de queda de desempenho ou aumento de faltas, a escola pode agir proativamente, oferecendo suporte acadêmico ou psicossocial antes do abandono.",
+      "Além disso, os dados ajudam a mapear o envolvimento e a participação em atividades extracurriculares, revelando que estudantes envolvidos nessas atividades tendem a permanecer mais tempo na escola por encontrarem um senso de pertencimento e motivação.",
+      "Outro aspecto crucial é a personalização do aprendizado, facilitada pela análise de dados. Com informações sobre estilo de aprendizado, interesses e necessidades individuais, as escolas podem adaptar suas abordagens pedagógicas, melhorando a experiência de aprendizado e o engajamento do aluno.",
+      "Em suma, a gestão de dados tem um papel transformador na retenção de estudantes, permitindo a construção de um sistema educacional mais inclusivo e eficiente.",
+    ],
+    cardText:"A gestão eficaz de dados tem se tornado um alicerce cada vez mais essencial para a retenção de alunos na educação pública brasileira. No contexto...",
+    comments: [
+      {
+        img: post6comment1,
+        name: "Pedro, Diretor",
+        comment:
+          "Desde que começamos a cruzar dados de frequência e notas, conseguimos intervir a tempo em dezenas de casos. É a diferença entre perder um aluno e salvar um futuro.",
+      },
+      {
+        img: post6comment2,
+        name: "Guilhermina, Professora",
+        comment:
+          "Os dados me mostram qual aluno está desconectado antes da prova final. Agora posso puxar uma conversa e oferecer ajuda específica. Mudou minha forma de lecionar.",
+      },
+      {
+        img: post6comment3,
+        name: "Fabrício, Gestor",
+        comment:
+          "Os dados me mostram qual aluno está desconectado antes da prova final. Agora posso puxar uma conversa e oferecer ajuda específica. Mudou minha forma de lecionar.",
+      },
+      {
+        img: post6comment4,
+        name: "Mariana, Estudante",
+        comment:
+          "Me recomendaram um clube de robótica porque viram que eu curtia exatas. Foi onde me achei na escola. Dados podem ser legais sim!",
+      },
+      {
+        img: post6comment5,
+        name: "João, Gestor",
+        comment:
+          "O maior desafio é treinar as equipes para usar os dados, não só coletá-los. Precisamos de mais capacitação para transformar números em ação.",
+      },
+      {
+        img: post6comment6,
+        name: "Laura, Psicóloga ",
+        comment:
+          "Os dados são um termômetro social. Eles não mentem: mostram a relação direta entre vulnerabilidade econômica e risco de evasão. Precisamos de políticas baseadas nisso.",
+      },
+    ],
   },
 ];

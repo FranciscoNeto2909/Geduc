@@ -54,8 +54,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 6px;
-  margin-right: 40px;
+  gap: 8px;
+  margin-right: 33px;
+  margin-top: 3px;
+}
+
+.top-social-icon{
+  cursor: pointer;
 }
 
 .top-account {
