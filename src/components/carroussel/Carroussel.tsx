@@ -14,6 +14,7 @@ export default function Carroussel({ auto, children }: ComponentsProps) {
   const [automatic] = useState<Boolean>(auto || false);
 
   function handleNextPage() {
+    if (!pages) return;
     if (pagesCount < pages?.length - 1) {
       setPagesCount(pagesCount + 1);
       pages[0].style.transition = "1.3s ease-in-out;";
@@ -22,6 +23,7 @@ export default function Carroussel({ auto, children }: ComponentsProps) {
   }
 
   function handlePrevPage() {
+    if (!pages) return;
     if (pagesCount > 0) {
       setPagesCount(pagesCount - 1);
       pages[0].style.marginLeft = `-${100 * (pagesCount - 1)}%`;
@@ -95,7 +97,7 @@ export default function Carroussel({ auto, children }: ComponentsProps) {
         <div className="carroussel-next">
           <button
             className={`pagination-button ${
-              pagesCount < pages?.length - 1 && "pagination-button--available"
+              pages && pagesCount < pages?.length - 1 && "pagination-button--available"
             }`}
             onClick={handleNextPage}
           >

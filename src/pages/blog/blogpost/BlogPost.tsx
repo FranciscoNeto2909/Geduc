@@ -27,9 +27,7 @@ export default function BlogPost({
         <div className="blog-post-texts">
           <h3 className="blog-post-texts-title">Introdução</h3>
           {post?.texts.map((text, i) => (
-            <p key={i} className="blog-post-text">
-              {text}
-            </p>
+            <div key={i}className="blog-post-text" dangerouslySetInnerHTML={{ __html: text }}/>
           ))}
         </div>
         <div className="blog-post-share">
