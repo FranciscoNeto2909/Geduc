@@ -6,11 +6,8 @@ import logo from "../../../assets/logo.png";
 import { LiaComments } from "react-icons/lia";
 import "./blogPost.css";
 
-export default function BlogPost({
-  post,
-}: {
-  post: PostInterface | null | undefined;
-}) {
+export default function BlogPost({post}: {post: PostInterface | null | undefined}) {
+  
   return (
     <div className="blog-post">
       <div className="blog-post-main">

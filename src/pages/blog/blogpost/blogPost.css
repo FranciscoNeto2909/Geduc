@@ -1,6 +1,6 @@
 .blog-post {
   width: 100%;
-  max-width: 1278px;
+  max-width: 1318px;
   height: fit-content;
   padding: 0 24px;
   margin: 0 auto;
@@ -10,6 +10,7 @@
 }
 
 .blog-post-main {
+  height: min-content;
   padding: 60px 0;
 }
 
@@ -48,6 +49,7 @@
 .blog-post-img {
   height: 100%;
   width: 100%;
+  max-width: 832px;
 }
 
 .blog-post-header {
@@ -61,6 +63,7 @@
   line-height: 100%;
   color: var(--desc-gray);
   margin-bottom: 24px;
+  font-family: var(--title-font);
 }
 
 .blog-post-subtitle {
@@ -72,7 +75,7 @@
 }
 
 .blog-post-texts {
-  max-width: 760px;
+  max-width: 800px;
   margin-bottom: 74px;
 }
 
@@ -97,12 +100,31 @@
   padding-left: 24px;
 }
 
+.blog-post-decimal {
+  list-style: decimal;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.blog-post-decimal li::marker {
+  font-weight: bold;
+}
+
 .blog-post-text-dark {
   font-weight: 700;
   font-size: 16px;
   line-height: 108%;
   letter-spacing: 4%;
   color: #000;
+}
+
+.blog-post-text span {
+  font-family: Arial;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 108%;
+  letter-spacing: 4%;
 }
 
 .blog-post-comments {
@@ -128,7 +150,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 24px;
+  gap: 28px;
 }
 
 .comments-card {
@@ -138,8 +160,9 @@
   display: flex;
   gap: 18px;
   border-radius: 16px;
-  padding: 18px;
+  padding: 14px;
   position: relative;
+  z-index: 1;
 }
 
 .comments-card-poligon {
@@ -150,6 +173,7 @@
   bottom: -5px;
   background-color: #fff;
   transform: rotate(45deg);
+  z-index: -1;
 }
 
 .comments-card-img {
@@ -178,10 +202,11 @@
   line-height: 100%;
   letter-spacing: 0.3px;
   color: #000;
-  margin-top: 14px;
+  margin-top: 12px;
 }
 
 .posts-comments-button {
+  margin-top: 12px;
   display: flex;
   justify-content: center;
 }
@@ -194,4 +219,43 @@
   line-height: 100%;
   width: 100%;
   max-width: 243px;
+}
+
+@media (max-width: 1024px) {
+  .blog-post {
+    flex-wrap: wrap;
+  }
+
+  .blog-post-main {
+    padding-bottom: 0;
+  }
+
+  .blog-post-comments {
+    max-width: 100%;
+    margin-top: 0;
+    margin-bottom: 52px;
+  }
+
+  .post-comments-cards {
+    height: auto;
+    flex-direction: row;
+    overflow-y: hidden;
+    overflow-x: scroll;
+  }
+
+  .comments-card {
+    width: 264px;
+    min-width: 264px;
+    max-height: 150px;
+  }
+}
+
+@media (max-width: 525px) {
+  .blog-post-header {
+    margin-bottom: 32px;
+  }
+
+  .blog-post-texts {
+    margin-bottom: 32px;
+  }
 }
