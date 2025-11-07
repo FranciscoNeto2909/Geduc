@@ -5,7 +5,6 @@
 
 .blog-banner {
   height: 100%;
-  max-height: 700px;
   width: 100%;
   max-width: 1164px;
   padding: 0 24px;
@@ -229,8 +228,73 @@
 }
 
 @media (max-width: 1024px) {
-.blog-posts-cards{
-  justify-content: center;
-  gap: 24px;
+  .blog-banner {
+    padding-top: 52px;
+    justify-content: center;
+    flex-direction: column-reverse;
+    justify-content: center;
+    gap: 32px;
+  }
+
+  .blog-banner-texts {
+    height: auto;
+    gap: 32px;
+    max-width: 100%;
+  }
+
+  .blog-posts-cards {
+    justify-content: center;
+    gap: 24px;
+  }
 }
+
+@media (max-width: 525px) {
+  .blog-banner {
+    padding-top: 32px;
+    gap: 52px;
+    margin-bottom: 60px;
+  }
+
+  .blog-banner-texts-title {
+    font-size: 34px;
+  }
+
+  .blog-banner-img {
+    max-width: 100%;
+    max-height: 320px;
+  }
+
+  .blog-banner-img img {
+    height: auto;
+    width: 100%;
+    max-width: 330px;
+  }
+
+  .blog-banner-circle-top,
+  .blog-banner-circle-bottom {
+    height: 150px;
+    width: 150px;
+  }
+
+  .blog-banner-circle-top {
+    top: 5px;
+    left: 20px;
+  }
+
+  .blog-banner-circle-bottom {
+    bottom: 0;
+    right: 5px;
+  }
+
+  .blog-posts {
+    padding-bottom: 52px;
+  }
+
+  .blog-posts-header {
+    margin-bottom: 32px;
+  }
+
+  .posts-header-title {
+    font-size: 28px;
+  }
 }
