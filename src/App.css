@@ -24,6 +24,16 @@
   font-weight: 600;
 }
 
+.button--white {
+  background-color: #fff;
+  box-shadow: 4px 4px 4px 0px #00000014;
+  color: var(--banner-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
 .button--small {
   width: 153px;
   font-size: 13px;
@@ -45,7 +55,7 @@
   font-size: 13px;
 }
 
-.banner-button--inverted{
+.banner-button--inverted {
   background-color: #fff;
   color: var(--banner-blue);
   border: 1px solid var(--banner-blue);
@@ -63,11 +73,35 @@
   background-color: #fff;
 }
 
+.register-input {
+  width: 100%;
+  border-radius: 16px;
+  height: 39px;
+  padding-left: 24px;
+  font-size: 16px;
+  border: 1px solid #e8e8e8;
+  width: 100%;
+  max-width: 335px;
+  min-width: 250px;
+  margin-top: 14px;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+}
+
+.register-input::placeholder {
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+}
+
 .form-input-small {
   height: 32px;
 }
 
-.desc-bold{
+.desc-bold {
   font-weight: bold;
 }
 
@@ -95,7 +129,13 @@
   background-color: var(--icon-blue);
 }
 
-.title-emphasis{
+.title-emphasis {
   color: var(--banner-blue);
   font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .register-input {
+    max-width: 100%;
+  }
 }

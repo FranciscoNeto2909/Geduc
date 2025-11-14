@@ -14,7 +14,8 @@
   --local-blue: #e3f0ff45;
   --banner-blue: #0976b1;
   --gradient-blue: #93cbd8;
-
+  --bgform-blue:#0049A3;
+  
   --dark-green: #021a1a;
   --medium-green: #195849;
   --green: #93c02c;
@@ -27,7 +28,8 @@
   --soft-orange: #ffb76b;
   --light-orange: #ffcf91;
 
-  --dark-yellow: #f8de4b;
+  --dark-yellow:#786D42;
+  --strong-yellow: #f8de4b;
   --medium-yellow: #fcee50;
   --yellow: #fef78d;
   --soft-yellow: #fef7af;

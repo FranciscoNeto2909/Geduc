@@ -22,12 +22,20 @@ import {
   AiOutlineWhatsApp,
   AiOutlineInstagram,
   AiOutlineLinkedin,
+  AiOutlineFileText,
 } from "react-icons/ai";
 import { PiBookBookmarkFill, PiClipboardTextBold } from "react-icons/pi";
-import { MdManageAccounts, MdOutlineHomeWork } from "react-icons/md";
+import {
+  MdManageAccounts,
+  MdOutlineHomeWork,
+  MdOutlineHandshake,
+  MdHeadset,
+} from "react-icons/md";
 import { FaUsers } from "react-icons/fa";
 import { FaSchoolCircleCheck } from "react-icons/fa6";
 import { BiCategoryAlt } from "react-icons/bi";
+import { BsBank } from "react-icons/bs";
+import { RiGraduationCapLine, RiMoneyDollarCircleLine } from "react-icons/ri";
 
 import post1 from "./blog/post1.png";
 import post1comment1 from "./blog/post1comment1.png";
@@ -471,11 +479,11 @@ export const posts: PostInterface[] = [
     title: "O Impacto dos Dados na Retenção Escolar",
     subTitle: "Como a Gestão de Dados Pode Combater a Evasão Escolar",
     texts: [
-      "A gestão eficaz de dados tem se tornado um alicerce essencial para a retenção de alunos na educação pública brasileira. Num contexto onde a evasão escolar continua sendo um desafio significativo, o uso de dados precisos e bem geridos oferece insights valiosos para os gestores, permitindo a identificação precoce de sinais de risco de evasão e a criação de estratégias direcionadas.",
-      "O principal benefício é a capacidade de monitorar e analisar o desempenho e a frequência dos alunos em tempo real. Ao identificar padrões de queda de desempenho ou aumento de faltas, a escola pode agir proativamente, oferecendo suporte acadêmico ou psicossocial antes do abandono.",
-      "Além disso, os dados ajudam a mapear o envolvimento e a participação em atividades extracurriculares, revelando que estudantes envolvidos nessas atividades tendem a permanecer mais tempo na escola por encontrarem um senso de pertencimento e motivação.",
-      "Outro aspecto crucial é a personalização do aprendizado, facilitada pela análise de dados. Com informações sobre estilo de aprendizado, interesses e necessidades individuais, as escolas podem adaptar suas abordagens pedagógicas, melhorando a experiência de aprendizado e o engajamento do aluno.",
-      "Em suma, a gestão de dados tem um papel transformador na retenção de estudantes, permitindo a construção de um sistema educacional mais inclusivo e eficiente.",
+      "<span>A gestão eficaz de dados tem se tornado um alicerce essencial para a retenção de alunos</span> na educação pública brasileira. Num contexto onde a <span>evasão escolar continua sendo um desafio significativo</span>, o uso de <span>dados precisos e bem geridos</span> oferece <span>insights valiosos</span> para os gestores, permitindo a <span>identificação precoce de sinais de risco de evasão</span> e a <span>criação de estratégias direcionadas.</span>",
+      "O principal benefício é a <span>capacidade de monitorar e analisar o desempenho e a frequência dos alunos em tempo real</span>. Ao <span>identificar padrões de queda de desempenho ou aumento de faltas</span>, a escola pode <span>agir proativamente</span>, oferecendo <span>suporte acadêmico</span> ou <span>psicossocial</span> antes do abandono.",
+      "Além disso, os dados ajudam a <span>mapear o envolvimento</span> e a <span>participação em atividades extracurriculares</span>, revelando que estudantes envolvidos nessas atividades <span>tendem a permanecer mais tempo na escola</span> por encontrarem um <span>senso de pertencimento e motivação.</span>",
+      "Outro aspecto crucial é a <span>personalização do aprendizado</span>, facilitada pela análise de dados. Com informações sobre <span>estilo de aprendizado, interesses e necessidades individuais</span>, as escolas podem adaptar suas <span>abordagens pedagógicas</span>, melhorando a <span>experiência de aprendizado</span> e o <span>engajamento do aluno</span>.",
+      "Em suma, a <span>gestão de dados tem um papel transformador na retenção de estudantes</span>, permitindo a construção de um <span>sistema educacional mais inclusivo e eficiente</span>.",
     ],
     cardText:
       "A gestão eficaz de dados tem se tornado um alicerce cada vez mais essencial para a retenção de alunos na educação pública brasileira. No contexto...",
@@ -517,5 +525,113 @@ export const posts: PostInterface[] = [
           "Os dados são um termômetro social. Eles não mentem: mostram a relação direta entre vulnerabilidade econômica e risco de evasão. Precisamos de políticas baseadas nisso.",
       },
     ],
+  },
+];
+
+export const commission = [
+  {
+    icon: MdOutlineHandshake,
+    color: "#2EA98C",
+    size: 40,
+    title: "Para Parceiros Estratégicos",
+    desc: "Para parceiros que vão além da indicação.",
+  },
+  {
+    icon: BsBank,
+    color: "#FE8E22",
+    size: 32,
+    title: "Foco no Setor Público",
+    desc: "Para quem entende do setor público.",
+  },
+  {
+    icon: RiMoneyDollarCircleLine,
+    color: "#FDCE17",
+    size: 42,
+    title: "Simplicidade e Resultados",
+    desc: "Com renda constante sem complexidade.",
+  },
+];
+
+export const acting = [
+  {
+    title: "Indicação",
+    desc: "Você indica o cliente interessado no GEDUC",
+  },
+  {
+    title: "Negociação",
+    desc: "Nossa equipe cuida de todo o processo comercial",
+  },
+  {
+    title: "Implantação",
+    desc: "Implementamos e damos suporte completo ao cliente",
+  },
+  {
+    title: "Ganhos recorrentes",
+    desc: "Você recebe comissões enquanto durar o contrato",
+  },
+];
+
+export const partnershipModels = [
+  {
+    category: "Mais Simples",
+    title: "Indicação",
+    subTitle: "Apoio Total na Venda",
+    comission: "10% recorrente por 2 anos",
+    desc: "Indique o cliente e o GEDUC cuida de tudo",
+    advantages: [
+      "Você apenas indica o lead qualificado",
+      "GEDUC conduz toda a negociação",
+      "Suporte e implantação por nossa conta",
+      "Sem necessidade de estrutura comercial",
+    ],
+  },
+  {
+    category: "Mais Popular",
+    title: "Representação",
+    subTitle: "Você assume o comercial",
+    comission: "30% recorrente durante o contrato",
+    desc: "Você assume o processo comercial completo",
+    advantages: [
+      "Controle total do processo de vendas",
+      "Materiais de apoio comercial",
+      "Suporte técnico para suas apresentações",
+      "GEDUC cuida da implantação e suporte",
+    ],
+  },
+  {
+    category: "Máximo Controle",
+    title: "White Label",
+    subTitle: "Liberdade total",
+    comission: "Comissão definida pelo parceiro",
+    desc: "Atue com sua marca e total liberdade de preços",
+    advantages: [
+      "Use sua própria marca",
+      "Defina seus próprios preços",
+      "Gestão completa do cliente",
+      "Gestão completa do cliente",
+    ],
+  },
+];
+
+export const partnershipSteps = [
+  {
+    icon: MdHeadset,
+    title: "Suporte técnico e comercial",
+    descc: "Equipe dedicada para apoiar você em todas as etapas",
+  },
+  {
+    icon: AiOutlineFileText,
+    title: "Materiais de divulgação prontos",
+    descc: "Apresentações, vídeos e conteúdos para facilitar suas vendas",
+  },
+  {
+    icon: RiGraduationCapLine,
+    title: "Treinamento contínuo",
+    descc: "Capacitação constante sobre o produto e mercado",
+  },
+  {
+    icon: AiOutlineBarChart,
+    title: "Relatórios e acompanhamento",
+    descc: "Dashboard com métricas e performance em tempo real",
   },
 ];

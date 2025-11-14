@@ -1,8 +1,383 @@
-import "./sejaParceiro.css"
+import { AiOutlineCheckCircle, AiOutlineWhatsApp } from "react-icons/ai";
+import {
+  acting,
+  commission,
+  partnershipModels,
+  partnershipSteps,
+} from "../../variables";
+import quadriculado from "../../assets/quadriculado.png";
+import professores from "../../assets/professores.png";
+import estudante from "../../assets/estudante.png";
+import livro from "../../assets/livro.png";
+import Footer from "../../components/footer/Footer";
+import "./sejaParceiro.css";
+import { useState } from "react";
 
 export default function SejaParceiro() {
-    return (
-        <>
-        </>
-    )
+  const [hasInterest, setHasInterest] = useState<boolean>(false);
+  const [option, setOption] = useState<string>("Selecione uma opção");
+
+  function handleOpenOptions() {
+    setHasInterest(!hasInterest);
+  }
+
+  function handleCloseOptions() {
+    setHasInterest(false);
+  }
+
+  function handleChangeOption(value: string) {
+    setOption(value);
+  }
+
+  return (
+    <div className="parceria">
+      <div className="parceria-banner">
+        <div className="parceria-banner-bg">
+          <img src={quadriculado} alt="" />
+        </div>
+        <div className="parceria-banner-items">
+          <div className="parceria-banner-texts">
+            <h2 className="parceria-banner-title">
+              Programa de Parcerias GEDUC
+            </h2>
+            <p className="parceria-banner-subtitle">
+              Cresça com a gente e leve inovação para a educação pública
+            </p>
+            <div className="parceria-banner-text">
+              <p>
+                O Programa de Parcerias GEDUC foi criado para profissionais e
+                empresas que acreditam no poder da tecnologia para transformar a
+                gestão educacional.
+              </p>
+              <p>
+                Nosso objetivo é expandir nossa atuação na educação pública por
+                meio de parceiros estratégicos, oferecendo bonificação por
+                indicações e vendas efetivadas do software GEDUC.
+              </p>
+            </div>
+            <div className="parceria-banners-buttons">
+              <button className="button">Quero ser parceiro</button>
+              <button className="button button--white">
+                <AiOutlineWhatsApp size={24} />
+                Fale como um consultor
+              </button>
+            </div>
+          </div>
+          <div className="parceria-banner-img">
+            <img src={professores} alt="professores" />
+          </div>
+        </div>
+      </div>
+      <div className="parceria-parceiro">
+        <div className="parceiro">
+          <div className="parceiro-header">
+            <h2 className="parceiro-header-title">
+              Por que se tornar parceiro GEDUC?
+            </h2>
+            <p className="parceiro-header-desc">
+              O Programa de Parcerias GEDUC foi criado para ampliar nossa
+              presença na educação pública através de parcerias estratégicas.
+              Oferecemos{" "}
+              <span>bonificação por indicações e vendas efetivadas</span> do
+              software GEDUC — uma plataforma que já transforma a gestão
+              educacional em diversas redes do país.
+            </p>
+          </div>
+          <div className="parceiro-main">
+            <div className="parceiro-main-img">
+              <div className="parceiro-main-hrectangle"></div>
+              <div className="parceiro-main-vrectangle"></div>
+              <img src={estudante} alt="" />
+            </div>
+            <div className="paceiro-main-texts">
+              <h3 className="parceiro-main-title">Como Funciona</h3>
+              <p className="parceiro-main-text">
+                O parceiro atua ativamente na prospecção e pré-venda, abrindo
+                portas e qualificando leads. <br /> O Geduc assume toda a parte
+                de negociação, implantação e suporte, garantindo uma entrega
+                completa ao cliente final.
+                <span>
+                  Você foca em gerar conexões — nós cuidamos da operação.
+                </span>
+              </p>
+              <ul className="parceiro-main-items">
+                <li className="parceiro-main-item">
+                  Sem necessidade de equipe comercial
+                </li>
+                <li className="parceiro-main-item">
+                  Suporte integral do Geduc
+                </li>
+                <li className="parceiro-main-item">
+                  Relacionamento direto com decisores
+                </li>
+                <li className="parceiro-main-item">
+                  Participação estratégica em negócios reais
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="parceiro-commission">
+            <div className="commission">
+              <div className="commission-header">
+                <h2 className="commission-header-title">Comissão</h2>
+                <div className="commission-header-desc">
+                  <p>
+                    Receba 15% de comissão recorrente por 2 anos sobre as
+                    mensalidades dos seus clientes, sem descontos na
+                    implantação.
+                  </p>
+                  <p>
+                    Perfeito para consultores e empresas de tecnologia que atuam
+                    no setor público, nosso modelo oferece ganhos previsíveis
+                    sem necessidade de estrutura comercial complexa.
+                  </p>
+                  <p>
+                    Seja mais que um indicador - seja um parceiro estratégico
+                    com renda garantida.
+                  </p>
+                </div>
+              </div>
+              <div className="commission-cards">
+                {commission.map((item, i) => (
+                  <div className="commission-card" key={i}>
+                    <item.icon
+                      size={item.size}
+                      fill={item.color}
+                      className="comission-card-icon"
+                    />
+                    <div className="commission-card-texts">
+                      <h3 className="commission-card-title">{item.title}</h3>
+                      <p className="commission-card-desc">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+          <div className="parceiro-act">
+            <div className="parceiro-act-header">
+              <h2 className="act-header-title">Você escolhe como quer atuar</h2>
+              <p className="act-header-desc">
+                O parceiro GEDUC pode atuar desde a indicação até a
+                representação total. Nós cuidamos da negociação, implantação e
+                suporte conforme o modelo de parceria escolhido.
+              </p>
+            </div>
+            <div className="parceiro-act-options">
+              <div className="act-options-cards">
+                {acting.map((act, i) => (
+                  <div className="act-options-card" key={i}>
+                    <div className="act-options-card-num">
+                      <span>0{i + 1}</span>
+                    </div>
+                    <div className="act-options-texts">
+                      <h3 className="act-options-title">{act.title}</h3>
+                      <p className="act-options-desc">{act.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="parceria-models">
+          <div className="models">
+            <div className="models-header">
+              <h3 className="models-header-title">Modelos de Parceria</h3>
+              <p className="models-header-desc">
+                Escolha o modelo que melhor se adapta ao seu perfil e objetivos
+                de negócio
+              </p>
+            </div>
+            <div className="models-cards">
+              {partnershipModels.map((model, i) => (
+                <div className="models-card" key={i}>
+                  <div className="models-card-header">
+                    <span className="models-card-category">
+                      {model.category}
+                    </span>
+                    <h3 className="models-card-title">{model.title}</h3>
+                    <p className="models-card-desc">{model.subTitle}</p>
+                  </div>
+                  <div className="models-card-comission">
+                    <p className="models-card-comission-title">Comissão</p>
+                    <p className="models-card-comission-text">
+                      {model.comission}
+                    </p>
+                  </div>
+                  <div className="models-card-desc">
+                    <p>{model.desc}</p>
+                  </div>
+                  <ul className="models-card-advantages">
+                    {model.advantages.map(advantage => (
+                      <li className="models-card-advantages-item" key={i}>
+                        <AiOutlineCheckCircle
+                          className="card-advantages-item-icon"
+                          size={20}
+                        />
+                        <span className="card-advantages-item-text">
+                          {advantage}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+        <div className="parceria-steps">
+          <div className="parceria-steps-texts">
+            <h2 className="parceria-steps-title">
+              O GEDUC está ao seu lado em cada etapa
+            </h2>
+            <div className="parceria-steps-cards">
+              {partnershipSteps.map((step, i) => (
+                <div className="parceria-steps-card" key={i}>
+                  <step.icon className="parceria-steps-card-icon" size={28} />
+                  <div className="parceria-steps-card-texts">
+                    <h3 className="parceria-steps-card-title">{step.title}</h3>
+                    <p className="parceria-steps-card-desc">{step.descc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="parceria-steps-img">
+            <img src={livro} alt="" />
+          </div>
+        </div>
+      </div>
+      <div className="parceria-form">
+        <div className="form">
+          <div className="form-header">
+            <h2 className="form-header-title">
+              Pronto para crescer com o GEDUC?
+            </h2>
+            <p className="form-header-subtitle">
+              Preencha o formulário e receba o material completo do Programa de
+              Parcerias
+            </p>
+          </div>
+          <div className="form-register">
+            <form action="" className="form-register-form">
+              <div className="form-register-container">
+                <div className="form-register-item">
+                  <label className="form-register-text" htmlFor="name">
+                    Nome Completo *
+                  </label>
+                  <input
+                    autoComplete="none"
+                    type="text"
+                    id="name"
+                    placeholder="Seu Nome"
+                    className="register-input"
+                  />
+                </div>
+                <div className="form-register-item">
+                  <label className="form-register-text" htmlFor="email">
+                    E-mail profissional *
+                  </label>
+                  <input
+                    autoComplete="none"
+                    type="email"
+                    placeholder="@gmail.com"
+                    id="email"
+                    className="register-input"
+                  />
+                </div>
+              </div>
+              <div className="form-register-container">
+                <div className="form-register-item">
+                  <label className="form-register-text" htmlFor="enterprize">
+                    Empresa / CNPJ
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Nome da empresa"
+                    id="enterprize"
+                    className="register-input"
+                    autoComplete="none"
+                  />
+                </div>
+                <div className="form-register-item">
+                  <label className="form-register-text" htmlFor="phone">
+                    Telefone
+                  </label>
+                  <input
+                    autoComplete="none"
+                    type="text"
+                    id="phone"
+                    placeholder="(00) 00000-0000"
+                    className="register-input"
+                  />
+                </div>
+              </div>
+              <div className="form-register-item-interest">
+                <h3 className="form-register-text">
+                  Tipo de parceria de interesse *
+                </h3>
+                <div
+                  className="register-item-interest-options"
+                  onClick={handleOpenOptions}
+                >
+                  <div className="register-item-interest-selected">
+                    {option}
+                  </div>
+                  {hasInterest && (
+                    <div
+                      className="register-item-interest-items"
+                      onMouseLeave={handleCloseOptions}
+                    >
+                      <div
+                        className="register-item-interest-item"
+                        onClick={() => handleChangeOption("Indicação")}
+                      >
+                        Indicação
+                      </div>
+                      <div
+                        className="register-item-interest-item"
+                        onClick={() => handleChangeOption("Representação")}
+                      >
+                        Representação
+                      </div>
+                      <div
+                        className="register-item-interest-item"
+                        onClick={() => handleChangeOption("White Label")}
+                      >
+                        White Label
+                      </div>
+                      <div
+                        className="register-item-interest-item"
+                        onClick={() =>
+                          handleChangeOption("Selecione uma opção")
+                        }
+                      >
+                        Nenhuma
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
+              <div className="form-register-item-message">
+                <label htmlFor="message" className="form-register-text">
+                  Mensagem (Opcional)
+                </label>
+                <textarea
+                  name=""
+                  id=""
+                  className="form-register-message-text"
+                  placeholder="Conte-nos mais sobre seu interesse..."
+                ></textarea>
+              </div>
+              <button type="button" className="button form-register-button">
+                Enviar e receber o material completo
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </div>
+  );
 }
