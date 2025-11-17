@@ -14,8 +14,8 @@
   --local-blue: #e3f0ff45;
   --banner-blue: #0976b1;
   --gradient-blue: #93cbd8;
-  --bgform-blue:#0049A3;
-  
+  --bgform-blue: #0049a3;
+
   --dark-green: #021a1a;
   --medium-green: #195849;
   --green: #93c02c;
@@ -23,24 +23,28 @@
   --light-green: #2cc295;
 
   --dark-orange: #fd7b03;
+  --strong-orange:#AC8903;
   --medium-orange: #ed8c36;
   --orange: #ffa451;
   --soft-orange: #ffb76b;
   --light-orange: #ffcf91;
 
-  --dark-yellow:#786D42;
+  --dark-yellow: #786d42;
   --strong-yellow: #f8de4b;
   --medium-yellow: #fcee50;
   --yellow: #fef78d;
   --soft-yellow: #fef7af;
   --light-yellow: #fef7cd;
 
+  --medium-red:#8F5113;
+
   --desc-color: #4e4e4e;
   --not-selected: #ababab80;
   --opinion-gray: #717171;
   --desc-gray: #2a2a2a;
   --placeholder-gray: #ababab;
-  --title-font:Poppins, arial;
+  --card-gray:#999999;
+  --title-font: Poppins, arial;
 }
 
 * {
@@ -77,6 +81,5 @@ button {
 }
 
 a {
-  color: #fff;
   cursor: pointer;
 }

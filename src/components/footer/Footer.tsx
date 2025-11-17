@@ -118,7 +118,7 @@ export default function Footer() {
         </div>
         <div className="footer-bottom-item">
           <p>Contato</p>
-          <Link to="/">Política de Privacidade</Link>
+          <Link to="/" className="">Política de Privacidade</Link>
         </div>
       </div>
     </div>

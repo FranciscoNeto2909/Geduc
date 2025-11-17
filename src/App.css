@@ -8,10 +8,12 @@
 }
 
 .button {
-  width: 218px;
-  height: 33px;
+  width: 100%;
+  max-width: 218px;
+  text-align: center;
+  padding: 6px;
   color: #fff;
-  background-color: var(--primary-blue);
+  background-color: var(--banner-blue);
   border-radius: 8px;
   border: 1px solid transparent;
   cursor: pointer;
@@ -19,8 +21,8 @@
 
 .button--inverted {
   background-color: #fff;
-  border: 1px solid var(--primary-blue);
-  color: var(--primary-blue);
+  border: 1px solid var(--banner-blue);
+  color: var(--banner-blue);
   font-weight: 600;
 }
 
@@ -79,7 +81,7 @@
   height: 39px;
   padding-left: 24px;
   font-size: 16px;
-  border: 1px solid #e8e8e8;
+  border: 1px solid var(--placeholder-gray);
   width: 100%;
   max-width: 335px;
   min-width: 250px;

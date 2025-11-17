@@ -12,7 +12,7 @@
 
 .top-bar {
   height: 100%;
-  width:64%;
+  width: 64%;
   position: absolute;
   background-color: var(--soft-blue);
   z-index: -1;
@@ -50,7 +50,7 @@
   justify-content: center;
 }
 
-.top-social-icons{
+.top-social-icons {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,8 +59,9 @@
   margin-top: 3px;
 }
 
-.top-social-icon{
+.top-social-icon {
   cursor: pointer;
+  color: #fff;
 }
 
 .top-account {
@@ -70,7 +71,12 @@
   gap: 6px;
 }
 
-.top-account a {
+.top-account-link {
   font-weight: 700;
   color: #fff;
+  border-bottom: 1px solid transparent;
+}
+
+.top-account--selected {
+  border-bottom: 1px solid #fff;
 }

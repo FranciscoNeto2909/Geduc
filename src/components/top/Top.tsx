@@ -1,11 +1,19 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FaRegUser, FaLinkedin } from "react-icons/fa";
 import "./top.css";
 import { AiOutlineInstagram, AiOutlineWhatsApp } from "react-icons/ai";
+import { useEffect, useState } from "react";
 
 export default function Top() {
+  const { pathname } = useLocation();
+  const [currRoute, setCurrRoute] = useState(pathname);
+
+  useEffect(() => {
+    setCurrRoute(pathname);
+  }, [pathname]);
+
   return (
     <div className="top">
       <div className="top-bar"></div>
@@ -41,7 +49,14 @@ export default function Top() {
           </div>
           <div className="top-account">
             <FaRegUser size={16} />
-            <Link to="conta">Minha conta</Link>
+            <Link
+              to="minha-conta"
+              className={
+                `top-account-link ${currRoute === "/minha-conta" && "top-account--selected"}`
+              }
+            >
+              Minha conta
+            </Link>
           </div>
         </div>
       </div>
