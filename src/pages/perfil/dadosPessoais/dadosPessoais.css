@@ -1,0 +1,66 @@
+.dadosPessoais {
+  height: 100%;
+  width: 100%;
+}
+
+.dadosPessoais-item-container {
+  display: flex;
+}
+
+.dadosPessoais-item {
+  width: 50%;
+  margin-bottom: 52px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dadosPessoais-item label {
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+}
+
+.dadosPessoais-button {
+  width: 50%;
+  display: flex;
+}
+
+.dadosPessoais-button button {
+  width: 100%;
+  max-width: 80%;
+  font-family: Arial;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0.3px;
+  padding: 10px;
+  background-color: var(--blue);
+}
+
+@media (max-width: 768px) {
+  .dadosPessoais {
+    justify-content: center;
+  }
+  .dadosPessoais-item-container {
+    flex-wrap: wrap;
+  }
+
+  .dadosPessoais-item {
+    width: 100%;
+    margin-bottom: 32px;
+  }
+
+  .dadosPessoais-item input {
+    max-width: 100%;
+  }
+
+  .dadosPessoais-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .dadosPessoais-button button {
+    max-width: 100%;
+  }
+}
