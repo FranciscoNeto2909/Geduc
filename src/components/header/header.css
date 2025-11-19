@@ -17,15 +17,14 @@
 }
 
 .header-logo {
-  width: 167px;
-  height: 47px;
+  width: auto;
   display: flex;
   align-items: center;
   gap: 4px;
 }
 
 .header-logo-img {
-  height: 55px;
+  height: 35px;
   width: auto;
   overflow: hidden;
 }
@@ -44,7 +43,7 @@
   background-color: transparent;
   position: absolute;
   right: 20px;
-  top: 26px;
+  top: 16px;
   border: none;
   display: none;
 }
@@ -171,10 +170,15 @@
     gap: 24px;
     flex-direction: column;
     align-items: flex-start;
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    z-index: 4;
   }
 
-  .header-menu-button{
+  .header-menu-button {
     display: block;
+    z-index: 4;
   }
 
   .hide-nav {
@@ -183,11 +187,11 @@
 
   .header-nav-routes {
     flex-direction: column;
-    max-width: 150px;
   }
   .route-item-link,
   .route-item {
-    font-size: 18px;
+    font-family: poppins;
+    font-size: 17px;
     padding: 3px 0;
   }
 

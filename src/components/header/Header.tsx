@@ -54,10 +54,11 @@ export default function Header() {
       <div className="header-container">
         <div className="header-logo">
           <div className="header-logo-img">
-            <img src={logo} alt="logo" className="header-img" />
-          </div>
-          <div className="title">
-            <h3 className="header-logo-title">Geduc</h3>
+            <img
+              src="https://geduc.com.br/wp-content/uploads/2025/04/Logo-1.png"
+              alt="logo"
+              className="header-img"
+            />
           </div>
         </div>
         <button
@@ -65,7 +66,11 @@ export default function Header() {
           className="header-menu-button"
           onClick={handleOpenMenu}
         >
-          {openedMenu ? <AiOutlineClose size={26} /> : <AiOutlineMenu size={26}/>}
+          {openedMenu ? (
+            <AiOutlineClose size={26} />
+          ) : (
+            <AiOutlineMenu size={26} />
+          )}
         </button>
         <div className={`header-nav ${!openedMenu && "hide-nav"}`}>
           <nav className="header-nav-routes">
