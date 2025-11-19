@@ -12,6 +12,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 24px;
+  position: relative;
 }
 
 .header-logo {
@@ -38,9 +40,19 @@
   font-size: 32px;
 }
 
+.header-menu-button {
+  background-color: transparent;
+  position: absolute;
+  right: 20px;
+  top: 26px;
+  border: none;
+  display: none;
+}
+
 .header-nav {
   width: 100%;
   max-width: 671px;
+  justify-content: space-between;
 }
 
 .header-nav-routes {
@@ -56,19 +68,39 @@
   color: var(--not-selected);
 }
 
+.route-item:hover:not(.route-item--selected) {
+  color: var(--blue);
+}
+
+.route-item-link {
+  font-family: Arial;
+  font-size: 14px;
+  color: inherit;
+}
+
+.route-item--list {
+  position: relative;
+  cursor: pointer;
+  border: none;
+  border-bottom: 2px solid transparent;
+  background-color: transparent;
+}
+
 .route-item--selected {
   color: var(--dark-blue);
   border-bottom: 2px solid var(--dark-blue);
 }
 
-.route-item:hover:not(.route-item--selected) {
-  color: var(--blue);
-}
-
-.route-item a {
-  font-family: Arial;
-  font-size: 14px;
-  color: inherit;
+.route-item--list::before {
+  right: -16px;
+  bottom: 5px;
+  transform: rotate(-45deg);
+  position: absolute;
+  content: "";
+  height: 6px;
+  width: 6px;
+  border-left: 2px solid var(--not-selected);
+  border-bottom: 2px solid var(--not-selected);
 }
 
 .header-contact-button {
@@ -77,4 +109,99 @@
   background-color: var(--blue);
   border: none;
   border-radius: 8px;
+}
+
+.route-item-options {
+  position: absolute;
+  background-color: #fff;
+  list-style: none;
+  margin-top: 12px;
+  border-radius: 16px;
+  box-shadow: 0 0 4px #00000017;
+  z-index: 4;
+  padding: 16px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.route-item-option {
+  font-family: Arial;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 100%;
+  color: var(--dark-blue);
+  position: relative;
+  cursor: pointer;
+}
+
+.route-item-option-button {
+  border: none;
+  background-color: transparent;
+  font-family: Arial;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 100%;
+  color: var(--dark-blue);
+  position: relative;
+  cursor: pointer;
+  padding: 0 32px 0 12px;
+}
+
+.route-item-hidden {
+  display: none;
+}
+
+.route-item-option-secItem {
+  list-style: none;
+  margin: 6px 0;
+  padding: 6px 24px;
+}
+
+.route-item-option-secItem:hover {
+  background-color: #00000017;
+}
+
+.route-item-option-secItem a {
+  color: #000;
+}
+
+@media (max-width: 700px) {
+  .header-container {
+    gap: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-menu-button{
+    display: block;
+  }
+
+  .hide-nav {
+    display: none;
+  }
+
+  .header-nav-routes {
+    flex-direction: column;
+    max-width: 150px;
+  }
+  .route-item-link,
+  .route-item {
+    font-size: 18px;
+    padding: 3px 0;
+  }
+
+  .route-item-options {
+    position: relative;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .route-item--list::before {
+    bottom: 10px;
+  }
+
+  .route-item:hover:not(.route-item--selected) {
+    color: var(--not-selected);
+  }
 }
