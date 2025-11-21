@@ -241,57 +241,61 @@ export default function Inicio() {
           {solutions.map((solution, i) => (
             <div
               className={`${
-                solutioinId == i && "solutions-item--selected"
+                (solutioinId == i || window.innerWidth < 500) &&
+                "solutions-item--selected"
               } solutions-item`}
               key={i}
               onClick={() => handleSelectItem(i)}
             >
               <div className="solution-item-top">
-                <solution.icon size={32} className="solutions-item-icon" />
+                <solution.icon
+                  size={window.innerWidth < 500 ? 40 : 32}
+                  className="solutions-item-icon"
+                />
                 <h4 className="solutions-item-title">{solution.title}</h4>
               </div>
               <div className="solution-item-desc">{solution.desc}</div>
             </div>
           ))}
         </div>
-        <div className="inicio-pillars-news">
-          <div className="pillars-news-texts">
-            <h2 className="news-texts-title">
-              Receba as <span className="news-texts-news">novidades</span>{" "}
-              direto no seu e-mail!
-            </h2>
-            <p className="news-texts-desc">
-              Cadastre-se e receba dicas, conteúdos exclusivos e novidades toda
-              semana.
-            </p>
-          </div>
-          <div className="pillars-news-form">
-            <form className="news-form" action="">
-              <div className="news-form-name">
-                <label htmlFor="name"></label>
-                <input
-                  className="form-input"
-                  type="text"
-                  id="name"
-                  placeholder="Nome Completo*"
-                />
-              </div>
-              <div className="news-form-email">
-                <label htmlFor="email"></label>
-                <input
-                  className="form-input"
-                  id="email"
-                  type="text"
-                  placeholder="E-mail*"
-                />
-              </div>
-              <div className="news-form-burtton">
-                <button type="button" className="button">
-                  Assinar
-                </button>
-              </div>
-            </form>
-          </div>
+      </div>
+      <div className="inicio-pillars-news">
+        <div className="pillars-news-texts">
+          <h2 className="news-texts-title">
+            Receba as <span className="news-texts-news">novidades</span> direto
+            no seu e-mail!
+          </h2>
+          <p className="news-texts-desc">
+            Cadastre-se e receba dicas, conteúdos exclusivos e novidades toda
+            semana.
+          </p>
+        </div>
+        <div className="pillars-news-form">
+          <form className="news-form" action="">
+            <div className="news-form-name">
+              <label htmlFor="name"></label>
+              <input
+                className="form-input"
+                type="text"
+                id="name"
+                placeholder="Nome Completo*"
+              />
+            </div>
+            <div className="news-form-email">
+              <label htmlFor="email"></label>
+              <input
+                className="form-input"
+                id="email"
+                type="text"
+                placeholder="E-mail*"
+              />
+            </div>
+            <div className="news-form-burtton">
+              <button type="button" className="button news-form-button">
+                Assinar
+              </button>
+            </div>
+          </form>
         </div>
       </div>
       <div className="inicio-features">

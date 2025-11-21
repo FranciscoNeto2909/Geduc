@@ -1,5 +1,4 @@
 import Top from "../top/Top";
-import logo from "../../assets/logo.png";
 import { Link } from "react-router-dom";
 import { routes } from "../../variables";
 import { useLocation } from "react-router-dom";
