@@ -64,14 +64,11 @@
   color: #fff;
 }
 
-.top-account {
+.top-account-link {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 6px;
-}
-
-.top-account-link {
   font-weight: 700;
   color: #fff;
   border-bottom: 1px solid transparent;
@@ -79,4 +76,32 @@
 
 .top-account--selected {
   border-bottom: 1px solid #fff;
+}
+
+@media (max-width: 500px) {
+  .top-items {
+    padding: 0 16px;
+  }
+  .top-contacts {
+    padding-top: 2px;
+    flex-direction: column;
+    gap: 0;
+    align-items: flex-start;
+    font-size: 10px;
+  }
+
+  .top-contacts span {
+    display: none;
+  }
+  .top-social-icons {
+    margin: 0 6px;
+  }
+
+  .top-account {
+    gap: 4px;
+  }
+
+  .top-account-link {
+    width: max-content;
+  }
 }

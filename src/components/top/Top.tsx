@@ -47,17 +47,15 @@ export default function Top() {
               <FaLinkedin size={16} className="top-social-icon" />
             </Link>
           </div>
-          <div className="top-account">
-            <FaRegUser size={16} />
-            <Link
-              to="minha-conta"
-              className={
-                `top-account-link ${currRoute === "/minha-conta" && "top-account--selected"}`
-              }
-            >
-              Minha conta
-            </Link>
-          </div>
+          <Link
+            to="minha-conta"
+            className={`top-account-link ${
+              currRoute === "/minha-conta" && "top-account--selected"
+            }`}
+          >
+            <FaRegUser className="top-account-icon" size={16} />
+            Minha conta
+          </Link>
         </div>
       </div>
     </div>

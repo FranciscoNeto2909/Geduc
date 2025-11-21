@@ -36,6 +36,11 @@ export default function Header() {
     setOpenedMenu(!openedMenu);
   }
 
+  function handleNavigate() {
+    setMenuIndex(null);
+    setOpenedMenu(false);
+  }
+
   useEffect(() => {
     setCurrRoute(pathname);
   }, [pathname]);
@@ -52,13 +57,13 @@ export default function Header() {
       <Top />
       <div className="header-container">
         <div className="header-logo">
-          <div className="header-logo-img">
+          <Link className="header-logo-img" to="/">
             <img
               src="https://geduc.com.br/wp-content/uploads/2025/04/Logo-1.png"
               alt="logo"
               className="header-img"
             />
-          </div>
+          </Link>
         </div>
         <button
           type="button"
@@ -75,11 +80,7 @@ export default function Header() {
           <nav className="header-nav-routes">
             {routes.map((route, i) =>
               !route?.hasOptions ? (
-                <div
-                  onClick={() => setMenuIndex(null)}
-                  className={`route-item`}
-                  key={i}
-                >
+                <div onClick={handleNavigate} className={`route-item`} key={i}>
                   <Link
                     className={`route-item-link ${
                       route?.to === currRoute && "route-item--selected"

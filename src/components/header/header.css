@@ -177,6 +177,7 @@
     background-color: #fff;
     width: 100%;
     z-index: 4;
+    padding: 12px 16px;
   }
 
   .header-menu-button {

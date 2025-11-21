@@ -124,7 +124,7 @@ export default function Inicio() {
                   </button>
                   <button
                     type="button"
-                    className="button banner-button banner-button--invertedd"
+                    className="button banner-button banner-button--inverted"
                   >
                     Seja Parceiro
                   </button>
