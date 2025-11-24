@@ -26,7 +26,7 @@ export default function QuemSomos() {
               A Educação é a Base que Transforma o Mundo
             </h2>
             <p className="quemsomos-banner-desc">
-              A melhor forma de transformar o mundo é através da educação.E é
+              A melhor forma de transformar o mundo é através da educação. E é
               com esse propósito que nascemos: para impulsionar mudanças reais,
               construindo pontes entre o presente e o futuro dentro das escolas.
             </p>
