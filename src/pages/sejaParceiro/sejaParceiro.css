@@ -834,11 +834,129 @@
 }
 
 @media (max-width: 600px) {
+  .parceria-banner-texts {
+    padding: 0 16px 24px 16px;
+  }
+
+  .parceria-banner-items {
+    justify-content: center;
+  }
+  .parceria-banners-buttons button {
+    padding: 10px 0;
+    font-size: 15px;
+  }
+
+  .parceiro-header {
+    max-width: 100vw;
+    padding: 0 16px;
+    margin: 40px 0 0;
+  }
+
+  .parceiro-main-img {
+    transform: scale(0.8);
+  }
+
+  .paceiro-main-texts {
+    max-width: 100%;
+    padding: 0 16px;
+  }
+  .commission {
+    max-width: 100%;
+    padding: 0 16px;
+  }
+
+  .commission-cards {
+    justify-content: center;
+  }
+
+  .commission-card {
+    transform: scale(1.1);
+  }
+
+  .parceiro-act {
+    margin-bottom: 100px;
+  }
+
+  .parceiro-act-header {
+    padding: 0 16px;
+    margin-bottom: 52px;
+  }
+
+  .act-header-title {
+    font-size: 38px;
+    margin-bottom: 24px;
+  }
+
+  .act-options-cards {
+    gap: 24px 12px;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 100%;
+    padding: 0 16px;
+  }
+
+  .act-options-card {
+    max-width: 160px;
+  }
+  .act-options-card:hover {
+    transform: scale(1);
+  }
+
+  .models-header {
+    width: 100%;
+    padding: 0 16px;
+    margin-bottom: 52px;
+  }
+
+  .models-cards {
+    padding: 0 16px;
+  }
+
+  .models-header-title {
+    font-size: 38px;
+  }
+
+  .parceria-steps-texts {
+    width: 100%;
+    padding: 0 16px 24px;
+  }
+
+  .parceria-steps-img {
+    width: 100vw;
+    padding: 0 16px;
+  }
+
+  .parceria-steps-img img {
+    max-width: 100%;
+  }
+
+  .parceria-form {
+    padding: 32px 16px 52px;
+  }
+
+  .form-header {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .form-header-title {
+    font-size: 33px;
+  }
+
+  .form-register {
+    padding: 24px 16px;
+  }
+
   .form-register-container {
     flex-wrap: wrap;
   }
 
-  .form-register-item{
+  .form-register-item {
     max-width: 100%;
+  }
+
+  .form-register-button {
+    max-width: 100%;
+    padding: 16px 0;
   }
 }
