@@ -102,7 +102,7 @@ export default function Footer() {
                 <form action="" className="footer-body-register">
                   <div className="">
                     <label htmlFor=""></label>
-                    <input type="text" placeholder="E-mail*" className="form-input form-input-small" />
+                    <input type="text" placeholder="E-mail*" className="register-input form-input-small" />
                   </div>
                   <button onClick={handleRegister} className="button footer-body-button">Cadastre-se</button>
                 </form>
