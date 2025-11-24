@@ -144,4 +144,8 @@
   .register-input {
     max-width: 100%;
   }
+
+  .button{
+    padding: 16px 6px;
+  }
 }

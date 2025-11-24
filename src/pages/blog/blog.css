@@ -1,6 +1,7 @@
 .blog {
   width: 100vw;
   height: auto;
+  padding-top: 72px;
 }
 
 .blog-banner {
@@ -256,18 +257,20 @@
   }
 
   .blog-banner-texts-title {
-    font-size: 34px;
+    font-size: 32px;
+    line-height: 120%;
   }
 
   .blog-banner-img {
     max-width: 100%;
     max-height: 320px;
+    margin-left: -20px;
   }
 
   .blog-banner-img img {
     height: auto;
     width: 100%;
-    max-width: 330px;
+    max-width: 300px;
   }
 
   .blog-banner-circle-top,
@@ -283,7 +286,7 @@
 
   .blog-banner-circle-bottom {
     bottom: 0;
-    right: 5px;
+    right: -10px;
   }
 
   .blog-posts {
@@ -296,5 +299,8 @@
 
   .posts-header-title {
     font-size: 28px;
+  }
+  .blog-banner-buttons {
+    gap: 12px;
   }
 }

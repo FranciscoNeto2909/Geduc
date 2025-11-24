@@ -255,6 +255,10 @@
     margin-bottom: 32px;
   }
 
+  .blog-post {
+    padding: 0 16px;
+  }
+
   .blog-post-texts {
     margin-bottom: 32px;
   }
