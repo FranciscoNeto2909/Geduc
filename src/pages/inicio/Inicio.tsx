@@ -97,7 +97,7 @@ export default function Inicio() {
                   </button>
                 </div>
               </div>
-              <div className="banners-phone">
+              <div className="banners-student">
                 <div className="student-circle1"></div>
                 <img
                   src={student}

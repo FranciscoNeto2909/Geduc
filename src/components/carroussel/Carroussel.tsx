@@ -38,33 +38,36 @@ export default function Carroussel({ auto, children }: ComponentsProps) {
     }
   }, []);
 
-  useEffect(() => {
-    if (auto) {
-      if (!pages || pages.length === 0) return;
-      let subindo = true;
-      let interval = setInterval(() => {
-        setPagesCount(prev => {
-          if (subindo) {
-            if (prev >= pages.length - 1) {
-              subindo = false;
-              return prev - 1;
-            }
-            pages[0].style.marginLeft = `-${100 * (prev + 1)}%`;
-            return prev + 1;
-          } else {
-            if (prev <= 0) {
-              subindo = true;
-              return prev + 1;
-            }
-            pages[0].style.marginLeft = `${-100 * (prev - 1)}%`;
+const subindoRef = useRef(true);
+
+useEffect(() => {
+  if (auto) {
+    if (!pages || pages.length === 0) return;
+
+    let interval = setInterval(() => {
+      setPagesCount(prev => {
+        if (subindoRef.current) {
+          if (prev >= pages.length - 1) {
+            subindoRef.current = false;
             return prev - 1;
           }
-        });
-      }, 4000);
+          pages[0].style.marginLeft = `-${100 * (prev + 1)}%`;
+          return prev + 1;
+        } else {
+          if (prev <= 0) {
+            subindoRef.current = true;
+            return prev + 1;
+          }
+          pages[0].style.marginLeft = `-${100 * (prev - 1)}%`;
+          return prev - 1;
+        }
+      });
+    }, 4000);
 
-      return () => clearInterval(interval);
-    }
-  }, [pages]);
+    return () => clearInterval(interval);
+  }
+}, [auto, pages]);
+
 
   return (
     <div className="carroussel-container">

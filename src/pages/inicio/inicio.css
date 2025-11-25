@@ -102,7 +102,8 @@
   opacity: 0.1;
 }
 
-.banners-phone {
+.banners-phone,
+.banners-student {
   position: relative;
 }
 
@@ -802,6 +803,26 @@
 
   .banner-texts-title {
     font-size: 32px;
+  }
+
+  .banner-img-phone {
+    max-height: 400px;
+  }
+
+  .phone-circle1,
+  .phone-circle2 {
+    max-height: 160px;
+    max-width: 160px;
+  }
+
+  .banner-books,
+  .banners-phone {
+    margin-top: 52px;
+  }
+
+  .banners-student {
+    display: flex;
+    margin-left: -20px;
   }
 
   .banner-img-student {
