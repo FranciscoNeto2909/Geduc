@@ -1,6 +1,13 @@
 import Top from "../top/Top";
 import { Link } from "react-router-dom";
-import { routes } from "../../variables";
+import {
+  publicRoutes,
+  privateRoutes,
+  routes,
+  appTeacher,
+  appStudent,
+} from "../../variables";
+import { FaChevronDown } from "react-icons/fa";
 import { useLocation } from "react-router-dom";
 import "./header.css";
 import { useEffect, useState } from "react";
@@ -9,36 +16,43 @@ import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 export default function Header() {
   const { pathname } = useLocation();
   const [currRoute, setCurrRoute] = useState(pathname);
-  const [hoverOne, setHoverOne] = useState(false);
-  const [hoverTwo, setHoverTwo] = useState(false);
-  const [hoverTree, setHoverTree] = useState(false);
-  const [menuIndex, setMenuIndex] = useState<number | null>(null);
   const [openedMenu, setOpenedMenu] = useState(false);
-
-  function handleOpenHoverOne(i: number) {
-    setMenuIndex(i);
-    setHoverOne(!hoverOne);
-    if (hoverOne == false) {
-      setHoverTwo(false);
-      setHoverTree(false);
-      setMenuIndex(null);
-    }
-  }
-
-  function handleOpenHoverTwo() {
-    setHoverTwo(!hoverTwo);
-  }
-  function handleOpenHoverTree() {
-    setHoverTree(!hoverTree);
-  }
+  const [openedPlataforma, setOpenedPlataforma] = useState(false);
+  const [openedPublic, setOpenedPublic] = useState(false);
+  const [openedPrivate, setOpenedPrivate] = useState(false);
+  const [openedDownApp, setOpenedDownApp] = useState(false);
+  const [openedTLink, setOpenedTLink] = useState(false);
+  const [openedSLink, setOpenedSLink] = useState(false);
 
   function handleOpenMenu() {
     setOpenedMenu(!openedMenu);
   }
 
   function handleNavigate() {
-    setMenuIndex(null);
     setOpenedMenu(false);
+  }
+
+  function handleOpenPlataforma() {
+    setOpenedPlataforma(!openedPlataforma);
+  }
+
+  function handleOpenPublic() {
+    setOpenedPublic(!openedPublic);
+  }
+  function handleOpenPrivate() {
+    setOpenedPrivate(!openedPrivate);
+  }
+
+  function handleOpenAppdownload() {
+    setOpenedDownApp(!openedDownApp);
+  }
+
+  function handleOpenTLink() {
+    setOpenedTLink(!openedTLink);
+  }
+
+  function handleOpenSLink() {
+    setOpenedSLink(!openedSLink);
   }
 
   useEffect(() => {
@@ -78,62 +92,128 @@ export default function Header() {
         </button>
         <div className={`header-nav ${!openedMenu && "hide-nav"}`}>
           <nav className="header-nav-routes">
-            {routes.map((route, i) =>
-              !route?.hasOptions ? (
-                <div onClick={handleNavigate} className={`route-item`} key={i}>
-                  <Link
-                    className={`route-item-link ${
-                      route?.to === currRoute && "route-item--selected"
-                    }`}
-                    to={route?.to || ""}
-                  >
-                    {route?.name}
-                  </Link>
+            {routes.map((route, i) => (
+              <div onClick={handleNavigate} className={`route-item`} key={i}>
+                <Link
+                  className={`route-item-link ${
+                    route?.to === currRoute && "route-item--selected"
+                  }`}
+                  to={route?.to || ""}
+                >
+                  {route?.name}
+                </Link>
+              </div>
+            ))}
+            <div className="header-nav-plataforma">
+              <button
+                onClick={handleOpenPlataforma}
+                className={`route-item ${
+                  openedPlataforma && "route-item--selected"
+                }`}
+              >
+                <span className="route-item-name">Plataforma</span>
+                <FaChevronDown className="route-icon" size={12} />
+              </button>
+              {openedPlataforma && (
+                <div className="nav-plataforma">
+                  <div className="nav-plataforma-item">
+                    <button
+                      className={`route-item ${
+                        openedPublic && "route-item--selected"
+                      }`}
+                      onClick={handleOpenPublic}
+                    >
+                      <span className="route-item-name">Rede Pública</span>
+                      <FaChevronDown className="route-icon" size={12} />
+                    </button>
+                    {openedPublic && (
+                      <ul className="route-item-lists">
+                        {publicRoutes.map((item, i) => (
+                          <li className="route-item-list" key={i}>
+                            <a href={item.to}>{item.name}</a>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                  <div className="nav-plataforma-item">
+                    <button
+                      className={`route-item ${
+                        openedPrivate && "route-item--selected"
+                      }`}
+                      onClick={handleOpenPrivate}
+                    >
+                      <span className="route-item-name">Rede Privada</span>
+                      <FaChevronDown className="route-icon" size={12} />
+                    </button>
+                    {openedPrivate && (
+                      <ul className="route-item-lists">
+                        {privateRoutes.map((item, i) => (
+                          <li className="route-item-list" key={i}>
+                            <a href={item.to}>{item.name}</a>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
                 </div>
-              ) : (
-                <div>
-                  <button
-                    type="button"
-                    onClick={() => handleOpenHoverOne(i)}
-                    className={`route-item route-item--list ${
-                      i == menuIndex && "route-item--selected"
-                    }`}
-                  >
-                    {route.name}
-                  </button>
-                  <ul
-                    className={`route-item-options ${
-                      !(!hoverOne && i == menuIndex) && "route-item-hidden"
-                    }`}
-                  >
-                    {i == menuIndex &&
-                      route.options.map((item, i) => (
-                        <li className="route-item-option">
-                          <button
-                            type="button"
-                            className="route-item-option-button"
-                            onClick={
-                              i == 0 ? handleOpenHoverTwo : handleOpenHoverTree
-                            }
-                          >
-                            {item.name}
-                          </button>
-                          <ul>
-                            {(i == 0 ? hoverTwo : hoverTree) &&
-                              item.items.map(op => (
-                                <li className="route-item-option-secItem">
-                                  <a href={op.to} target="_blank">
-                                    {op.name}
-                                  </a>
-                                </li>
-                              ))}
-                          </ul>
-                        </li>
-                      ))}
-                  </ul>
+              )}
+            </div>
+            <div className="header-nav-app">
+              <button
+                onClick={handleOpenAppdownload}
+                className={`route-item ${
+                  openedDownApp && "route-item--selected"
+                }`}
+              >
+                <span className="route-item-name">Baixar App</span>
+                <FaChevronDown className="route-icon" size={12} />
+              </button>
+              {openedDownApp && (
+                <div className="nav-plataforma nav-donwload-app">
+                  <div className="nav-plataforma-item">
+                    <button
+                      className={`route-item ${
+                        openedPublic && "route-item--selected"
+                      }`}
+                      onClick={handleOpenTLink}
+                    >
+                      <span className="route-item-name">Professor</span>
+                      <FaChevronDown className="route-icon" size={12} />
+                    </button>
+                    {openedTLink && (
+                      <ul className="route-item-lists">
+                        {appTeacher.map((item, i) => (
+                          <li className="route-item-list" key={i}>
+                            <a href={item.to}>{item.name}</a>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                  <div className="nav-plataforma-item">
+                    <button
+                      className={`route-item ${
+                        openedPrivate && "route-item--selected"
+                      }`}
+                      onClick={handleOpenSLink}
+                    >
+                      <span className="route-item-name">Aluno</span>
+                      <FaChevronDown className="route-icon" size={12} />
+                    </button>
+                    {openedSLink && (
+                      <ul className="route-item-lists">
+                        {appStudent.map((item, i) => (
+                          <li className="route-item-list" key={i}>
+                            <a href={item.to}>{item.name}</a>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
                 </div>
-              )
-            )}
+              )}
+            </div>
           </nav>
         </div>
       </div>

@@ -77,86 +77,63 @@ export const routes = [
   { name: "Quem Somos", to: "/quem-somos" },
   { name: "Blog", to: "/blog" },
   { name: "Seja Parceiro", to: "/seja-parceiro" },
+];
+
+export const publicRoutes = [
   {
-    name: "Plataforma",
-    to: "",
-    hasOptions: true,
-    options: [
-      {
-        name: "Rede Pública",
-        items: [
-          {
-            name: "SEMED",
-            to: "https://semed.geduc.com.br/index.php?class=LoginForm",
-          },
-          { name: "Contratos", to: "https://contratos.geduc.com.br/login" },
-          {
-            name: "Escola",
-            to: "https://semed.geduc.com.br/index.php?class=LoginForm",
-          },
-          {
-            name: "Professor",
-            to: "https://professor.geduc.com.br/index.php?class=LoginForm",
-          },
-          {
-            name: "Aluno",
-            to: "https://aluno.geduc.com.br/index.php?class=LoginForm",
-          },
-        ],
-      },
-      {
-        name: "Rede Privada",
-        items: [
-          {
-            name: "Escola",
-            to: "https://semed.geduc.com.br/index.php?class=LoginForm",
-          },
-          {
-            name: "Professor",
-            to: "https://professor.geduc.com.br/index.php?class=LoginForm",
-          },
-          {
-            name: "Aluno",
-            to: "https://aluno.geduc.com.br/index.php?class=LoginForm",
-          },
-        ],
-      },
-    ],
+    name: "SEMED",
+    to: "https://semed.geduc.com.br/index.php?class=LoginForm",
+  },
+  { name: "Contratos", to: "https://contratos.geduc.com.br/login" },
+  {
+    name: "Escola",
+    to: "https://semed.geduc.com.br/index.php?class=LoginForm",
   },
   {
-    name: "Baixar App",
-    to: "",
-    hasOptions: true,
-    options: [
-      {
-        name: "Professor",
-        items: [
-          {
-            name: "Apple Store",
-            to: "https://apps.apple.com/br/app/geduc-professor/id1538751276",
-          },
-          {
-            name: "Play Store",
-            to: "https://play.google.com/store/apps/details?id=br.com.geduc.professor",
-          },
-        ],
-      },
-      {
-        name: "Aluno",
-        items: [
-          {
-            name: "Apple Store",
-            to: "https://apps.apple.com/br/app/geduc-class/id1534929068",
-          },
-          {
-            name: "Play Store",
-            to: "https://play.google.com/store/apps/details?id=br.com.geduc.geducclass.app",
-          },
-        ],
-      },
-    ],
+    name: "Professor",
+    to: "https://professor.geduc.com.br/index.php?class=LoginForm",
   },
-  ,
+  {
+    name: "Aluno",
+    to: "https://aluno.geduc.com.br/index.php?class=LoginForm",
+  },
+];
+
+export const privateRoutes = [
+  {
+    name: "Escola",
+    to: "https://semed.geduc.com.br/index.php?class=LoginForm",
+  },
+  {
+    name: "Professor",
+    to: "https://professor.geduc.com.br/index.php?class=LoginForm",
+  },
+  {
+    name: "Aluno",
+    to: "https://aluno.geduc.com.br/index.php?class=LoginForm",
+  },
+];
+
+export const appTeacher = [
+  {
+    name: "Apple Store",
+    to: "https://apps.apple.com/br/app/geduc-professor/id1538751276",
+  },
+  {
+    name: "Play Store",
+    to: "https://play.google.com/store/apps/details?id=br.com.geduc.professor",
+  },
+];
+
+export const appStudent = [
+  {
+    name: "Apple Store",
+    to: "https://apps.apple.com/br/app/geduc-class/id1534929068",
+  },
+  {
+    name: "Play Store",
+    to: "https://play.google.com/store/apps/details?id=br.com.geduc.geducclass.app",
+  },
 ];
 
 export const solutions = [
