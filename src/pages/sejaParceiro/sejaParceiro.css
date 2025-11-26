@@ -8,7 +8,7 @@
   overflow: hidden;
 }
 
-.parceria-banner-items {
+.parceria-banner .parceria-banner-items {
   padding: 100px 0;
   max-width: 1120px;
   margin: 0 auto;
@@ -26,10 +26,37 @@
   z-index: -1;
 }
 
+.parceria-banner-img {
+  position: relative;
+}
+
 .parceria-banner-img img {
   height: 100%;
   max-height: 483px;
   max-width: 394px;
+}
+
+.parceria-banner-circle1,
+.parceria-banner-circle2 {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  background: linear-gradient(
+    135.51deg,
+    var(--soft-blue) 11.09%,
+    var(--blue) 59.06%,
+    var(--icon-blue) 107.03%
+  );
+  border-radius: 50%;
+}
+
+.parceria-banner-circle1 {
+  z-index: -1;
+}
+
+.parceria-banner-circle2 {
+  right: 0;
+  bottom: -25px;
 }
 
 .parceria-banner-texts {
@@ -840,6 +867,10 @@
 
   .parceria-banner-items {
     justify-content: center;
+  }
+
+  .parceria-banner-img {
+    margin: 0 auto;
   }
   .parceria-banners-buttons button {
     padding: 8px 0;

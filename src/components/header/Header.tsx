@@ -85,9 +85,9 @@ export default function Header() {
           onClick={handleOpenMenu}
         >
           {openedMenu ? (
-            <AiOutlineClose size={26} />
+            <AiOutlineClose size={30} />
           ) : (
-            <AiOutlineMenu size={26} />
+            <AiOutlineMenu size={30} />
           )}
         </button>
         <div className={`header-nav ${!openedMenu && "hide-nav"}`}>

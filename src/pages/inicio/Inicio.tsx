@@ -47,7 +47,7 @@ export default function Inicio() {
           <div className="inicio-banners-circle circle-orange"></div>
           <div className="inicio-banners-circle circle-blue"></div>
           <div className="inicio-banners-circle circle-green"></div>
-          <Carroussel auto>
+          <Carroussel auto pagesQuant={3}>
             <div className="carroussel-item inicio-banner">
               <div className="banner-texts">
                 <h2 className="banner-texts-title">
@@ -358,41 +358,26 @@ export default function Inicio() {
         </div>
 
         <div className="clients-carroussel">
-          <div className="clients-carroussel-prev">
-            <button type="button" className="pagination-button">
-              <AiOutlineLeft size={32} />
-            </button>
-          </div>
           <div className="clients-carroussel-page">
-            <div className="clients-carroussel-items">
+            <Carroussel pagesQuant={window.innerWidth > 768 ? 2 : 4} auto>
               {clientsOpinion.map((client, i) => (
-                <div className="clients-carroussel-item" key={i}>
-                  <div className="clients-carroussel-opinion">
-                    <p className="clients-carroussel-opinion-text">
-                      {client.opinion}
-                    </p>
-                    <span className="carroussel-opinion-tip"></span>
-                  </div>
-                  <div className="clients-carroussel-client">
-                    <h4 className="carroussel-client-name">{client.name}</h4>
-                    <p className="carroussel-client-city">{client.city}</p>
+                <div className="clients-carroussel-container carroussel-item">
+                  <div className="clients-carroussel-item" key={i}>
+                    <div className="clients-carroussel-opinion">
+                      <p className="clients-carroussel-opinion-text">
+                        {client.opinion}
+                      </p>
+                      <span className="carroussel-opinion-tip"></span>
+                    </div>
+                    <div className="clients-carroussel-client">
+                      <h4 className="carroussel-client-name">{client.name}</h4>
+                      <p className="carroussel-client-city">{client.city}</p>
+                    </div>
                   </div>
                 </div>
               ))}
-            </div>
+            </Carroussel>
           </div>
-          <div className="clients-carroussel-next">
-            <button
-              type="button"
-              className="pagination-button pagination-button--available"
-            >
-              <AiOutlineRight size={32} />
-            </button>
-          </div>
-        </div>
-        <div className="clients-pagination">
-          <div className="pagination-item pagination-item--selected"></div>
-          <div className="pagination-item"></div>
         </div>
       </div>
       <div className="inicio-content">

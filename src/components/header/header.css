@@ -159,6 +159,7 @@
   .header-menu-button {
     display: block;
     z-index: 4;
+    color: var(--blue);
   }
 
   .hide-nav {
@@ -180,6 +181,10 @@
 
   .route-item:hover:not(.route-item--selected) {
     color: var(--not-selected);
+  }
+
+  .route-item-link, .route-item-name, .route-icon{
+    color: var(--dark-blue);
   }
 
   .nav-plataforma {

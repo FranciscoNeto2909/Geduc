@@ -231,6 +231,18 @@ export const clientsOpinion = [
     opinion:
       "“Muito bom ter um sistema como o do Geduc dando facilidade em fazer acontecer o trabalho do professor em sala de aula.”",
   },
+  {
+    name: "Raimoneey Hermison",
+    city: "Fortuna - MA",
+    opinion:
+      "“No decorrer de sete anos sempre acompanhei meus dados estatísticos em geral de forma rápida e eficiente, nos momentos mais necessários na gestão de informações sempre tive o suporte eficaz”",
+  },
+  {
+    name: "Jose Nilton Vieira",
+    city: "Itinga do Maranhão - MA",
+    opinion:
+      "“O nosso antigo sistema não transmitia a segurança e confiabilidade que precisávamos. Ao aderirmos o GEDUC, podemos ter segurança e confiabilidade nos dados que tem no sistema.”",
+  },
 ];
 
 export const content = [

@@ -64,7 +64,9 @@ export default function SejaParceiro() {
             </div>
           </div>
           <div className="parceria-banner-img">
+            <div className="parceria-banner-circle1"></div>
             <img src={professores} alt="professores" />
+            <div className="parceria-banner-circle2"></div>
           </div>
         </div>
       </div>

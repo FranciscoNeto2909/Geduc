@@ -5,9 +5,14 @@ import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 interface ComponentsProps {
   auto?: boolean;
   children?: React.ReactNode;
+  pagesQuant: number;
 }
 
-export default function Carroussel({ auto, children }: ComponentsProps) {
+export default function Carroussel({
+  auto,
+  children,
+  pagesQuant,
+}: ComponentsProps) {
   const carrRef = useRef<HTMLDivElement | null>(null);
   const [pages, setPages] = useState<NodeListOf<HTMLDivElement>>();
   const [pagesCount, setPagesCount] = useState<number>(0);
@@ -15,9 +20,9 @@ export default function Carroussel({ auto, children }: ComponentsProps) {
 
   function handleNextPage() {
     if (!pages) return;
-    if (pagesCount < pages?.length - 1) {
+    if (pagesCount < pagesQuant - 1) {
       setPagesCount(pagesCount + 1);
-      pages[0].style.transition = "1.3s ease-in-out;";
+      pages[0].style.transition = "1.3s ease-in-out";
       pages[0].style.marginLeft = `-${100 * (pagesCount + 1)}%`;
     }
   }
@@ -38,17 +43,20 @@ export default function Carroussel({ auto, children }: ComponentsProps) {
     }
   }, []);
 
-const subindoRef = useRef(true);
+  const subindoRef = useRef(true);
 
-useEffect(() => {
-  if (auto) {
+  useEffect(() => {
+    if (!auto) return;
     if (!pages || pages.length === 0) return;
+
+    pages[0].style.transition = "1.3s ease-in-out";
 
     let interval = setInterval(() => {
       setPagesCount(prev => {
         if (subindoRef.current) {
-          if (prev >= pages.length - 1) {
+          if (prev >= pagesQuant - 1) {
             subindoRef.current = false;
+            pages[0].style.marginLeft = `-${100 * (prev - 1)}%`;
             return prev - 1;
           }
           pages[0].style.marginLeft = `-${100 * (prev + 1)}%`;
@@ -56,6 +64,7 @@ useEffect(() => {
         } else {
           if (prev <= 0) {
             subindoRef.current = true;
+            pages[0].style.marginLeft = `-${100 * (prev + 1)}%`;
             return prev + 1;
           }
           pages[0].style.marginLeft = `-${100 * (prev - 1)}%`;
@@ -65,9 +74,7 @@ useEffect(() => {
     }, 4000);
 
     return () => clearInterval(interval);
-  }
-}, [auto, pages]);
-
+  }, [pages]);
 
   return (
     <div className="carroussel-container">
@@ -84,7 +91,7 @@ useEffect(() => {
         </div>
       )}
       <div className="carroussel-pagination">
-        {Array.from({ length: pages?.length || 1 }, (_, i) => (
+        {Array.from({ length: pagesQuant || 1 }, (_, i) => (
           <div
             key={i}
             className={`pagination-item ${
@@ -100,7 +107,9 @@ useEffect(() => {
         <div className="carroussel-next">
           <button
             className={`pagination-button ${
-              pages && pagesCount < pages?.length - 1 && "pagination-button--available"
+              pages &&
+              pagesCount < pages?.length - 1 &&
+              "pagination-button--available"
             }`}
             onClick={handleNextPage}
           >
