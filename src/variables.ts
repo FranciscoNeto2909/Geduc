@@ -21,7 +21,6 @@ import {
   AiOutlineEnvironment,
   AiOutlineWhatsApp,
   AiOutlineInstagram,
-  AiOutlineLinkedin,
   AiOutlineFileText,
 } from "react-icons/ai";
 import { PiBookBookmarkFill, PiClipboardTextBold } from "react-icons/pi";
@@ -31,7 +30,7 @@ import {
   MdOutlineHandshake,
   MdHeadset,
 } from "react-icons/md";
-import { FaUsers } from "react-icons/fa";
+import { FaLinkedin, FaUsers } from "react-icons/fa";
 import { FaSchoolCircleCheck } from "react-icons/fa6";
 import { BiCategoryAlt } from "react-icons/bi";
 import { BsBank } from "react-icons/bs";
@@ -274,9 +273,18 @@ export const content = [
 ];
 
 export const social = [
-  { icon: AiOutlineInstagram },
-  { icon: AiOutlineWhatsApp },
-  { icon: AiOutlineLinkedin },
+  {
+    icon: AiOutlineInstagram,
+    link: "https://www.instagram.com/geduc.educacao",
+  },
+  {
+    icon: AiOutlineWhatsApp,
+    link: "https://api.whatsapp.com/send/?phone=5585994323201",
+  },
+  {
+    icon: FaLinkedin,
+    link: "https://www.linkedin.com/company/geduc-soluções/",
+  },
 ];
 
 export const ourValues = [

@@ -7,7 +7,8 @@ import transformacao from "../../assets/transformacao.png";
 import aula from "../../assets/aula.png";
 import acompanhamento from "../../assets/acompanhamento.png";
 import conectividade2 from "../../assets/conectividade2.png";
-import mainFeatures from "../../assets/mainFeatures.png";
+import notebook from "../../assets/features.png";
+import blueBg from "../../assets/blue-bg.jpg";
 import clientsOpinionImg from "../../assets/clientsOpinion.png";
 import books from "../../assets/livros.png";
 import student from "../../assets/aluno.png";
@@ -17,25 +18,12 @@ import {
   clientsOpinion,
   content,
 } from "../../variables";
-import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import "./inicio.css";
 import { Link } from "react-router-dom";
 import Footer from "../../components/footer/Footer";
 import Carroussel from "../../components/carroussel/Carroussel";
-import { useState } from "react";
 
 export default function Inicio() {
-  const [solutioinId, setSolutionId] = useState<number | null>();
-
-  function handleSelectItem(id: number) {
-    setSolutionId(id);
-    const timeout = setTimeout(() => {
-      setSolutionId(null);
-    }, 5000);
-
-    return () => clearTimeout(timeout);
-  }
-
   return (
     <div className="inicio">
       <div className="inicio-banners">
@@ -239,14 +227,7 @@ export default function Inicio() {
         </div>
         <div className="solutions-items">
           {solutions.map((solution, i) => (
-            <div
-              className={`${
-                (solutioinId == i || window.innerWidth < 500) &&
-                "solutions-item--selected"
-              } solutions-item`}
-              key={i}
-              onClick={() => handleSelectItem(i)}
-            >
+            <div className="solutions-item" key={i}>
               <div className="solution-item-top">
                 <solution.icon
                   size={window.innerWidth < 500 ? 40 : 32}
@@ -303,47 +284,28 @@ export default function Inicio() {
           <h2 className="features-header-title">Recursos Principais</h2>
         </div>
         <div className="features-carroussel">
-          <div className="features-carroussel-prev">
-            <button type="button" className="pagination-button">
-              <AiOutlineLeft size={32} />
-            </button>
-          </div>
-          <div className="features-carroussel-page">
-            <div className="features-carroussel-items">
-              {mainSolutionsBanner.map((item, i) => (
-                <div className="features-carroussel-item" key={i}>
-                  <div className="features-carroussel-icon">
-                    <item.icon size={32} />
+          <Carroussel pagesQuant={3}>
+            <div className="features-carroussel-page">
+              <div className="features-carroussel-items">
+                {mainSolutionsBanner.map((item, i) => (
+                  <div className="features-carroussel-item" key={i}>
+                    <div className="features-carroussel-icon">
+                      <item.icon size={32} />
+                    </div>
+                    <div className="features-carroussel-texts">
+                      <h4 className="features-carroussel-title">
+                        {item.title}
+                      </h4>
+                      <p className="features-carroussel-desc">{item.desc}</p>
+                    </div>
                   </div>
-                  <div className="features-carroussel-texts">
-                    <h4 className="features-carroussel-title">{item.title}</h4>
-                    <p className="features-carroussel-desc">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
+                ))}
+              </div>
+              <div className="features-carroussel-img">
+                <img src={notebook} className="features-carroussel-notebook" />
+              </div>
             </div>
-            <div className="features-carroussel-img">
-              <img src={mainFeatures} alt="laptop e celular" />
-            </div>
-          </div>
-          <div className="features-carroussel-next">
-            <button
-              type="button"
-              className="pagination-button pagination-button--available"
-            >
-              <AiOutlineRight size={32} />
-            </button>
-          </div>
-        </div>
-        <div className="features-more">
-          <div className="features-more-pagination">
-            <div className="pagination-item pagination-item--selected"></div>
-            <div className="pagination-item"></div>
-            <div className="pagination-item"></div>
-          </div>
-          <button type="button" className="button features-more-button">
-            Saiba mais
-          </button>
+          </Carroussel>
         </div>
       </div>
       <div className="inicio-clients">
@@ -361,7 +323,10 @@ export default function Inicio() {
           <div className="clients-carroussel-page">
             <Carroussel pagesQuant={window.innerWidth > 768 ? 2 : 4} auto>
               {clientsOpinion.map((client, i) => (
-                <div className="clients-carroussel-container carroussel-item">
+                <div
+                  className="clients-carroussel-container carroussel-item"
+                  key={i}
+                >
                   <div className="clients-carroussel-item" key={i}>
                     <div className="clients-carroussel-opinion">
                       <p className="clients-carroussel-opinion-text">

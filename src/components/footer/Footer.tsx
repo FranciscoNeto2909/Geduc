@@ -6,11 +6,11 @@ import { PiChalkboardTeacherLight, PiStudentLight } from "react-icons/pi";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 
 export default function Footer() {
-    const navigate = useNavigate()
-    
-    function handleRegister() {
-        navigate("/cadastro")
-    }
+  const navigate = useNavigate();
+
+  function handleRegister() {
+    navigate("/cadastro");
+  }
   return (
     <div className="footer">
       <div className="footer-header">
@@ -21,9 +21,14 @@ export default function Footer() {
           </div>
           <div className="footer-header-logo-social">
             {social.map((item, i) => (
-              <div className="social-item" key={i}>
+              <a
+                href={item.link}
+                target="_blank"
+                className="social-item"
+                key={i}
+              >
                 <item.icon className="social-item-icon" size={22} />
-              </div>
+              </a>
             ))}
           </div>
         </div>
@@ -34,31 +39,21 @@ export default function Footer() {
           <div className="footer-body-address">
             <h3 className="footer-body-title">Endereço</h3>
             <div className="footer-body-addresses">
-              <p className="footer-body-text">
+              <Link
+              target="_blank"
+                to="https://maps.app.goo.gl/eb1JhT3bZSvBdA8h9"
+                className="footer-body-text"
+              >
                 Rua Monte Castelo, 02, Jardim São Luís, <br />
                 <span>Imperatriz - MA</span>
-              </p>
-              <p className="footer-body-text">
-                Av. Desembargador Moreira 2020, Trade Center, sala 208 - <br />
-                <span>Aldeota, Fortaleza, Ceará</span>
-              </p>
-            </div>
-            <div className="footer-body-locations">
-              <Link
-                to="https://maps.app.goo.gl/eb1JhT3bZSvBdA8h9"
-                target="_blank"
-                className="footer-body-local"
-              >
-                <HiOutlineLocationMarker size={22} />
-                <p>Localização Detalhada - MA</p>
               </Link>
               <Link
+              target="_blank"
                 to="https://maps.app.goo.gl/uNcwA8Gaw2BBubMv8"
-                target="_blank"
-                className="footer-body-local"
+                className="footer-body-text"
               >
-                <HiOutlineLocationMarker size={22} />
-                <p>Localização Detalhada - CE</p>
+                Av. Desembargador Moreira 2020, Trade Center, sala 208 - <br />
+                <span>Aldeota, Fortaleza, Ceará</span>
               </Link>
             </div>
           </div>
@@ -71,7 +66,13 @@ export default function Footer() {
             </div>
             <div className="footer-body-contacts-phone">
               <h3 className="footer-body-title">Telefone</h3>
-              <Link to="https://wa.me/5599984538839" target="_blank" className="footer-body-phone">(99) 98453-8839</Link>
+              <Link
+                to="https://wa.me/5599984538839"
+                target="_blank"
+                className="footer-body-phone"
+              >
+                (99) 98453-8839
+              </Link>
             </div>
           </div>
           <div className="footer-body-app">
@@ -102,9 +103,18 @@ export default function Footer() {
                 <form action="" className="footer-body-register">
                   <div className="">
                     <label htmlFor=""></label>
-                    <input type="text" placeholder="E-mail*" className="register-input form-input-small" />
+                    <input
+                      type="text"
+                      placeholder="E-mail*"
+                      className="register-input form-input-small"
+                    />
                   </div>
-                  <button onClick={handleRegister} className="button footer-body-button">Cadastre-se</button>
+                  <button
+                    onClick={handleRegister}
+                    className="button footer-body-button"
+                  >
+                    Cadastre-se
+                  </button>
                 </form>
               </div>
             </div>
@@ -118,7 +128,9 @@ export default function Footer() {
         </div>
         <div className="footer-bottom-item">
           <p>Contato</p>
-          <Link to="/" className="">Política de Privacidade</Link>
+          <Link to="/" className="footer-bottom-link">
+            Política de Privacidade
+          </Link>
         </div>
       </div>
     </div>
