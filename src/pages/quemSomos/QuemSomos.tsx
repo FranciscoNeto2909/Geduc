@@ -286,7 +286,7 @@ export default function QuemSomos() {
               <p className="item-invite-text">
                 Agora que você já conhece nossa história, nossos valores e o que
                 nos move, convidamos você a experimentar na prática como a Geduc
-                pode revolucionar <br /> a gestão da sua instituição.
+                pode revolucionar a gestão da sua instituição.
               </p>
             </div>
           </div>

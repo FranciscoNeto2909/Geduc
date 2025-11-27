@@ -72,16 +72,17 @@
 }
 
 .banner-texts-title {
-  font-size: 42px;
+  font-family: poppins;
+  font-size: 38px;
   width: 100%;
-  max-width: 480px;
+  max-width: 500px;
   font-weight: 700;
   color: var(--banner-blue);
 }
 
 .banner-texts-desc {
   max-width: 550px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial;
   letter-spacing: 1.1px;
   font-weight: 400;
   font-size: 16px;
@@ -303,8 +304,11 @@
 
 .pillars-header-title {
   color: var(--dark-blue);
-  font-size: 28px;
   margin: 10px 0;
+  font-family: Poppins;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 100%;
 }
 
 .pillars-header-desc {
@@ -339,9 +343,12 @@
 
 .pillars-card-title {
   padding-top: 6px;
+  color: var(--dark-blue);
+  font-family: Poppins;
   font-weight: 700;
   font-size: 16px;
-  color: var(--dark-blue);
+  line-height: 121%;
+  letter-spacing: 0.5px;
 }
 
 .pillars-card-desc {
@@ -384,8 +391,11 @@
 }
 
 .solutions-header-title {
-  font-size: 41px;
   color: var(--dark-blue);
+  font-family: Poppins;
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 100%;
 }
 
 .solutions-items {
@@ -511,8 +521,11 @@
 }
 
 .features-header-title {
-  font-size: 28px;
   color: var(--dark-blue);
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 100%;
 }
 
 .features-carroussel {
@@ -607,8 +620,11 @@
 }
 
 .clients-header-title {
-  font-size: 30px;
-  color: var(--primary-blue);
+  color: var(--dark-blue);
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 100%;
 }
 
 .clients-carroussel-page {
@@ -723,8 +739,11 @@
   align-items: center;
 }
 .content-header-title {
+  color: var(--dark-blue);
+  font-family: Poppins;
+  font-weight: 600;
   font-size: 30px;
-  color: var(--primary-blue);
+  line-height: 100%;
 }
 .content-cards {
   padding: 24px 50px;
@@ -755,7 +774,7 @@
   margin-bottom: 14px;
   font-size: 20px;
   font-weight: 700;
-  color: var(--opinion-gray);
+  color: var(--desc-gray);
 }
 .content-cards-item-desc {
   font-size: 14px;

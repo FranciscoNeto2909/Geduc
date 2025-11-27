@@ -12,6 +12,7 @@ import livro from "../../assets/livro.png";
 import Footer from "../../components/footer/Footer";
 import "./sejaParceiro.css";
 import { useState } from "react";
+import { FaArrowRight } from "react-icons/fa";
 
 export default function SejaParceiro() {
   const [hasInterest, setHasInterest] = useState<boolean>(false);
@@ -168,15 +169,22 @@ export default function SejaParceiro() {
             <div className="parceiro-act-options">
               <div className="act-options-cards">
                 {acting.map((act, i) => (
-                  <div className="act-options-card" key={i}>
-                    <div className="act-options-card-num">
-                      <span>0{i + 1}</span>
+                  <>
+                    <div className="act-options-card" key={i}>
+                      <div className="act-options-card-num">
+                        <span>0{i + 1}</span>
+                      </div>
+                      <div className="act-options-texts">
+                        <h3 className="act-options-title">{act.title}</h3>
+                        <p className="act-options-desc">{act.desc}</p>
+                      </div>
                     </div>
-                    <div className="act-options-texts">
-                      <h3 className="act-options-title">{act.title}</h3>
-                      <p className="act-options-desc">{act.desc}</p>
-                    </div>
-                  </div>
+                    {i < 3 && (
+                      <div className="act-options-arrow">
+                        <FaArrowRight size={26} />
+                      </div>
+                    )}
+                  </>
                 ))}
               </div>
             </div>
