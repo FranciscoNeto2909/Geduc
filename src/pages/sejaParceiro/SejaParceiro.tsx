@@ -1,4 +1,8 @@
-import { AiOutlineCheckCircle, AiOutlineWhatsApp } from "react-icons/ai";
+import {
+  AiOutlineCheck,
+  AiOutlineCheckCircle,
+  AiOutlineWhatsApp,
+} from "react-icons/ai";
 import {
   acting,
   commission,
@@ -17,6 +21,7 @@ import { FaArrowRight } from "react-icons/fa";
 export default function SejaParceiro() {
   const [hasInterest, setHasInterest] = useState<boolean>(false);
   const [option, setOption] = useState<string>("Selecione uma opção");
+  const [optionId, setOptionId] = useState<number>(4);
 
   function handleOpenOptions() {
     setHasInterest(!hasInterest);
@@ -26,8 +31,9 @@ export default function SejaParceiro() {
     setHasInterest(false);
   }
 
-  function handleChangeOption(value: string) {
+  function handleChangeOption({ value, id }: { value: string; id: number }) {
     setOption(value);
+    setOptionId(id);
   }
 
   return (
@@ -58,10 +64,13 @@ export default function SejaParceiro() {
             </div>
             <div className="parceria-banners-buttons">
               <button className="button">Quero ser parceiro</button>
-              <button className="button button--white">
+              <a
+                href="https://api.whatsapp.com/send/?phone=(99)%2098453-8839%20"
+                className="button button--white"
+              >
                 <AiOutlineWhatsApp size={24} />
                 Fale como um consultor
-              </button>
+              </a>
             </div>
           </div>
           <div className="parceria-banner-img">
@@ -340,30 +349,66 @@ export default function SejaParceiro() {
                       onMouseLeave={handleCloseOptions}
                     >
                       <div
-                        className="register-item-interest-item"
-                        onClick={() => handleChangeOption("Indicação")}
+                        className={`register-item-interest-item ${
+                          optionId == 1 && "register-item-interest-emphasis"
+                        }`}
+                        onClick={() =>
+                          handleChangeOption({ value: "Indicação", id: 1 })
+                        }
                       >
-                        Indicação
+                        {optionId == 1 && (
+                          <AiOutlineCheck
+                            size={12}
+                            className="register-item-interest-icon"
+                          />
+                        )}
+                        <span className="register-item-interest-text">
+                          Indicação
+                        </span>
                       </div>
                       <div
-                        className="register-item-interest-item"
-                        onClick={() => handleChangeOption("Representação")}
+                        className={`register-item-interest-item ${
+                          optionId == 2 && "register-item-interest-emphasis"
+                        }`}
+                        onClick={() =>
+                          handleChangeOption({ value: "Representação", id: 2 })
+                        }
                       >
-                        Representação
+                        {optionId == 2 && (
+                          <AiOutlineCheck
+                            size={12}
+                            className="register-item-interest-icon"
+                          />
+                        )}
+                        <span className="register-item-interest-text">
+                          Representação
+                        </span>
                       </div>
                       <div
-                        className="register-item-interest-item"
-                        onClick={() => handleChangeOption("White Label")}
+                        className={`register-item-interest-item ${
+                          optionId == 3 && "register-item-interest-emphasis"
+                        }`}
+                        onClick={() =>
+                          handleChangeOption({ value: "White Label", id: 3 })
+                        }
                       >
-                        White Label
+                        {optionId == 3 && <AiOutlineCheck size={12} className="register-item-interest-icon"/>}
+                        <span className="register-item-interest-text">
+                          White Label
+                        </span>
                       </div>
                       <div
                         className="register-item-interest-item"
                         onClick={() =>
-                          handleChangeOption("Selecione uma opção")
+                          handleChangeOption({
+                            value: "Selecione uma opção",
+                            id: 4,
+                          })
                         }
                       >
-                        Nenhuma
+                        <span className="register-item-interest-text">
+                          Ainda não sei
+                        </span>
                       </div>
                     </div>
                   )}

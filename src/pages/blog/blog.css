@@ -46,6 +46,7 @@
 .blog-banner-buttons {
   display: flex;
   gap: 26px;
+  font-size: 13px;
 }
 
 .blog-banner-buttons button {

@@ -1,5 +1,5 @@
-import { Route, Routes } from "react-router-dom";
-import "./App.css";
+import { useEffect } from "react";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Inicio from "./pages/inicio/Inicio";
 import QuemSomos from "./pages/quemSomos/QuemSomos";
 import Blog from "./pages/blog/Blog";
@@ -9,7 +9,15 @@ import Conta from "./pages/conta/Conta";
 import Navbar from "./components/header/Header";
 import Cadastro from "./pages/cadastro/Cadastro";
 import Perfil from "./pages/perfil/Perfil";
+import "./App.css";
+
 export default function App() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
     <div className="container">
       <Navbar />

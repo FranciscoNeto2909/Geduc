@@ -34,7 +34,7 @@ export default function Blog() {
               Acesse Já!
             </p>
             <div className="blog-banner-buttons">
-              <button className="button">Conheça a Plataforma</button>
+              <a className="button" href="https://semed.geduc.com.br/index.php?class=LoginForm" target="_blank">Conheça a Plataforma</a>
               <button className="button--inverted button">Seja Parceiro</button>
             </div>
           </div>

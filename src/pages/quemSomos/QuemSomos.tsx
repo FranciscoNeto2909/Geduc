@@ -31,9 +31,13 @@ export default function QuemSomos() {
               construindo pontes entre o presente e o futuro dentro das escolas.
             </p>
             <div className="banner-buttons">
-              <button className="button banner-button">
+              <a
+                href="https://semed.geduc.com.br/index.php?class=LoginForm"
+                target="_blank"
+                className="button banner-button"
+              >
                 Conheça a plataforma
-              </button>
+              </a>
               <button className="button banner-button--inverted">
                 Seja parceiro
               </button>
@@ -149,7 +153,13 @@ export default function QuemSomos() {
               </p>
             </div>
             <div className="proporsal-item-button">
-              <button className="button">Conheça a Plataforma</button>
+              <a
+                className="button"
+                href="https://semed.geduc.com.br/index.php?class=LoginForm"
+                target="_blank"
+              >
+                Conheça a Plataforma
+              </a>
             </div>
           </div>
           <div className="proporsal-item">
@@ -274,7 +284,10 @@ export default function QuemSomos() {
               {steps.map((step, i) => (
                 <div className="firstStep-item-step" key={i}>
                   <div className="item-step-number">
-                    <h3 className="step-number" style={{ color: `var(${step.color})` }}>{`0${i+1}.`}</h3>
+                    <h3
+                      className="step-number"
+                      style={{ color: `var(${step.color})` }}
+                    >{`0${i + 1}.`}</h3>
                   </div>
                   <div className="item-step-text">
                     <h3 className="step-text">{step.text}</h3>

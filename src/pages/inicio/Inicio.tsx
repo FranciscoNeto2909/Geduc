@@ -8,7 +8,6 @@ import aula from "../../assets/aula.png";
 import acompanhamento from "../../assets/acompanhamento.png";
 import conectividade2 from "../../assets/conectividade2.png";
 import notebook from "../../assets/features.png";
-import blueBg from "../../assets/blue-bg.jpg";
 import clientsOpinionImg from "../../assets/clientsOpinion.png";
 import books from "../../assets/livros.png";
 import student from "../../assets/aluno.png";
@@ -74,9 +73,13 @@ export default function Inicio() {
                   educação mais acessível e transformadora.
                 </p>
                 <div className="banner-buttons">
-                  <button type="button" className="button banner-button">
-                    Quero uma demonstração
-                  </button>
+                  <a
+                    href="https://semed.geduc.com.br/index.php?class=LoginForm"
+                    target="_blank"
+                    className="button banner-button"
+                  >
+                    Conheça a plataforma
+                  </a>
                   <button
                     type="button"
                     className="button banner-button banner-button--inverted"
