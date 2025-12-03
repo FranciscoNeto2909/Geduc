@@ -21,8 +21,42 @@ import "./inicio.css";
 import { Link } from "react-router-dom";
 import Footer from "../../components/footer/Footer";
 import Carroussel from "../../components/carroussel/Carroussel";
+import { useState } from "react";
 
 export default function Inicio() {
+  const [name, setname] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [msg, setMsg] = useState("");
+  const [errors, setErrors] = useState({
+    name: false,
+    email: false,
+    message: "",
+  });
+  const emailRegex = new RegExp(
+    "^[_a-z0-9-]+([_a-z0-9-]+)*@[a-z0-9-]+([a-z0-9-]+).([a-z]{2,3})$"
+  );
+
+  function handleSendEmail() {
+    if (name == undefined || name.length < 4) {
+      setErrors({ ...errors, name: true, message: "Preencha esse campo!" });
+      setTimeout(() => {
+        setErrors({ ...errors, name: false });
+      }, 3000);
+    } else if (!emailRegex.test(email)) {
+      setErrors({ ...errors, email: true, message: "Digite um email válido!" });
+      setTimeout(() => {
+        setErrors({ ...errors, email: false });
+      }, 3000);
+    } else {
+      setMsg("Email cadastrado com sucesso!");
+      console.log({ name, email });
+      setTimeout(() => {
+        setMsg("");
+        setname("");
+        setEmail("");  
+      }, 3000);
+    }
+  }
   return (
     <div className="inicio">
       <div className="inicio-banners">
@@ -244,6 +278,7 @@ export default function Inicio() {
         </div>
       </div>
       <div className="inicio-pillars-news">
+        {msg.length > 4 && <div className="pillars-news-msg">{msg}</div>}
         <div className="pillars-news-texts">
           <h2 className="news-texts-title">
             Receba as <span className="news-texts-news">novidades</span> direto
@@ -259,11 +294,16 @@ export default function Inicio() {
             <div className="news-form-name">
               <label htmlFor="name"></label>
               <input
+                value={name}
                 className="form-input"
                 type="text"
                 id="name"
                 placeholder="Nome Completo*"
+                onChange={e => setname(e.target.value)}
               />
+              {errors.name && (
+                <span className="news-form-errorMsg">{errors.message}</span>
+              )}
             </div>
             <div className="news-form-email">
               <label htmlFor="email"></label>
@@ -271,11 +311,20 @@ export default function Inicio() {
                 className="form-input"
                 id="email"
                 type="text"
+                value={email}
                 placeholder="E-mail*"
+                onChange={e => setEmail(e.target.value)}
               />
+              {errors.email && (
+                <span className="news-form-errorMsg">{errors.message}</span>
+              )}
             </div>
-            <div className="news-form-burtton">
-              <button type="button" className="button news-form-button">
+            <div className="news-form-button">
+              <button
+                type="button"
+                className="button"
+                onClick={handleSendEmail}
+              >
                 Assinar
               </button>
             </div>

@@ -473,6 +473,23 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 42px;
+  position: relative;
+}
+
+.pillars-news-msg {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--primary-blue);
+  color: #fff;
+  top: 10px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-family: Arial;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  z-index: 2;
 }
 
 .pillars-news-texts {
@@ -499,11 +516,26 @@
 .news-form {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 18px;
 }
 
-.news-form-button {
-  max-width: 100%;
+.news-form-name,
+.news-form-email {
+  position: relative;
+}
+
+.news-form-errorMsg {
+  font-family: poppins;
+  font-weight: 600;
+  color: var(--dark-orange);
+  position: absolute;
+  bottom: -16px;
+  left: 16px;
+  font-size: 11px;
+}
+
+.news-form-button button {
+  max-width: 100% !important;
   background-color: var(--primary-blue);
 }
 
