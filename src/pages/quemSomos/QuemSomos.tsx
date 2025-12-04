@@ -43,7 +43,7 @@ export default function QuemSomos() {
       setConversationErrors({
         ...conversationErrors,
         name: true,
-        msg: "Preencha esse campo!",
+        msg: "Digite seu nome!",
       });
       setTimeout(() => {
         setConversationErrors({ ...conversationErrors, name: false, msg: "" });
@@ -52,7 +52,7 @@ export default function QuemSomos() {
       setConversationErrors({
         ...conversationErrors,
         surname: true,
-        msg: "Preencha esse campo!",
+        msg: "Digite seu sobrenome!",
       });
       setTimeout(() => {
         setConversationErrors({
@@ -70,7 +70,7 @@ export default function QuemSomos() {
       setTimeout(() => {
         setConversationErrors({ ...conversationErrors, email: false, msg: "" });
       }, 3000);
-    } else if (conversation.phone.length < 11) {
+    } else if (conversation.phone.length < 15) {
       setConversationErrors({
         ...conversationErrors,
         phone: true,
