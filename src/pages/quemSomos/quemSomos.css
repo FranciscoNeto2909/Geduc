@@ -531,7 +531,19 @@
 .firstStep-form-body {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 18px;
+}
+
+.firststep-form-item {
+  position: relative;
+}
+
+.firststep-form-message {
+  position: absolute;
+  color: #f00;
+  font-size: 11px;
+  left: 24px;
+  bottom: -14px;
 }
 
 .firstStep-form-item-text {

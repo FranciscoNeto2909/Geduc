@@ -1,7 +1,7 @@
 import { AiOutlineUser } from "react-icons/ai";
 import { MdManageAccounts } from "react-icons/md";
 import { PiClipboardTextBold } from "react-icons/pi";
-
+import { mask } from "remask";
 import professor from "../../assets/professor.png";
 import professora from "../../assets/professora.png";
 import alunos from "../../assets/alunos2.png";
@@ -10,9 +10,93 @@ import quad from "../../assets/quadriculado.png";
 import Footer from "../../components/footer/Footer";
 import "./quemSomos.css";
 import { FaChartLine } from "react-icons/fa";
-import { ourValues, steps } from "../../variables";
+import { emailRegex, ourValues, steps } from "../../variables";
+import { useState } from "react";
 
 export default function QuemSomos() {
+  const [conversation, setConversation] = useState({
+    name: "",
+    surname: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const [conversationErrors, setConversationErrors] = useState({
+    name: false,
+    surname: false,
+    email: false,
+    phone: false,
+    message: false,
+    msg: "",
+  });
+
+  function handleMaskPhone(e: string) {
+    setConversation({
+      ...conversation,
+      phone: mask(`${e}`, ["(99) 99999-9999"]),
+    });
+  }
+
+  function handleconversation() {
+    if (conversation.name.length < 4) {
+      setConversationErrors({
+        ...conversationErrors,
+        name: true,
+        msg: "Preencha esse campo!",
+      });
+      setTimeout(() => {
+        setConversationErrors({ ...conversationErrors, name: false, msg: "" });
+      }, 3000);
+    } else if (conversation.surname.length < 4) {
+      setConversationErrors({
+        ...conversationErrors,
+        surname: true,
+        msg: "Preencha esse campo!",
+      });
+      setTimeout(() => {
+        setConversationErrors({
+          ...conversationErrors,
+          surname: false,
+          msg: "",
+        });
+      }, 3000);
+    } else if (!emailRegex.test(conversation.email)) {
+      setConversationErrors({
+        ...conversationErrors,
+        email: true,
+        msg: "Digite um email válido!",
+      });
+      setTimeout(() => {
+        setConversationErrors({ ...conversationErrors, email: false, msg: "" });
+      }, 3000);
+    } else if (conversation.phone.length < 11) {
+      setConversationErrors({
+        ...conversationErrors,
+        phone: true,
+        msg: "Digite um telefone válido!",
+      });
+      setTimeout(() => {
+        setConversationErrors({ ...conversationErrors, phone: false, msg: "" });
+      }, 3000);
+    } else if (conversation.message.length < 10) {
+      setConversationErrors({
+        ...conversationErrors,
+        message: true,
+        msg: "Escreva uma mensagem!",
+      });
+      setTimeout(() => {
+        setConversationErrors({
+          ...conversationErrors,
+          message: false,
+          msg: "",
+        });
+      }, 3000);
+    } else {
+      console.log(conversation);
+    }
+  }
+
   return (
     <div className="quemsomos">
       <div className="quemsomos-banner">
@@ -224,7 +308,19 @@ export default function QuemSomos() {
                       placeholder="Nome*"
                       type="text"
                       className="form-input"
+                      value={conversation.name}
+                      onChange={e =>
+                        setConversation({
+                          ...conversation,
+                          name: e.target.value,
+                        })
+                      }
                     />
+                    {conversationErrors.name && (
+                      <span className="firststep-form-message">
+                        {conversationErrors.msg}
+                      </span>
+                    )}
                   </div>
                   <div className="firststep-form-item">
                     <label htmlFor="surname"></label>
@@ -233,7 +329,19 @@ export default function QuemSomos() {
                       placeholder="Sobrenome*"
                       type="text"
                       className="form-input"
+                      value={conversation.surname}
+                      onChange={e =>
+                        setConversation({
+                          ...conversation,
+                          surname: e.target.value,
+                        })
+                      }
                     />
+                    {conversationErrors.surname && (
+                      <span className="firststep-form-message">
+                        {conversationErrors.msg}
+                      </span>
+                    )}
                   </div>
                   <div className="firststep-form-item">
                     <label htmlFor="email"></label>
@@ -242,27 +350,64 @@ export default function QuemSomos() {
                       type="email"
                       placeholder="E-mail*"
                       className="form-input"
+                      value={conversation.email}
+                      onChange={e =>
+                        setConversation({
+                          ...conversation,
+                          email: e.target.value,
+                        })
+                      }
                     />
+                    {conversationErrors.email && (
+                      <span className="firststep-form-message">
+                        {conversationErrors.msg}
+                      </span>
+                    )}
                   </div>
                   <div className="firststep-form-item">
                     <label htmlFor="phone"></label>
                     <input
                       id="phone"
                       placeholder="Telefone*"
-                      type="text"
+                      type="tel"
                       className="form-input"
+                      value={conversation.phone}
+                      onChange={e => handleMaskPhone(e.target.value)}
                     />
+                    {conversationErrors.phone && (
+                      <span className="firststep-form-message">
+                        {conversationErrors.msg}
+                      </span>
+                    )}
                   </div>
-                  <div className="">
+                  <div className="firststep-form-item">
                     <textarea
                       className="firstStep-form-item-text"
                       id="text"
                       placeholder="Escreva para Nós!"
+                      value={conversation.message}
+                      onChange={e =>
+                        setConversation({
+                          ...conversation,
+                          message: e.target.value,
+                        })
+                      }
                     ></textarea>
+                    {conversationErrors.message && (
+                      <span className="firststep-form-message">
+                        {conversationErrors.msg}
+                      </span>
+                    )}
                   </div>
                 </div>
                 <div className="firstStep-form-button">
-                  <button className="button">Enviar</button>
+                  <button
+                    className="button"
+                    type="button"
+                    onClick={handleconversation}
+                  >
+                    Enviar
+                  </button>
                 </div>
               </form>
             </div>

@@ -71,6 +71,11 @@ import post6comment4 from "./blog/post6comment4.png";
 import post6comment5 from "./blog/post6comment5.png";
 import post6comment6 from "./blog/post6comment6.png";
 
+export const emailRegex = new RegExp(
+    "^[_a-z0-9-]+([_a-z0-9-]+)*@[a-z0-9-]+([a-z0-9-]+).([a-z]{2,3})$"
+  );
+
+
 export const routes = [
   { name: "Início", to: "/" },
   { name: "Quem Somos", to: "/quem-somos" },

@@ -16,6 +16,7 @@ import {
   mainSolutionsBanner,
   clientsOpinion,
   content,
+  emailRegex,
 } from "../../variables";
 import "./inicio.css";
 import { Link } from "react-router-dom";
@@ -32,9 +33,6 @@ export default function Inicio() {
     email: false,
     message: "",
   });
-  const emailRegex = new RegExp(
-    "^[_a-z0-9-]+([_a-z0-9-]+)*@[a-z0-9-]+([a-z0-9-]+).([a-z]{2,3})$"
-  );
 
   function handleSendEmail() {
     if (name == undefined || name.length < 4) {
@@ -53,7 +51,7 @@ export default function Inicio() {
       setTimeout(() => {
         setMsg("");
         setname("");
-        setEmail("");  
+        setEmail("");
       }, 3000);
     }
   }
