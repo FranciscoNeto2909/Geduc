@@ -3,7 +3,6 @@ import logo from "../../assets/logo.png";
 import { social } from "../../variables";
 import { Link, useNavigate } from "react-router-dom";
 import { PiChalkboardTeacherLight, PiStudentLight } from "react-icons/pi";
-import { HiOutlineLocationMarker } from "react-icons/hi";
 
 export default function Footer() {
   const navigate = useNavigate();
@@ -40,7 +39,7 @@ export default function Footer() {
             <h3 className="footer-body-title">Endereço</h3>
             <div className="footer-body-addresses">
               <Link
-              target="_blank"
+                target="_blank"
                 to="https://maps.app.goo.gl/eb1JhT3bZSvBdA8h9"
                 className="footer-body-text"
               >
@@ -48,7 +47,7 @@ export default function Footer() {
                 <span>Imperatriz - MA</span>
               </Link>
               <Link
-              target="_blank"
+                target="_blank"
                 to="https://maps.app.goo.gl/uNcwA8Gaw2BBubMv8"
                 className="footer-body-text"
               >
