@@ -6,8 +6,8 @@ import notebook from "../../blog/notebook.png";
 import BlogPost from "./blogpost/BlogPost";
 
 export default function Blog() {
-  const [commentId, setCommentId] = useState<Number | null>(null);
-  const [currPost, setCurrPost] = useState<PostInterface | null>();
+  const [commentId, setCommentId] = useState<number | null>(null);
+  const [currPost, setCurrPost] = useState<PostInterface>({} as PostInterface);
 
   function handleChangePost(id: number) {
     setCommentId(id);
@@ -15,7 +15,7 @@ export default function Blog() {
   }
 
   useEffect(() => {
-    setCurrPost(posts.find((_, i) => i === commentId));
+    setCurrPost(posts.find((_, i) => i === commentId) as PostInterface);
   }, [commentId]);
 
   return (
@@ -34,7 +34,13 @@ export default function Blog() {
               Acesse Já!
             </p>
             <div className="blog-banner-buttons">
-              <a className="button" href="https://semed.geduc.com.br/index.php?class=LoginForm" target="_blank">Conheça a Plataforma</a>
+              <a
+                className="button"
+                href="https://semed.geduc.com.br/index.php?class=LoginForm"
+                target="_blank"
+              >
+                Conheça a Plataforma
+              </a>
               <button className="button--inverted button">Seja Parceiro</button>
             </div>
           </div>
