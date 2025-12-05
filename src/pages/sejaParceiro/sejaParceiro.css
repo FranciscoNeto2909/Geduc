@@ -15,7 +15,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
   z-index: 1;
 }
 
@@ -109,7 +108,7 @@
 }
 
 .parceiro {
-  max-width: 1120px;
+  max-width: 1152px;
   margin: 0 auto;
 }
 
@@ -145,11 +144,11 @@
 }
 
 .parceiro-main {
-  margin-bottom: 100px;
+  margin: 0 16px 100px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  gap: 6px;
 }
 
 .parceiro-main-img {
@@ -202,7 +201,7 @@
   border-radius: 60px;
 }
 
-.paceiro-main-texts {
+.parceiro-main-texts {
   width: 100%;
   max-width: 573px;
 }
@@ -225,6 +224,7 @@
   margin-bottom: 32px;
   color: var(--desc-gray);
   text-indent: 23px;
+  max-width: 573px;
 }
 
 .parceiro-main-text span {
@@ -374,7 +374,8 @@
   color: var(--desc-gray);
 }
 
-.act-options-cards {
+.act-options-cards,
+.act-options-cards-container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -767,6 +768,19 @@
   background-color: #fff;
   padding: 32px 24px;
   border-radius: 16px;
+  position: relative;
+}
+
+.form-register-msg {
+  position: absolute;
+  z-index: 2;
+  background-color: var(--primary-blue);
+  color: #fff;
+  padding: 8px 24px;
+  border-radius: 16px;
+  font-family: poppins;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .form-register-form {
@@ -785,6 +799,16 @@
   width: 100%;
   max-width: 335px;
   margin-top: 16px;
+  position: relative;
+}
+
+.form-register-errorMsg {
+  color: #f00;
+  font-size: 11px;
+  font-family: poppins;
+  position: absolute;
+  bottom: -18px;
+  left: 24px;
 }
 
 .form-register-text {
@@ -848,6 +872,7 @@
   width: 100%;
   left: 0;
   position: absolute;
+  z-index: 2;
 }
 
 .register-item-interest-item {
@@ -857,7 +882,7 @@
   cursor: pointer;
 }
 
-.register-item-interest-icon{
+.register-item-interest-icon {
   margin-right: 4px;
 }
 
@@ -876,6 +901,7 @@
 
 .form-register-item-message {
   margin: 18px 0;
+  position: relative;
 }
 
 .form-register-message-text {
@@ -911,12 +937,13 @@
 }
 
 @media (max-width: 768px) {
-  .parceria-banner-texts {
-    padding: 0 16px 24px 16px;
+  .parceria-banner .parceria-banner-items {
+    flex-wrap: wrap;
   }
 
-  .parceria-banner-items {
-    justify-content: center;
+  .parceria-banner-texts {
+    padding: 0 16px 24px 16px;
+    margin: 0 auto;
   }
 
   .parceria-banner-img {
@@ -935,13 +962,14 @@
 
   .parceiro-main {
     justify-content: center;
+    flex-wrap: wrap;
   }
 
   .parceiro-main-img {
     transform: scale(0.8);
   }
 
-  .paceiro-main-texts {
+  .parceiro-main-texts {
     max-width: 100%;
     padding: 0 16px;
   }

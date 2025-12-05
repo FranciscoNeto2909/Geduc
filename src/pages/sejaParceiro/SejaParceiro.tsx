@@ -6,6 +6,7 @@ import {
 import {
   acting,
   commission,
+  emailRegex,
   partnershipModels,
   partnershipSteps,
 } from "../../variables";
@@ -17,11 +18,31 @@ import Footer from "../../components/footer/Footer";
 import "./sejaParceiro.css";
 import { useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
+import { mask } from "remask";
 
 export default function SejaParceiro() {
   const [hasInterest, setHasInterest] = useState<boolean>(false);
   const [option, setOption] = useState<string>("Selecione uma opção");
   const [optionId, setOptionId] = useState<number>(4);
+  const [message, setmessage] = useState("");
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    enterprise: "",
+    phone: "",
+    partnership: "ainda não sei",
+    message: "",
+  });
+
+  const [formErrors, setFormErrors] = useState({
+    name: false,
+    enterprise: false,
+    email: false,
+    phone: false,
+    partnership: false,
+    message: false,
+    msg: "",
+  });
 
   function handleOpenOptions() {
     setHasInterest(!hasInterest);
@@ -34,6 +55,77 @@ export default function SejaParceiro() {
   function handleChangeOption({ value, id }: { value: string; id: number }) {
     setOption(value);
     setOptionId(id);
+    if (id == 4) {
+      setForm({ ...form, partnership: "ainda não sei" });
+    } else {
+      setForm({ ...form, partnership: value });
+    }
+  }
+
+  function handleMaskPhone(e: string) {
+    setForm({
+      ...form,
+      phone: mask(`${e}`, ["(99) 99999-9999"]),
+    });
+  }
+
+  function handleRegisterForm() {
+    if (form.name.length < 2) {
+      setFormErrors({ ...formErrors, name: true, msg: "Preencha esse campo!" });
+      setTimeout(() => {
+        setFormErrors({ ...formErrors, name: false, msg: "" });
+      }, 3000);
+    } else if (!emailRegex.test(form.email)) {
+      setFormErrors({
+        ...formErrors,
+        email: true,
+        msg: "Digite um email válido!",
+      });
+      setTimeout(() => {
+        setFormErrors({ ...formErrors, email: false, msg: "" });
+      }, 3000);
+    } else if (form.enterprise.length < 8) {
+      setFormErrors({
+        ...formErrors,
+        enterprise: true,
+        msg: "preencha esse campo!",
+      });
+      setTimeout(() => {
+        setFormErrors({ ...formErrors, enterprise: false, msg: "" });
+      }, 3000);
+    } else if (form.phone.length < 15) {
+      setFormErrors({
+        ...formErrors,
+        phone: true,
+        msg: "Digite um telefone válido!",
+      });
+      setTimeout(() => {
+        setFormErrors({ ...formErrors, phone: false, msg: "" });
+      }, 3000);
+    } else if (form.message.length > 0 && form.message.length < 10) {
+      setFormErrors({
+        ...formErrors,
+        message: true,
+        msg: "Mensagem muito curta!",
+      });
+      setTimeout(() => {
+        setFormErrors({ ...formErrors, message: false, msg: "" });
+      }, 3000);
+    } else {
+      setmessage("O matarial chegará no seu email");
+      console.log(form);
+      setTimeout(() => {
+        setmessage("");
+        setForm({
+          name: "",
+          email: "",
+          enterprise: "",
+          phone: "",
+          partnership: "ainda não sei",
+          message: "",
+        });
+      }, 3000);
+    }
   }
 
   return (
@@ -178,8 +270,8 @@ export default function SejaParceiro() {
             <div className="parceiro-act-options">
               <div className="act-options-cards">
                 {acting.map((act, i) => (
-                  <>
-                    <div className="act-options-card" key={i}>
+                  <div className="act-options-cards-container" key={i}>
+                    <div className="act-options-card">
                       <div className="act-options-card-num">
                         <span>0{i + 1}</span>
                       </div>
@@ -193,7 +285,7 @@ export default function SejaParceiro() {
                         <FaArrowRight size={26} />
                       </div>
                     )}
-                  </>
+                  </div>
                 ))}
               </div>
             </div>
@@ -228,8 +320,8 @@ export default function SejaParceiro() {
                     <p>{model.desc}</p>
                   </div>
                   <ul className="models-card-advantages">
-                    {model.advantages.map(advantage => (
-                      <li className="models-card-advantages-item" key={i}>
+                    {model.advantages.map((advantage, ai) => (
+                      <li className="models-card-advantages-item" key={ai}>
                         <AiOutlineCheckCircle
                           className="card-advantages-item-icon"
                           size={20}
@@ -279,31 +371,48 @@ export default function SejaParceiro() {
             </p>
           </div>
           <div className="form-register">
-            <form action="" className="form-register-form">
+            {message.length > 0 && (
+              <div className="form-register-msg">{message}</div>
+            )}
+            <form className="form-register-form" autoComplete="off">
               <div className="form-register-container">
                 <div className="form-register-item">
                   <label className="form-register-text" htmlFor="name">
                     Nome Completo *
                   </label>
                   <input
-                    autoComplete="none"
+                    autoComplete="off"
                     type="text"
                     id="name"
                     placeholder="Seu Nome"
                     className="register-input"
+                    value={form.name}
+                    onChange={e => setForm({ ...form, name: e.target.value })}
                   />
+                  {formErrors.name && (
+                    <span className="form-register-errorMsg">
+                      {formErrors.msg}
+                    </span>
+                  )}
                 </div>
                 <div className="form-register-item">
                   <label className="form-register-text" htmlFor="email">
                     E-mail profissional *
                   </label>
                   <input
-                    autoComplete="none"
+                    autoComplete="off"
                     type="email"
                     placeholder="@gmail.com"
                     id="email"
                     className="register-input"
+                    value={form.email}
+                    onChange={e => setForm({ ...form, email: e.target.value })}
                   />
+                  {formErrors.email && (
+                    <span className="form-register-errorMsg">
+                      {formErrors.msg}
+                    </span>
+                  )}
                 </div>
               </div>
               <div className="form-register-container">
@@ -316,20 +425,36 @@ export default function SejaParceiro() {
                     placeholder="Nome da empresa"
                     id="enterprize"
                     className="register-input"
-                    autoComplete="none"
+                    autoComplete="off"
+                    value={form.enterprise}
+                    onChange={e =>
+                      setForm({ ...form, enterprise: e.target.value })
+                    }
                   />
+                  {formErrors.enterprise && (
+                    <span className="form-register-errorMsg">
+                      {formErrors.msg}
+                    </span>
+                  )}
                 </div>
                 <div className="form-register-item">
                   <label className="form-register-text" htmlFor="phone">
                     Telefone
                   </label>
                   <input
-                    autoComplete="none"
+                    autoComplete="off"
                     type="text"
                     id="phone"
                     placeholder="(00) 00000-0000"
                     className="register-input"
+                    value={form.phone}
+                    onChange={e => handleMaskPhone(e.target.value)}
                   />
+                  {formErrors.phone && (
+                    <span className="form-register-errorMsg">
+                      {formErrors.msg}
+                    </span>
+                  )}
                 </div>
               </div>
               <div className="form-register-item-interest">
@@ -392,7 +517,12 @@ export default function SejaParceiro() {
                           handleChangeOption({ value: "White Label", id: 3 })
                         }
                       >
-                        {optionId == 3 && <AiOutlineCheck size={12} className="register-item-interest-icon"/>}
+                        {optionId == 3 && (
+                          <AiOutlineCheck
+                            size={12}
+                            className="register-item-interest-icon"
+                          />
+                        )}
                         <span className="register-item-interest-text">
                           White Label
                         </span>
@@ -423,9 +553,20 @@ export default function SejaParceiro() {
                   id=""
                   className="form-register-message-text"
                   placeholder="Conte-nos mais sobre seu interesse..."
+                  value={form.message}
+                  onChange={e => setForm({ ...form, message: e.target.value })}
                 ></textarea>
+                {formErrors.message && (
+                  <span className="form-register-errorMsg">
+                    {formErrors.msg}
+                  </span>
+                )}
               </div>
-              <button type="button" className="button form-register-button">
+              <button
+                type="button"
+                className="button form-register-button"
+                onClick={handleRegisterForm}
+              >
                 Enviar e receber o material completo
               </button>
             </form>

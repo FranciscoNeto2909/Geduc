@@ -518,6 +518,7 @@
 
 .firstStep-form-header {
   margin-bottom: 32px;
+  position: relative;
 }
 
 .firstStep-form-header-title {
@@ -526,6 +527,20 @@
   line-height: 100%;
   text-align: center;
   color: var(--medium-green);
+}
+
+.firstStep-form-header-message {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--primary-blue);
+  padding: 8px 24px;
+  color: #fff;
+  border-radius: 16px;
+  font-family: Arial;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
 }
 
 .firstStep-form-body {

@@ -136,7 +136,7 @@ export default function BlogPost({ post }: { post: PostInterface }) {
           </div>
         ) : (
           <div className="posts-comments-comment">
-            <form className="comment-form">
+            <form className="comment-form" autoComplete="off">
               <div className="comment-form-item">
                 <img
                   className="comment-form-item-img"

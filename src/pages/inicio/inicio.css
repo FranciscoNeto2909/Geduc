@@ -526,8 +526,7 @@
 
 .news-form-errorMsg {
   font-family: poppins;
-  font-weight: 600;
-  color: var(--dark-orange);
+  color: #f00;
   position: absolute;
   bottom: -16px;
   left: 16px;

@@ -67,6 +67,8 @@ textarea {
   border: none;
   cursor: text;
   resize: none;
+  offset: unset;
+  outline: none;
 }
 
 input::placeholder,

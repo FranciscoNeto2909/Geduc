@@ -288,7 +288,7 @@ export default function Inicio() {
           </p>
         </div>
         <div className="pillars-news-form">
-          <form className="news-form" action="">
+          <form className="news-form" autoComplete="off">
             <div className="news-form-name">
               <label htmlFor="name"></label>
               <input
@@ -298,6 +298,7 @@ export default function Inicio() {
                 id="name"
                 placeholder="Nome Completo*"
                 onChange={e => setname(e.target.value)}
+                autoComplete="off"
               />
               {errors.name && (
                 <span className="news-form-errorMsg">{errors.message}</span>
@@ -312,6 +313,7 @@ export default function Inicio() {
                 value={email}
                 placeholder="E-mail*"
                 onChange={e => setEmail(e.target.value)}
+                autoComplete="off"
               />
               {errors.email && (
                 <span className="news-form-errorMsg">{errors.message}</span>

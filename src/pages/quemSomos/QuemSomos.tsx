@@ -14,6 +14,8 @@ import { emailRegex, ourValues, steps } from "../../variables";
 import { useState } from "react";
 
 export default function QuemSomos() {
+  const [message, setMessage] = useState("");
+
   const [conversation, setConversation] = useState({
     name: "",
     surname: "",
@@ -83,7 +85,7 @@ export default function QuemSomos() {
       setConversationErrors({
         ...conversationErrors,
         message: true,
-        msg: "Escreva uma mensagem!",
+        msg: "Escreva uma mensagem maior!",
       });
       setTimeout(() => {
         setConversationErrors({
@@ -93,7 +95,18 @@ export default function QuemSomos() {
         });
       }, 3000);
     } else {
+      setMessage("Agradecemos o contato");
       console.log(conversation);
+      setTimeout(() => {
+        setConversation({
+          name: "",
+          surname: "",
+          email: "",
+          phone: "",
+          message: "",
+        });
+        setMessage("");
+      }, 3000);
     }
   }
 
@@ -294,8 +307,13 @@ export default function QuemSomos() {
         <div className="firststep">
           <div className="firststep-item">
             <div className="firstStep-item-form">
-              <form action="">
+              <form action="" autoComplete="off">
                 <div className="firstStep-form-header">
+                  {message.length > 0 && (
+                    <div className="firstStep-form-header-message">
+                      {message}
+                    </div>
+                  )}
                   <h3 className="firstStep-form-header-title">
                     Converse com um de nossos Especialistas!
                   </h3>
@@ -315,6 +333,7 @@ export default function QuemSomos() {
                           name: e.target.value,
                         })
                       }
+                      autoComplete="none"
                     />
                     {conversationErrors.name && (
                       <span className="firststep-form-message">
@@ -336,6 +355,7 @@ export default function QuemSomos() {
                           surname: e.target.value,
                         })
                       }
+                      autoComplete="none"
                     />
                     {conversationErrors.surname && (
                       <span className="firststep-form-message">
@@ -357,6 +377,7 @@ export default function QuemSomos() {
                           email: e.target.value,
                         })
                       }
+                      autoComplete="none"
                     />
                     {conversationErrors.email && (
                       <span className="firststep-form-message">
@@ -373,6 +394,7 @@ export default function QuemSomos() {
                       className="form-input"
                       value={conversation.phone}
                       onChange={e => handleMaskPhone(e.target.value)}
+                      autoComplete="off"
                     />
                     {conversationErrors.phone && (
                       <span className="firststep-form-message">
@@ -392,6 +414,7 @@ export default function QuemSomos() {
                           message: e.target.value,
                         })
                       }
+                      autoComplete="none"
                     ></textarea>
                     {conversationErrors.message && (
                       <span className="firststep-form-message">
