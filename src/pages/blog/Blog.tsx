@@ -72,7 +72,7 @@ export default function Blog() {
           {posts.map(
             (post, i) =>
               i !== commentId && (
-                <div className="blog-posts-card" key={i}>
+                <div className="blog-posts-card" key={i} data-aos={(window.innerWidth > 500) ? "zoom-in" : (i%2 == 0) ? "fade-right" : "fade-left"}>
                   <div className="posts-card-img">
                     <img src={post.img} alt="" />
                   </div>

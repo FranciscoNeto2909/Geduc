@@ -13,14 +13,15 @@ export default function Footer() {
   return (
     <div className="footer">
       <div className="footer-header">
-        <div className="footer-header-logo-containter">
-          <div className="footer-header-logo">
+        <div className="footer-header-logo-containter" >
+          <div className="footer-header-logo" data-aos="zoom-in">
             <img className="footer-header-logo-img" src={logo} alt="logo" />
             <h3 className="footer-header-logo-title">Geduc</h3>
           </div>
           <div className="footer-header-logo-social">
             {social.map((item, i) => (
               <a
+              data-aos="zoom-in"
                 href={item.link}
                 target="_blank"
                 className="social-item"
@@ -35,7 +36,7 @@ export default function Footer() {
       </div>
       <div className="footer-body">
         <div className="footer-body-container">
-          <div className="footer-body-address">
+          <div className="footer-body-address" data-aos="zoom-in">
             <h3 className="footer-body-title">Endereço</h3>
             <div className="footer-body-addresses">
               <Link
@@ -56,7 +57,7 @@ export default function Footer() {
               </Link>
             </div>
           </div>
-          <div className="footer-body-contacts">
+          <div className="footer-body-contacts" data-aos="zoom-in">
             <div className="footer-body-contacts-email">
               <h3 className="footer-body-title">Email</h3>
               <p className="footer-body-text">suporte@genesistech.com.br</p>
@@ -74,7 +75,7 @@ export default function Footer() {
               </Link>
             </div>
           </div>
-          <div className="footer-body-app">
+          <div className="footer-body-app" data-aos="zoom-in">
             <div className="">
               <h3 className="footer-body-title">Baixar Aplicativo</h3>
               <div className="footer-body-links">

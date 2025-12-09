@@ -149,9 +149,9 @@ export default function QuemSomos() {
           </div>
         </div>
       </div>
-      <div className="quemsomos-tecnology">
+      <div className="quemsomos-tecnology" data-aos="fade-up">
         <div className="tecnology">
-          <div className="tecnology-item">
+          <div className="tecnology-item" data-aos="fade-right">
             <div className="tecnology-item-icons">
               <AiOutlineUser size={24} />
               <hr className="tecnology-item-line" />
@@ -176,7 +176,7 @@ export default function QuemSomos() {
               </div>
             </div>
           </div>
-          <div className="tecnology-item">
+          <div className="tecnology-item" data-aos="fade-left">
             <div className="tecnology-item-top">
               <h4 className="item-top-title">QUEM SOMOS</h4>
             </div>
@@ -213,9 +213,9 @@ export default function QuemSomos() {
           </div>
         </div>
       </div>
-      <div className="quemsomos-proporsal">
+      <div className="quemsomos-proporsal" data-aos="fade-up">
         <div className="proporsal">
-          <div className="proporsal-item">
+          <div className="proporsal-item" data-aos="fade-right">
             <span className="proporsal-item-">O Que Nós Fazemos ?</span>
             <div className="proporsal-item-texts">
               <h2 className="proporsal-item-title">
@@ -259,7 +259,7 @@ export default function QuemSomos() {
               </a>
             </div>
           </div>
-          <div className="proporsal-item">
+          <div className="proporsal-item" data-aos="fade-left">
             <div className="proporsal-item-left">
               <img className="proporsal-item-img" src={alunos} alt="" />
             </div>
@@ -271,7 +271,7 @@ export default function QuemSomos() {
           </div>
         </div>
       </div>
-      <div className="quemsomos-values">
+      <div className="quemsomos-values" data-aos="fade-up">
         <div className="values-circle1"></div>
         <div className="values">
           <div className="values-texts">
@@ -285,7 +285,18 @@ export default function QuemSomos() {
           </div>
           <div className="values-cards">
             {ourValues.map((value, i) => (
-              <div className="values-card-container">
+              <div
+                key={i}
+                className="values-card-container"
+                data-aos={
+                  window.innerWidth > 500
+                    ? "fade-up"
+                    : i % 2 == 0
+                    ? "fade-right"
+                    : "fade-left"
+                }
+                data-aos-offset={window.innerWidth > 500 && `${i + 1}00`}
+              >
                 <div className={`values-card-emphasis ${value.color}`}>
                   <h4 className="values-card-emphasis-title">
                     {value.emphasis}
@@ -303,9 +314,9 @@ export default function QuemSomos() {
         </div>
         <div className="values-circle2"></div>
       </div>
-      <div className="quemsomos-firstStep">
+      <div className="quemsomos-firstStep" data-aos="fade-up">
         <div className="firststep">
-          <div className="firststep-item">
+          <div className="firststep-item" data-aos="fade-right">
             <div className="firstStep-item-form">
               <form action="" autoComplete="off">
                 <div className="firstStep-form-header">
@@ -435,7 +446,7 @@ export default function QuemSomos() {
               </form>
             </div>
           </div>
-          <div className="firststep-item">
+          <div className="firststep-item" data-aos="fade-left">
             <div className="firstStep-item-header">
               <h2 className="firstStep-item-header-title">
                 O Primeiro Passo para a Transformação
@@ -450,7 +461,18 @@ export default function QuemSomos() {
             </div>
             <div className="firstStep-item-steps">
               {steps.map((step, i) => (
-                <div className="firstStep-item-step" key={i}>
+                <div
+                  className="firstStep-item-step"
+                  key={i}
+                  data-aos={
+                    window.innerWidth > 500
+                      ? ""
+                      : i % 2 == 0
+                      ? "fade-right"
+                      : "fade-left"
+                  }
+                  data-aos-offset={window.innerWidth < 500 && `${i + 2}00`}
+                >
                   <div className="item-step-number">
                     <h3
                       className="step-number"

@@ -63,9 +63,6 @@ export default function Inicio() {
           style={{ backgroundImage: `url(${quad})` }}
         ></div>
         <div className="inicio-banners-carroussel">
-          <div className="inicio-banners-circle circle-orange"></div>
-          <div className="inicio-banners-circle circle-blue"></div>
-          <div className="inicio-banners-circle circle-green"></div>
           <Carroussel auto pagesQuant={3}>
             <div className="carroussel-item inicio-banner">
               <div className="banner-texts">
@@ -163,7 +160,7 @@ export default function Inicio() {
         </div>
       </div>
       <div className="inicio-descriptions">
-        <div className="inicio-description">
+        <div className="inicio-description"  data-aos="zoom-in">
           <div className="inicio-description-img">
             <img src={conectividade} alt="" />
           </div>
@@ -172,14 +169,14 @@ export default function Inicio() {
             Integra alunos, professores e instituições
           </p>
         </div>
-        <div className="inicio-description">
+        <div className="inicio-description"  data-aos="zoom-in">
           <div className="inicio-description-img">
             <img src={eficiencia} alt="" />
           </div>
           <h4 className="inicio-description-title">Eficiência</h4>
           <p className="inicio-description-text">Automação e gestão completa</p>
         </div>
-        <div className="inicio-description">
+        <div className="inicio-description"  data-aos="zoom-in">
           <div className="inicio-description-img">
             <img src={transformacao} alt="" />
           </div>
@@ -189,7 +186,7 @@ export default function Inicio() {
           </p>
         </div>
       </div>
-      <div className="inicio-pillars">
+      <div className="inicio-pillars" data-aos="fade-up">
         <div className="inicio-pillars-header">
           <div className="pillars-header-texts">
             <p className="pillars-header-text">
@@ -208,7 +205,7 @@ export default function Inicio() {
           </div>
         </div>
         <div className="inicio-pillars-cards">
-          <div className="pillars-card">
+          <div className="pillars-card" data-aos={window.innerWidth < 500 ? "fade-right" : ""}>
             <div className="pillars-card-texts">
               <h4 className="pillars-card-title">Gestão Eficiente</h4>
               <p className="pillars-card-desc">
@@ -221,7 +218,7 @@ export default function Inicio() {
             </div>
             <img className="pillars-card-img" src={aula} alt="" />
           </div>
-          <div className="pillars-card">
+          <div className="pillars-card" data-aos={window.innerWidth < 500 ? "fade-left" : ""}>
             <div className="pillars-card-texts">
               <h4 className="pillars-card-title">
                 Acompanhamento e Diagnósticos
@@ -237,7 +234,7 @@ export default function Inicio() {
             </div>
             <img className="pillars-card-img" src={acompanhamento} alt="" />
           </div>
-          <div className="pillars-card">
+          <div className="pillars-card" data-aos={window.innerWidth < 500 ? "fade-right" : ""}>
             <div className="pillars-card-texts">
               <h4 className="pillars-card-title">Conectividade</h4>
               <p className="pillars-card-desc">
@@ -252,7 +249,7 @@ export default function Inicio() {
           </div>
         </div>
       </div>
-      <div className="inicio-solutions">
+      <div className="inicio-solutions" data-aos="fade-up">
         <div
           className="inicio-solutions-banner"
           style={{ backgroundImage: `url(${quad2})` }}
@@ -262,7 +259,7 @@ export default function Inicio() {
         </div>
         <div className="solutions-items">
           {solutions.map((solution, i) => (
-            <div className="solutions-item" key={i}>
+            <div className="solutions-item" key={i} data-aos={(window.innerWidth > 500) ? "" : (i%2 == 0) ? "fade-right" : "fade-left"}  data-aos-offset="200">
               <div className="solution-item-top">
                 <solution.icon
                   size={window.innerWidth < 500 ? 40 : 32}
@@ -275,7 +272,7 @@ export default function Inicio() {
           ))}
         </div>
       </div>
-      <div className="inicio-pillars-news">
+      <div className="inicio-pillars-news" data-aos="fade-up">
         {msg.length > 4 && <div className="pillars-news-msg">{msg}</div>}
         <div className="pillars-news-texts">
           <h2 className="news-texts-title">
@@ -331,7 +328,7 @@ export default function Inicio() {
           </form>
         </div>
       </div>
-      <div className="inicio-features">
+      <div className="inicio-features" data-aos="fade-up">
         <div className="features-header">
           <h2 className="features-header-title">Recursos Principais</h2>
         </div>
@@ -360,7 +357,7 @@ export default function Inicio() {
           </Carroussel>
         </div>
       </div>
-      <div className="inicio-clients">
+      <div className="inicio-clients" data-aos="fade-up">
         <div
           className="clients-img"
           style={{ backgroundImage: `url(${clientsOpinionImg})` }}
@@ -397,7 +394,7 @@ export default function Inicio() {
           </div>
         </div>
       </div>
-      <div className="inicio-content">
+      <div className="inicio-content" data-aos="fade-up">
         <div className="content-header">
           <h2 className="content-header-title">Veja Nossos Conteúdos</h2>
           <div className="content-header-button">
@@ -412,7 +409,7 @@ export default function Inicio() {
         <div className="content-cards">
           <div className="content-cards-items">
             {content.map((item, i) => (
-              <div className="content-cards-item" key={i}>
+              <div className="content-cards-item" key={i} data-aos={(window.innerWidth > 500) ? "" : (i%2 == 0) ? "fade-right" : "fade-left"} data-aos-offset="200">
                 <div className="content-cards-item-texts">
                   <h3 className="content-cards-item-title">{item.title}</h3>
                   <p className="content-cards-item-desc">{item.desc}</p>

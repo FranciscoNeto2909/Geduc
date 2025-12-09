@@ -10,6 +10,8 @@ import Navbar from "./components/header/Header";
 import Cadastro from "./pages/cadastro/Cadastro";
 import Perfil from "./pages/perfil/Perfil";
 import "./App.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function App() {
   const { pathname } = useLocation();
@@ -17,6 +19,14 @@ export default function App() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+      mirror:true,
+    });
+  }, []);
 
   return (
     <div className="container">

@@ -87,7 +87,6 @@
   font-weight: 700;
 }
 
-
 .footer-body-contacts-email {
   display: flex;
   flex-direction: column;
@@ -137,7 +136,7 @@
   gap: 8px;
 }
 
-.footer-body-button {
+.footer-body button {
   height: 27px;
   width: 100%;
   font-weight: 600;
@@ -170,7 +169,7 @@
   border-radius: 8px;
 }
 
-.footer-bottom-link{
+.footer-bottom-link {
   color: #fff;
 }
 
@@ -193,7 +192,7 @@
     border-radius: 18px;
   }
 
-  .footer-body-button {
+  .footer-body button {
     padding: 20px 0;
   }
 }

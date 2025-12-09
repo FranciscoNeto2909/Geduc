@@ -174,7 +174,7 @@ export default function SejaParceiro() {
       </div>
       <div className="parceria-parceiro">
         <div className="parceiro">
-          <div className="parceiro-header">
+          <div className="parceiro-header" data-aos="fade-up">
             <h2 className="parceiro-header-title">
               Por que se tornar parceiro GEDUC?
             </h2>
@@ -187,13 +187,13 @@ export default function SejaParceiro() {
               educacional em diversas redes do país.
             </p>
           </div>
-          <div className="parceiro-main">
-            <div className="parceiro-main-img">
+          <div className="parceiro-main" data-aos="fade-up">
+            <div className="parceiro-main-img" data-aos="fade-right">
               <div className="parceiro-main-hrectangle"></div>
               <div className="parceiro-main-vrectangle"></div>
               <img src={estudante} alt="" />
             </div>
-            <div className="paceiro-main-texts">
+            <div className="paceiro-main-texts" data-aos="fade-left">
               <h3 className="parceiro-main-title">Como Funciona</h3>
               <p className="parceiro-main-text">
                 O parceiro atua ativamente na prospecção e pré-venda, abrindo
@@ -220,7 +220,7 @@ export default function SejaParceiro() {
               </ul>
             </div>
           </div>
-          <div className="parceiro-commission">
+          <div className="parceiro-commission" data-aos="fade-up">
             <div className="commission">
               <div className="commission-header">
                 <h2 className="commission-header-title">Comissão</h2>
@@ -243,7 +243,18 @@ export default function SejaParceiro() {
               </div>
               <div className="commission-cards">
                 {commission.map((item, i) => (
-                  <div className="commission-card" key={i}>
+                  <div
+                    className="commission-card"
+                    key={i}
+                    data-aos={
+                      window.innerWidth > 500
+                        ? "fade-up"
+                        : i % 2 == 0
+                        ? "fade-right"
+                        : "fade-left"
+                    }
+                    data-aos-offset={window.innerWidth > 500 && `${i + 1}00`}
+                  >
                     <item.icon
                       size={item.size}
                       fill={item.color}
@@ -258,7 +269,7 @@ export default function SejaParceiro() {
               </div>
             </div>
           </div>
-          <div className="parceiro-act">
+          <div className="parceiro-act" data-aos="fade-up">
             <div className="parceiro-act-header">
               <h2 className="act-header-title">Você escolhe como quer atuar</h2>
               <p className="act-header-desc">
@@ -270,7 +281,18 @@ export default function SejaParceiro() {
             <div className="parceiro-act-options">
               <div className="act-options-cards">
                 {acting.map((act, i) => (
-                  <div className="act-options-cards-container" key={i}>
+                  <div
+                    className="act-options-cards-container"
+                    key={i}
+                    data-aos={
+                      window.innerWidth > 500
+                        ? "fade-up"
+                        : i % 2 == 0
+                        ? "fade-right"
+                        : "fade-left"
+                    }
+                    data-aos-offset={window.innerWidth > 500 && `${i + 1}00`}
+                  >
                     <div className="act-options-card">
                       <div className="act-options-card-num">
                         <span>0{i + 1}</span>
@@ -291,7 +313,7 @@ export default function SejaParceiro() {
             </div>
           </div>
         </div>
-        <div className="parceria-models">
+        <div className="parceria-models" data-aos="fade-up">
           <div className="models">
             <div className="models-header">
               <h3 className="models-header-title">Modelos de Parceria</h3>
@@ -302,7 +324,18 @@ export default function SejaParceiro() {
             </div>
             <div className="models-cards">
               {partnershipModels.map((model, i) => (
-                <div className="models-card" key={i}>
+                <div
+                  className="models-card"
+                  key={i}
+                  data-aos={
+                    window.innerWidth > 500
+                      ? "fade-up"
+                      : i % 2 == 0
+                      ? "fade-right"
+                      : "fade-left"
+                  }
+                  data-aos-offset={window.innerWidth > 500 && `${i + 2}00`}
+                >
                   <div className="models-card-header">
                     <span className="models-card-category">
                       {model.category}
@@ -337,14 +370,25 @@ export default function SejaParceiro() {
             </div>
           </div>
         </div>
-        <div className="parceria-steps">
-          <div className="parceria-steps-texts">
+        <div className="parceria-steps" data-aos="fade-up">
+          <div className="parceria-steps-texts" data-aos="fade-right">
             <h2 className="parceria-steps-title">
               O GEDUC está ao seu lado em cada etapa
             </h2>
             <div className="parceria-steps-cards">
               {partnershipSteps.map((step, i) => (
-                <div className="parceria-steps-card" key={i}>
+                <div
+                  className="parceria-steps-card"
+                  key={i}
+                  data-aos={
+                    window.innerWidth > 500
+                      ? "fade-up"
+                      : i % 2 == 0
+                      ? "fade-right"
+                      : "fade-left"
+                  }
+                  data-aos-offset={"200"}
+                >
                   <step.icon className="parceria-steps-card-icon" size={28} />
                   <div className="parceria-steps-card-texts">
                     <h3 className="parceria-steps-card-title">{step.title}</h3>
@@ -354,12 +398,12 @@ export default function SejaParceiro() {
               ))}
             </div>
           </div>
-          <div className="parceria-steps-img">
+          <div className="parceria-steps-img" data-aos="fade-left">
             <img src={livro} alt="" />
           </div>
         </div>
       </div>
-      <div className="parceria-form">
+      <div className="parceria-form" data-aos="fade-up">
         <div className="form">
           <div className="form-header">
             <h2 className="form-header-title">

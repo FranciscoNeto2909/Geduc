@@ -14,7 +14,7 @@ export default function Conta() {
           <img src={quadriculado} alt="" />
         </div>
         <div className="conta-banner-items">
-          <div className="conta-banner-texts">
+          <div className="conta-banner-texts" data-aos="fade-right">
             <h3 className="conta-banner-title">
               Junte-se à comunidade do Geduc
             </h3>
@@ -43,12 +43,12 @@ export default function Conta() {
               </a>
             </div>
           </div>
-          <div className="conta-banner-img">
+          <div className="conta-banner-img" data-aos="fade-left">
             <img src={aluna} alt="" />
           </div>
         </div>
         <div className="conta-banner-cards">
-          <div className="conta-banner-card">
+          <div className="conta-banner-card" data-aos={window.innerWidth > 500 ? "zoom-in" : "fade-right"}>
             <h4 className="conta-banner-card-title">
               Não perca nenhuma novidade
             </h4>
@@ -61,7 +61,7 @@ export default function Conta() {
             </p>
             <button className="conta-banner-card-btn">Saiba mais</button>
           </div>
-          <div className="conta-banner-card">
+          <div className="conta-banner-card" data-aos={window.innerWidth > 500 ? "zoom-in" : "fade-left"}>
             <h4 className="conta-banner-card-title">Boas Práticas em Gestão</h4>
             <p className="conta-banner-card-desc">
               Acesse <span>modelos de planejamento</span>,{" "}
@@ -70,7 +70,7 @@ export default function Conta() {
             </p>
             <button className="conta-banner-card-btn">Ver Práticas</button>
           </div>
-          <div className="conta-banner-card">
+          <div className="conta-banner-card" data-aos={window.innerWidth > 500 ? "zoom-in" : "fade-right"}>
             <h4 className="conta-banner-card-title">Seja Nosso Parceiro</h4>
             <p className="conta-banner-card-desc">
               Como parceiro, você terá acesso a{" "}
@@ -84,7 +84,7 @@ export default function Conta() {
       </div>
       <div className="conta-login">
         <div className="login">
-          <div className="login-form-container">
+          <div className="login-form-container" data-aos={window.innerWidth > 500 ? "fade-right" : "fade-up"}>
             <h3 className="login-form-title">Entrar</h3>
             <form action="" className="login-form">
               <div className="login-form-item">
@@ -118,7 +118,7 @@ export default function Conta() {
               </span>
             </form>
           </div>
-          <div className="login-texts">
+          <div className="login-texts" data-aos={window.innerWidth > 500 ? "fade-left" : "fade-up"}>
             <div className="login-texts-header">
               <h3 className="login-texts-header-title">
                 Faça já o seu login ou se cadastre!
@@ -130,11 +130,11 @@ export default function Conta() {
               </p>
             </div>
             <div className="login-texts-cards">
-              <div className="login-texts-card">
+              <div className="login-texts-card" data-aos={window.innerWidth > 500 ? "" : "fade-right"} data-aos-offset="100">
                 <div className="login-texts-card-icon icon--location">
                   <IoLocationSharp size={24} />
                 </div>
-                <div className="login-texts-card-texts">
+                <div className="login-texts-card-texts" >
                   <h4 className="login-texts-card-title">Localização</h4>
                   <ul className="login-texts-card-items">
                     <li className="login-texts-card-item">
@@ -156,7 +156,7 @@ export default function Conta() {
                   </ul>
                 </div>
               </div>
-              <div className="login-texts-card">
+              <div className="login-texts-card" data-aos={window.innerWidth > 500 ? "" : "fade-left"} data-aos-offset="200">
                 <div className="login-texts-card-icon icon--phone">
                   <FaPhoneAlt size={20} />
                 </div>
@@ -169,7 +169,7 @@ export default function Conta() {
                   </a>
                 </div>
               </div>
-              <div className="login-texts-card">
+              <div className="login-texts-card" data-aos={window.innerWidth > 500 ? "" : "fade-right"} data-aos-offset="200">
                 <div className="login-texts-card-icon icon--time">
                   <FaClock size={22} />
                 </div>
@@ -178,7 +178,7 @@ export default function Conta() {
                   <p className="login-texts-card-text">8:00 às 18:30</p>
                 </div>
               </div>
-              <div className="login-texts-card">
+              <div className="login-texts-card" data-aos={window.innerWidth > 500 ? "" : "fade-left"} data-aos-offset="300">
                 <div className="login-texts-card-icon icon--email">
                   <IoMdMail size={22} />
                 </div>

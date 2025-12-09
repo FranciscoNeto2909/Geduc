@@ -60,7 +60,7 @@ export default function BlogPost({ post }: { post: PostInterface }) {
 
   return (
     <div className="blog-post">
-      <div className="blog-post-main">
+      <div className="blog-post-main" data-aos="fade-right">
         <div className="blog-post-img-container">
           <div className="blog-post-img-logo">
             <img src={logo} alt="" />
@@ -108,7 +108,7 @@ export default function BlogPost({ post }: { post: PostInterface }) {
           </div>
         </div>
       </div>
-      <div className="blog-post-comments">
+      <div className="blog-post-comments" data-aos="fade-left">
         <div className="post-comments-header">
           <h3>Comentarios</h3>
           <LiaComments size={26} />

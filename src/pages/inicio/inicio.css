@@ -14,43 +14,6 @@
   margin: 0 auto;
 }
 
-.inicio-banners-circle {
-  position: absolute;
-  height: 525px;
-  width: 525px;
-  border-radius: 50%;
-  top: -50%;
-  opacity: 50%;
-  z-index: -1;
-}
-
-.circle-orange {
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-    rgba(237, 140, 54, 0.45) 0%,
-    rgba(254, 208, 167, 0.2) 50%,
-    rgba(214, 231, 238, 0) 100%
-  );
-}
-.circle-blue {
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-    rgba(9, 172, 177, 0.45) 0%,
-    rgba(112, 202, 208, 0.2) 50%,
-    rgba(214, 231, 238, 0) 100%
-  );
-  left: calc(100% / 3);
-}
-.circle-green {
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-    rgba(147, 192, 44, 0.45) 0%,
-    rgba(177, 203, 116, 0.2) 50%,
-    rgba(214, 231, 238, 0) 100%
-  );
-  right: 0;
-}
-
 .inicio-banner {
   min-height: 600px;
   width: 100%;
