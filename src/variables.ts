@@ -22,6 +22,7 @@ import {
   AiOutlineWhatsApp,
   AiOutlineInstagram,
   AiOutlineFileText,
+  AiOutlineSync,
 } from "react-icons/ai";
 import { PiBookBookmarkFill, PiClipboardTextBold } from "react-icons/pi";
 import {
@@ -29,11 +30,13 @@ import {
   MdOutlineHomeWork,
   MdOutlineHandshake,
   MdHeadset,
+  MdSupportAgent,
+  MdOutlineMoneyOff,
 } from "react-icons/md";
-import { FaLinkedin, FaUsers } from "react-icons/fa";
+import { FaGraduationCap, FaLinkedin, FaUser, FaUsers } from "react-icons/fa";
 import { FaSchoolCircleCheck } from "react-icons/fa6";
 import { BiCategoryAlt } from "react-icons/bi";
-import { BsBank } from "react-icons/bs";
+import { BsBank, BsFileText, BsRocket } from "react-icons/bs";
 import { RiGraduationCapLine, RiMoneyDollarCircleLine } from "react-icons/ri";
 
 import post1 from "./blog/post1.png";
@@ -70,11 +73,11 @@ import post6comment3 from "./blog/post6comment3.png";
 import post6comment4 from "./blog/post6comment4.png";
 import post6comment5 from "./blog/post6comment5.png";
 import post6comment6 from "./blog/post6comment6.png";
+import { IoIosSettings, IoMdBriefcase } from "react-icons/io";
 
 export const emailRegex = new RegExp(
-    "^[_a-z0-9-]+([_a-z0-9-]+)*@[a-z0-9-]+([a-z0-9-]+).([a-z]{2,3})$"
-  );
-
+  "^[_a-z0-9-]+([_a-z0-9-]+)*@[a-z0-9-]+([a-z0-9-]+).([a-z]{2,3})$"
+);
 
 export const routes = [
   { name: "Início", to: "/" },
@@ -656,7 +659,7 @@ export const partnershipModels = [
     category: "Mais Simples",
     title: "Indicação",
     subTitle: "Apoio Total na Venda",
-    comission: "10% recorrente por 2 anos",
+    commission: "10% recorrente por 2 anos",
     desc: "Indique o cliente e o GEDUC cuida de tudo",
     advantages: [
       "Você apenas indica o lead qualificado",
@@ -669,7 +672,7 @@ export const partnershipModels = [
     category: "Mais Popular",
     title: "Representação",
     subTitle: "Você assume o comercial",
-    comission: "30% recorrente durante o contrato",
+    commission: "30% recorrente durante o contrato",
     desc: "Você assume o processo comercial completo",
     advantages: [
       "Controle total do processo de vendas",
@@ -682,7 +685,7 @@ export const partnershipModels = [
     category: "Máximo Controle",
     title: "White Label",
     subTitle: "Liberdade total",
-    comission: "Comissão definida pelo parceiro",
+    commission: "Comissão definida pelo parceiro",
     desc: "Atue com sua marca e total liberdade de preços",
     advantages: [
       "Use sua própria marca",
@@ -713,5 +716,98 @@ export const partnershipSteps = [
     icon: AiOutlineBarChart,
     title: "Relatórios e acompanhamento",
     descc: "Dashboard com métricas e performance em tempo real",
+  },
+];
+
+export const parceriaCards = [
+  {
+    icon: AiOutlineSync,
+    size: 32,
+    title: "Receita Recorrente",
+    text: "Transforme suas indicações em renda contínua, recebendo comissões sempre que seus clientes utilizam a plataforma.",
+  },
+  {
+    icon: MdSupportAgent,
+    size: 32,
+    title: "Suporte Completo",
+    text: "Tenha o apoio da nossa equipe em todas as etapas — do aprendizado às vendas.",
+  },
+  {
+    icon: BsRocket,
+    size: 32,
+    title: "Tecnologia Líder",
+    text: "Apresente uma plataforma inovadora e reconhecida por melhorar a gestão educacional.",
+  },
+  {
+    icon: MdOutlineMoneyOff,
+    size: 32,
+    title: "Zero Custos de Implantação",
+    text: "Torne-se parceiro sem nenhum investimento inicial. Simples, rápido e gratuito.",
+  },
+  {
+    icon: BsFileText,
+    size: 28,
+    title: "Materiais de Vendas",
+    text: "Receba conteúdos prontos que facilitam suas abordagens e aumentam suas conversões.",
+  },
+  {
+    icon: AiOutlineEnvironment,
+    size: 32,
+    title: "Expansão Nacional",
+    text: "Atue em qualquer região do país e amplie suas oportunidades de negócio com um produto escalável.",
+  },
+];
+
+export const partnerTypes = [
+  {
+    icon: IoMdBriefcase,
+    size: 60,
+    title: "Representantes Comerciais",
+    iconClass: "types-greenIcon",
+    titleClass: "types-greenTitle",
+  },
+  {
+    icon: FaGraduationCap,
+    size: 60,
+    title: "Consultores Educacionais",
+    iconClass: "types-orangeIcon",
+    titleClass: "types-orangeTitle",
+  },
+  {
+    icon: IoIosSettings,
+    size: 60,
+    title: "Empresas de Tecnologia",
+    iconClass: "types-yellowIcon",
+    titleClass: "types-yellowTitle",
+  },
+  {
+    icon: FaUser,
+    size: 55,
+    title: "Autônomos ou Freelancers",
+    iconClass: "types-blueIcon",
+    titleClass: "types-blueTitle",
+  },
+];
+
+export const questionsCards = [
+  {
+    question: "Preciso ter CNPJ?",
+    text: "",
+  },
+  {
+    question: "Como receber comissão?",
+    text: "",
+  },
+  {
+    question: "Quem faz implantação?",
+    text: "",
+  },
+  {
+    question: "Posso mudar de modalidade?",
+    text: "",
+  },
+  {
+    question: "Existe fidelidade?",
+    text: "",
   },
 ];

@@ -29,6 +29,7 @@
   --soft-orange: #ffb76b;
   --light-orange: #ffcf91;
   --bg-orange:#FE8E22;
+  --title-orange:#97581C;
 
   --dark-yellow: #786d42;
   --strong-yellow: #f8de4b;
@@ -36,6 +37,8 @@
   --yellow: #fef78d;
   --soft-yellow: #fef7af;
   --light-yellow: #fef7cd;
+  --bg-yellow:#FDCE17;
+  --title-yellow:#A18723;
 
   --medium-red:#8F5113;
 
@@ -46,6 +49,7 @@
   --placeholder-gray: #ababab;
   --card-gray:#999999;
   --title-font: Poppins, arial;
+  --border:#f5f5f5;
 }
 
 * {

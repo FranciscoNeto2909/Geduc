@@ -1,14 +1,18 @@
 import {
   AiOutlineCheck,
   AiOutlineCheckCircle,
+  AiOutlineDown,
   AiOutlineWhatsApp,
 } from "react-icons/ai";
 import {
   acting,
   commission,
   emailRegex,
+  parceriaCards,
   partnershipModels,
   partnershipSteps,
+  partnerTypes,
+  questionsCards,
 } from "../../variables";
 import quadriculado from "../../assets/quadriculado.png";
 import professores from "../../assets/professores.png";
@@ -173,20 +177,104 @@ export default function SejaParceiro() {
         </div>
       </div>
       <div className="parceria-parceiro">
-        <div className="parceiro">
-          <div className="parceiro-header" data-aos="fade-up">
-            <h2 className="parceiro-header-title">
-              Por que se tornar parceiro GEDUC?
-            </h2>
-            <p className="parceiro-header-desc">
-              O Programa de Parcerias GEDUC foi criado para ampliar nossa
-              presença na educação pública através de parcerias estratégicas.
-              Oferecemos{" "}
-              <span>bonificação por indicações e vendas efetivadas</span> do
-              software GEDUC — uma plataforma que já transforma a gestão
-              educacional em diversas redes do país.
-            </p>
+        <div className="parceiro parceiro-header" data-aos="fade-up">
+          <h2 className="parceiro-header-title">
+            Por que se tornar parceiro GEDUC?
+          </h2>
+          <p className="parceiro-header-desc">
+            O <span className="parceiro-header-emphasis">Programa de Parcerias GEDUC</span> foi criado para ampliar nossa presença
+            na educação pública através de parcerias estratégicas. Oferecemos{" "}
+            <span className="parceiro-header-emphasis">bonificação por indicações e vendas efetivadas</span> do
+            software GEDUC — uma plataforma que já transforma a gestão
+            educacional em diversas redes do país.
+          </p>
+        </div>
+        <div
+          className="parceiro parceiro-cards"
+          data-aos={window.innerWidth > 500 && "fade-up"}
+          data-aos-offset="200"
+        >
+          {parceriaCards.map((item, i) => (
+            <div
+              key={i}
+              className="parceiro-card"
+              data-aos={
+                window.innerWidth > 500
+                  ? "fade-up"
+                  : i % 2 == 0
+                  ? "fade-right"
+                  : "fade-left"
+              }
+              data-aos-offset="200"
+            >
+              <div className="parceiro-card-icon">
+                <item.icon size={item.size} />
+              </div>
+              <div className="parceiro-card-texts">
+                <h3 className="parceiro-card-title">{item.title}</h3>
+                <p className="parceiro-card-text">{item.text}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="parceria-models" data-aos="fade-up">
+          <div className="models">
+            <div className="models-header">
+              <h3 className="models-header-title">Modelos de Parceria</h3>
+              <p className="models-header-desc">
+                Escolha o modelo que melhor se adapta ao seu perfil e objetivos
+                de negócio
+              </p>
+            </div>
+            <div className="models-cards">
+              {partnershipModels.map((model, i) => (
+                <div
+                  className="models-card"
+                  key={i}
+                  data-aos={
+                    window.innerWidth > 500
+                      ? "fade-up"
+                      : i % 2 == 0
+                      ? "fade-right"
+                      : "fade-left"
+                  }
+                  data-aos-offset={window.innerWidth > 500 && `${i + 2}00`}
+                >
+                  <div className="models-card-header">
+                    <span className="models-card-category">
+                      {model.category}
+                    </span>
+                    <h3 className="models-card-title">{model.title}</h3>
+                    <p className="models-card-desc">{model.subTitle}</p>
+                  </div>
+                  <div className="models-card-commission">
+                    <p className="models-card-commission-title">Comissão</p>
+                    <p className="models-card-commission-text">
+                      {model.commission}
+                    </p>
+                  </div>
+                  <div className="models-card-desc">
+                    <p>{model.desc}</p>
+                  </div>
+                  <ul className="models-card-advantages">
+                    {model.advantages.map((advantage, ai) => (
+                      <li className="models-card-advantages-item" key={ai}>
+                        <AiOutlineCheckCircle
+                          className="card-advantages-item-icon"
+                          size={20}
+                        />
+                        <span className="card-advantages-item-text">
+                          {advantage}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
           </div>
+        </div>
+        <div className="parceiro">
           <div className="parceiro-main" data-aos="fade-up">
             <div className="parceiro-main-img" data-aos="fade-right">
               <div className="parceiro-main-hrectangle"></div>
@@ -220,112 +308,60 @@ export default function SejaParceiro() {
               </ul>
             </div>
           </div>
-          <div className="parceiro-commission" data-aos="fade-up">
-            <div className="commission">
-              <div className="commission-header">
-                <h2 className="commission-header-title">Comissão</h2>
-                <div className="commission-header-desc">
-                  <p>
-                    Receba 15% de comissão recorrente por 2 anos sobre as
-                    mensalidades dos seus clientes, sem descontos na
-                    implantação.
-                  </p>
-                  <p>
-                    Perfeito para consultores e empresas de tecnologia que atuam
-                    no setor público, nosso modelo oferece ganhos previsíveis
-                    sem necessidade de estrutura comercial complexa.
-                  </p>
-                  <p>
-                    Seja mais que um indicador - seja um parceiro estratégico
-                    com renda garantida.
-                  </p>
-                </div>
-              </div>
-              <div className="commission-cards">
-                {commission.map((item, i) => (
-                  <div
-                    className="commission-card"
-                    key={i}
-                    data-aos={
-                      window.innerWidth > 500
-                        ? "fade-up"
-                        : i % 2 == 0
-                        ? "fade-right"
-                        : "fade-left"
-                    }
-                    data-aos-offset={window.innerWidth > 500 && `${i + 1}00`}
-                  >
-                    <item.icon
-                      size={item.size}
-                      fill={item.color}
-                      className="comission-card-icon"
-                    />
-                    <div className="commission-card-texts">
-                      <h3 className="commission-card-title">{item.title}</h3>
-                      <p className="commission-card-desc">{item.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+        </div>
+        <div className="parceiro-types" data-aos="fade-up">
+          <div className="parceiro-types-header">
+            <span className="types-header-top">Junte-se à nós!</span>
+            <h2 className="types-header-title">Quem pode se tornar parceiro</h2>
           </div>
-          <div className="parceiro-act" data-aos="fade-up">
-            <div className="parceiro-act-header">
-              <h2 className="act-header-title">Você escolhe como quer atuar</h2>
-              <p className="act-header-desc">
-                O parceiro GEDUC pode atuar desde a indicação até a
-                representação total. Nós cuidamos da negociação, implantação e
-                suporte conforme o modelo de parceria escolhido.
-              </p>
-            </div>
-            <div className="parceiro-act-options">
-              <div className="act-options-cards">
-                {acting.map((act, i) => (
-                  <div
-                    className="act-options-cards-container"
-                    key={i}
-                    data-aos={
-                      window.innerWidth > 500
-                        ? "fade-up"
-                        : i % 2 == 0
-                        ? "fade-right"
-                        : "fade-left"
-                    }
-                    data-aos-offset={window.innerWidth > 500 && `${i + 1}00`}
-                  >
-                    <div className="act-options-card">
-                      <div className="act-options-card-num">
-                        <span>0{i + 1}</span>
-                      </div>
-                      <div className="act-options-texts">
-                        <h3 className="act-options-title">{act.title}</h3>
-                        <p className="act-options-desc">{act.desc}</p>
-                      </div>
-                    </div>
-                    {i < 3 && (
-                      <div className="act-options-arrow">
-                        <FaArrowRight size={26} />
-                      </div>
-                    )}
-                  </div>
-                ))}
+          <div className="parceiro-types-cards">
+            {partnerTypes.map((item, i) => (
+              <div
+                className="types-card"
+                key={i}
+                data-aos={
+                  window.innerWidth > 500
+                    ? "fade-up"
+                    : i % 2 == 0
+                    ? "fade-right"
+                    : "fade-left"
+                }
+                data-aos-offset={window.innerWidth > 500 && `${i + 2}00`}
+              >
+                <div className={`types-card-icon ${item.iconClass}`}>
+                  <item.icon size={item.size} />
+                </div>
+                <h3 className={`types-card-title ${item.titleClass}`}>
+                  {item.title}
+                </h3>
               </div>
-            </div>
+            ))}
           </div>
         </div>
-        <div className="parceria-models" data-aos="fade-up">
-          <div className="models">
-            <div className="models-header">
-              <h3 className="models-header-title">Modelos de Parceria</h3>
-              <p className="models-header-desc">
-                Escolha o modelo que melhor se adapta ao seu perfil e objetivos
-                de negócio
-              </p>
+        <div className="parceiro-commission" data-aos="fade-up">
+          <div className="commission">
+            <div className="commission-header">
+              <h2 className="commission-header-title">Comissão</h2>
+              <div className="commission-header-desc">
+                <p>
+                  Receba <span className="commission-header-emphasis">15%</span> de comissão recorrente por 2 anos sobre as
+                  mensalidades dos seus clientes, sem descontos na implantação.
+                </p>
+                <p>
+                  Perfeito para <span className="commission-header-emphasis">consultores e empresas de tecnologia</span> que atuam
+                  no setor público, nosso modelo oferece ganhos previsíveis sem
+                  necessidade de estrutura comercial complexa.
+                </p>
+                <p>
+                  Seja mais que um indicador - <span className="commission-header-emphasis">SEJA UM PARCEIRO</span> estratégico com
+                  renda garantida.
+                </p>
+              </div>
             </div>
-            <div className="models-cards">
-              {partnershipModels.map((model, i) => (
+            <div className="commission-cards">
+              {commission.map((item, i) => (
                 <div
-                  className="models-card"
+                  className="commission-card"
                   key={i}
                   data-aos={
                     window.innerWidth > 500
@@ -334,44 +370,106 @@ export default function SejaParceiro() {
                       ? "fade-right"
                       : "fade-left"
                   }
-                  data-aos-offset={window.innerWidth > 500 && `${i + 2}00`}
+                  data-aos-offset={window.innerWidth > 500 && `${i + 1}00`}
                 >
-                  <div className="models-card-header">
-                    <span className="models-card-category">
-                      {model.category}
-                    </span>
-                    <h3 className="models-card-title">{model.title}</h3>
-                    <p className="models-card-desc">{model.subTitle}</p>
+                  <item.icon
+                    size={item.size}
+                    fill={item.color}
+                    className="commission-card-icon"
+                  />
+                  <div className="commission-card-texts">
+                    <h3 className="commission-card-title">{item.title}</h3>
+                    <p className="commission-card-desc">{item.desc}</p>
                   </div>
-                  <div className="models-card-comission">
-                    <p className="models-card-comission-title">Comissão</p>
-                    <p className="models-card-comission-text">
-                      {model.comission}
-                    </p>
-                  </div>
-                  <div className="models-card-desc">
-                    <p>{model.desc}</p>
-                  </div>
-                  <ul className="models-card-advantages">
-                    {model.advantages.map((advantage, ai) => (
-                      <li className="models-card-advantages-item" key={ai}>
-                        <AiOutlineCheckCircle
-                          className="card-advantages-item-icon"
-                          size={20}
-                        />
-                        <span className="card-advantages-item-text">
-                          {advantage}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
                 </div>
               ))}
             </div>
           </div>
         </div>
+        <div className="parceiro-act" data-aos="fade-up">
+          <div className="parceiro-act-header">
+            <h2 className="act-header-title">Você escolhe como quer atuar</h2>
+            <p className="act-header-desc">
+              O parceiro GEDUC pode atuar desde a indicação até a representação
+              total. Nós cuidamos da negociação, implantação e suporte conforme
+              o modelo de parceria escolhido.
+            </p>
+          </div>
+          <div className="parceiro-act-options">
+            <div className="act-options-cards">
+              {acting.map((act, i) => (
+                <div
+                  className="act-options-cards-container"
+                  key={i}
+                  data-aos={
+                    window.innerWidth > 500
+                      ? "fade-up"
+                      : i % 2 == 0
+                      ? "fade-right"
+                      : "fade-left"
+                  }
+                  data-aos-offset={window.innerWidth > 500 && `${i + 1}00`}
+                >
+                  <div className="act-options-card">
+                    <div className="act-options-card-num">
+                      <span>0{i + 1}</span>
+                    </div>
+                    <div className="act-options-texts">
+                      <h3 className="act-options-title">{act.title}</h3>
+                      <p className="act-options-desc">{act.desc}</p>
+                    </div>
+                  </div>
+                  {i < 3 && (
+                    <div className="act-options-arrow">
+                      <FaArrowRight size={26} />
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+        <div className="parceria-questions" data-aos="fade-up">
+          <div className="questions-header">
+            <span className="questions-header-top">Principais Dúvidas</span>
+            <h2 className="questions-header-title">Perguntas Frequentes</h2>
+            <p className="questions-header-text">
+              As dúvidas mais comuns sobre o{" "}
+              <span className="questions-header-emphasis">
+                programa de parcerias
+              </span>
+              do GEDUC estão reunidas aqui para ajudar você a entender como tudo
+              funciona.
+              <span className="questions-header-text2">
+                Confira abaixo as respostas rápidas sobre{" "}
+                <span className="questions-header-emphasis">
+                  comissões, modalidades, requisitos
+                </span>{" "}
+                e muito mais.
+              </span>
+            </p>
+          </div>
+          <div className="questions-cards">
+            {questionsCards.map((item, i) => (
+              <div
+                className="questions-card"
+                key={i}
+                data-aos={i % 2 == 0 ? "fade-right" : "fade-left"}
+                data-aos-offset="200"
+              >
+                <p className="questions-card-question">{item.question}</p>
+                <button className="questions-card-button">
+                  <AiOutlineDown className="questions-card-button-icon" size={16} />
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
         <div className="parceria-steps" data-aos="fade-up">
-          <div className="parceria-steps-texts" data-aos="fade-right">
+          <div
+            className="parceria-steps-texts"
+            data-aos={window.innerWidth > 500 && "fade-right"}
+          >
             <h2 className="parceria-steps-title">
               O GEDUC está ao seu lado em cada etapa
             </h2>
@@ -398,7 +496,10 @@ export default function SejaParceiro() {
               ))}
             </div>
           </div>
-          <div className="parceria-steps-img" data-aos="fade-left">
+          <div
+            className="parceria-steps-img"
+            data-aos={window.innerWidth > 500 ? "fade-left" : "fade-up"}
+          >
             <img src={livro} alt="" />
           </div>
         </div>
