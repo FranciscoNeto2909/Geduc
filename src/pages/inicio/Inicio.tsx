@@ -160,7 +160,7 @@ export default function Inicio() {
         </div>
       </div>
       <div className="inicio-descriptions">
-        <div className="inicio-description"  data-aos="zoom-in">
+        <div className="inicio-description"  data-aos="fade-up" data-aos-offset="0">
           <div className="inicio-description-img">
             <img src={conectividade} alt="" />
           </div>
@@ -169,14 +169,14 @@ export default function Inicio() {
             Integra alunos, professores e instituições
           </p>
         </div>
-        <div className="inicio-description"  data-aos="zoom-in">
+        <div className="inicio-description"  data-aos="fade-up" data-aos-offset="100">
           <div className="inicio-description-img">
             <img src={eficiencia} alt="" />
           </div>
           <h4 className="inicio-description-title">Eficiência</h4>
           <p className="inicio-description-text">Automação e gestão completa</p>
         </div>
-        <div className="inicio-description"  data-aos="zoom-in">
+        <div className="inicio-description"  data-aos="fade-up" data-aos-offset="200">
           <div className="inicio-description-img">
             <img src={transformacao} alt="" />
           </div>
@@ -205,7 +205,7 @@ export default function Inicio() {
           </div>
         </div>
         <div className="inicio-pillars-cards">
-          <div className="pillars-card" data-aos={window.innerWidth < 500 ? "fade-right" : ""}>
+          <div className="pillars-card" data-aos={window.innerWidth < 500 ? "fade-right" : "fade-up"} data-aos-offset="50">
             <div className="pillars-card-texts">
               <h4 className="pillars-card-title">Gestão Eficiente</h4>
               <p className="pillars-card-desc">
@@ -218,7 +218,7 @@ export default function Inicio() {
             </div>
             <img className="pillars-card-img" src={aula} alt="" />
           </div>
-          <div className="pillars-card" data-aos={window.innerWidth < 500 ? "fade-left" : ""}>
+          <div className="pillars-card" data-aos={window.innerWidth < 500 ? "fade-left" : "fade-up"} data-aos-offset="200">
             <div className="pillars-card-texts">
               <h4 className="pillars-card-title">
                 Acompanhamento e Diagnósticos
@@ -234,7 +234,7 @@ export default function Inicio() {
             </div>
             <img className="pillars-card-img" src={acompanhamento} alt="" />
           </div>
-          <div className="pillars-card" data-aos={window.innerWidth < 500 ? "fade-right" : ""}>
+          <div className="pillars-card" data-aos={window.innerWidth < 500 ? "fade-right" : "fade-up"} data-aos-offset="300">
             <div className="pillars-card-texts">
               <h4 className="pillars-card-title">Conectividade</h4>
               <p className="pillars-card-desc">
