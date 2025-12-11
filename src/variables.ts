@@ -645,7 +645,7 @@ export const acting = [
     desc: "Nossa equipe cuida de todo o processo comercial",
   },
   {
-    title: "Implantação",
+    title: "Implantação e suporte",
     desc: "Implementamos e damos suporte completo ao cliente",
   },
   {
@@ -765,6 +765,7 @@ export const partnerTypes = [
     title: "Representantes Comerciais",
     iconClass: "types-greenIcon",
     titleClass: "types-greenTitle",
+    bg: "types-cardGreen",
   },
   {
     icon: FaGraduationCap,
@@ -772,6 +773,7 @@ export const partnerTypes = [
     title: "Consultores Educacionais",
     iconClass: "types-orangeIcon",
     titleClass: "types-orangeTitle",
+    bg: "types-cardOrange",
   },
   {
     icon: IoIosSettings,
@@ -779,6 +781,7 @@ export const partnerTypes = [
     title: "Empresas de Tecnologia",
     iconClass: "types-yellowIcon",
     titleClass: "types-yellowTitle",
+    bg: "types-cardYellow",
   },
   {
     icon: FaUser,
@@ -786,28 +789,30 @@ export const partnerTypes = [
     title: "Autônomos ou Freelancers",
     iconClass: "types-blueIcon",
     titleClass: "types-blueTitle",
+    bg: "types-cardBlue",
   },
 ];
 
 export const questionsCards = [
   {
     question: "Preciso ter CNPJ?",
-    text: "",
+    text: "<span>Não</span>. Você pode atuar como <span>pessoa física</span> ou <span>jurídica</span>. Somente o modelo <span>White Label</span> recomenda <span>CNPJ</span> por envolver faturamento próprio.",
   },
   {
     question: "Como receber comissão?",
-    text: "",
+    text: "O pagamento é mensal, baseado nos contratos ativos que você trouxe.<ul><li><span>Indicação</span>: você indica, o GEDUC fecha e você recebe comissão.</li> <li><span>Parceria</span>: você participa da venda e ganha percentual maior.</li><li><span>White Label</span>: você vende com sua marca, define o preço e fica com o lucro.</li></ul>",
   },
   {
     question: "Quem faz implantação?",
-    text: "",
+    text: "O time do GEDUC realiza <span>implantação</span>, <span>treinamento</span> e <span>suporte</span> sempre. Mesmo no <span>White Label</span>, sua marca aparece, mas a operação é 100% GEDUC.",
   },
   {
     question: "Posso mudar de modalidade?",
-    text: "",
+    text: "<span>Sim!</span> Você pode começar no modo <span>Indicação</span> e migrar para <span>Parceria</span> ou <span>White Label</span> quando quiser. Só fazemos uma revisão rápida para ajustar ao seu volume de vendas.",
   },
   {
     question: "Existe fidelidade?",
-    text: "",
+    text: "Para o <span>parceiro, não</span>. Você atua quando quiser, sem metas mínimas. A fidelidade vale apenas para o <span>cliente final</span>, conforme contrato do GEDUC.",
   },
 ];
+ 

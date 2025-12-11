@@ -2,6 +2,7 @@ import {
   AiOutlineCheck,
   AiOutlineCheckCircle,
   AiOutlineDown,
+  AiOutlineUp,
   AiOutlineWhatsApp,
 } from "react-icons/ai";
 import {
@@ -29,6 +30,9 @@ export default function SejaParceiro() {
   const [option, setOption] = useState<string>("Selecione uma opção");
   const [optionId, setOptionId] = useState<number>(4);
   const [message, setmessage] = useState("");
+  const [openedQuestion, setOpnedQuestion] = useState(false);
+  const [questionId, setQuestionId] = useState<number | null>(null);
+
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -54,6 +58,11 @@ export default function SejaParceiro() {
 
   function handleCloseOptions() {
     setHasInterest(false);
+  }
+
+  function handleOpenQuestion(id: number) {
+    setOpnedQuestion(!openedQuestion);
+    setQuestionId(id);
   }
 
   function handleChangeOption({ value, id }: { value: string; id: number }) {
@@ -182,10 +191,16 @@ export default function SejaParceiro() {
             Por que se tornar parceiro GEDUC?
           </h2>
           <p className="parceiro-header-desc">
-            O <span className="parceiro-header-emphasis">Programa de Parcerias GEDUC</span> foi criado para ampliar nossa presença
-            na educação pública através de parcerias estratégicas. Oferecemos{" "}
-            <span className="parceiro-header-emphasis">bonificação por indicações e vendas efetivadas</span> do
-            software GEDUC — uma plataforma que já transforma a gestão
+            O{" "}
+            <span className="parceiro-header-emphasis">
+              Programa de Parcerias GEDUC
+            </span>{" "}
+            foi criado para ampliar nossa presença na educação pública através
+            de parcerias estratégicas. Oferecemos{" "}
+            <span className="parceiro-header-emphasis">
+              bonificação por indicações e vendas efetivadas
+            </span>
+             do software GEDUC — uma plataforma que já transforma a gestão
             educacional em diversas redes do país.
           </p>
         </div>
@@ -317,7 +332,7 @@ export default function SejaParceiro() {
           <div className="parceiro-types-cards">
             {partnerTypes.map((item, i) => (
               <div
-                className="types-card"
+                className={`types-card ${item.bg}`}
                 key={i}
                 data-aos={
                   window.innerWidth > 500
@@ -344,17 +359,24 @@ export default function SejaParceiro() {
               <h2 className="commission-header-title">Comissão</h2>
               <div className="commission-header-desc">
                 <p>
-                  Receba <span className="commission-header-emphasis">15%</span> de comissão recorrente por 2 anos sobre as
-                  mensalidades dos seus clientes, sem descontos na implantação.
+                  Receba <span className="commission-header-emphasis">15%</span>{" "}
+                  de comissão recorrente por 2 anos sobre as mensalidades dos
+                  seus clientes, sem descontos na implantação.
                 </p>
                 <p>
-                  Perfeito para <span className="commission-header-emphasis">consultores e empresas de tecnologia</span> que atuam
-                  no setor público, nosso modelo oferece ganhos previsíveis sem
-                  necessidade de estrutura comercial complexa.
+                  Perfeito para{" "}
+                  <span className="commission-header-emphasis">
+                    consultores e empresas de tecnologia
+                  </span>{" "}
+                  que atuam no setor público, nosso modelo oferece ganhos
+                  previsíveis sem necessidade de estrutura comercial complexa.
                 </p>
                 <p>
-                  Seja mais que um indicador - <span className="commission-header-emphasis">SEJA UM PARCEIRO</span> estratégico com
-                  renda garantida.
+                  Seja mais que um indicador -{" "}
+                  <span className="commission-header-emphasis">
+                    SEJA UM PARCEIRO
+                  </span>{" "}
+                  estratégico com renda garantida.
                 </p>
               </div>
             </div>
@@ -452,15 +474,35 @@ export default function SejaParceiro() {
           <div className="questions-cards">
             {questionsCards.map((item, i) => (
               <div
-                className="questions-card"
+                className={`questions-card ${
+                  questionId === i && openedQuestion && "questions-card-oppened"
+                }`}
                 key={i}
-                data-aos={i % 2 == 0 ? "fade-right" : "fade-left"}
-                data-aos-offset="200"
+                data-aos={!(questionId !== null || openedQuestion) && (i % 2 === 0 ? "fade-right" : "fade-left")}
               >
-                <p className="questions-card-question">{item.question}</p>
-                <button className="questions-card-button">
-                  <AiOutlineDown className="questions-card-button-icon" size={16} />
-                </button>
+                <div className="questions-card-question">
+                  <p className="questions-card-question">{item.question}</p>
+                  <button
+                    className="questions-card-button"
+                    onClick={() => handleOpenQuestion(i)}
+                  >
+                    {questionId == i && openedQuestion ? (
+                      <AiOutlineUp
+                        className="questions-card-button-icon"
+                        size={16}
+                      />
+                    ) : (
+                      <AiOutlineDown
+                        className="questions-card-button-icon"
+                        size={16}
+                      />
+                    )}
+                  </button>
+                </div>
+                <div
+                  className="questions-card-text"
+                  dangerouslySetInnerHTML={{ __html: item.text }}
+                />
               </div>
             ))}
           </div>
